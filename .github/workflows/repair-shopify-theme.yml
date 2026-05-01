@@ -1,0 +1,61 @@
+name: Repair Shopify theme structure
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Move root asset files into assets folder and fix Liquid schema render
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets snippets
+
+          # Move files that Shopify expects under /assets if they were uploaded to repo root by mistake.
+          shopt -s nullglob
+          for f in *.css *.js *.svg *.gif *.png *.jpg *.jpeg *.webp *.woff *.woff2 *.ttf *.eot *.otf; do
+            if [ -f "$f" ]; then
+              mv -f "$f" "assets/$f"
+            fi
+          done
+
+          # Defensive fix: keep the schema snippet present so older theme.liquid calls do not break storefront rendering.
+          if [ ! -f snippets/globisun-schema.liquid ]; then
+            cat > snippets/globisun-schema.liquid <<'EOF'
+          {%- comment -%}
+            GlobiSun schema placeholder.
+            Organization / website schema can be handled by dedicated theme snippets and Shopify native structured data.
+            This file prevents missing-snippet Liquid errors when layout/theme.liquid calls `globisun-schema`.
+          {%- endcomment -%}
+          EOF
+          fi
+
+          # If theme.liquid still calls globisun-schema, keep it safe by ensuring the snippet exists.
+          # Do not remove FAQ schema.
+
+          # Show final top-level structure for debugging.
+          find . -maxdepth 2 -type f | sort | sed 's#^./##' | head -300
+
+      - name: Commit repaired theme structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "GlobiSun Theme Repair Bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add -A
+            git commit -m "Repair Shopify theme asset structure"
+            git push
+          else
+            echo "No theme structure changes needed."
+          fi
