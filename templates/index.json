@@ -1,0 +1,416 @@
+{
+  "sections": {
+    "globisun_b2b_home": {
+      "type": "globisun-b2b-home",
+      "settings": {
+        "eyebrow": "GlobiSun Multimedia Corp. \u00b7 B2B Art Supply Sourcing",
+        "heading": "Wholesale Art Supply Sourcing for Schools, Studios & Creative Buyers",
+        "subheading": "A California-based B2B supply portal for education programs, art studios, workshops, resellers, and creative teams that need bulk art materials, quote review, kit planning, and custom sourcing support.",
+        "primary_label": "Request a Wholesale Quote",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Browse Wholesale Catalog",
+        "secondary_link": "/collections/all",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "collection_list_b2b": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_frontpage": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "featured_collection_acrylic_markers": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "acrylic-markers"
+          }
+        },
+        "featured_collection_alcohol_markers": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "alcohol-marker-pens"
+          }
+        },
+        "featured_collection_acrylic_paints": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "acrylic-paints"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_frontpage",
+        "featured_collection_acrylic_markers",
+        "featured_collection_alcohol_markers",
+        "featured_collection_acrylic_paints"
+      ],
+      "settings": {
+        "title": "Wholesale Product Categories",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_b2b": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "acrylic-paints",
+        "products_to_show": 8,
+        "title": "Available Product Lines",
+        "heading_size": "h1",
+        "description": "Browse current products and contact us for bulk pricing, case-pack options, or custom sourcing support.",
+        "show_description": true,
+        "description_style": "subtitle",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    },
+    "quote_form_home": {
+      "type": "globisun-quote-form",
+      "settings": {
+        "eyebrow": "Start the quote",
+        "heading": "Request a wholesale quote or sourcing review.",
+        "intro": "Send product category, expected quantity, delivery ZIP code, timeline, and intended use. Clear details help us review pricing, packaging, lead time, and substitutions faster.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "b2b_content_hub": {
+      "type": "globisun-b2b-content-hub",
+      "settings": {
+        "eyebrow": "B2B operating model",
+        "heading": "A quote-based supply portal, not just a product grid.",
+        "intro": "GlobiSun is structured for organizations that need product planning, bulk quantities, and professional communication before checkout. This makes the site more useful for schools, studios, resellers, supplier discussions, and documentation-heavy purchasing.",
+        "primary_label": "Submit Wholesale Inquiry",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Explore Custom Sourcing",
+        "secondary_link": "/pages/custom-sourcing",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "procurement_matrix": {
+      "type": "globisun-procurement-matrix",
+      "settings": {
+        "eyebrow": "Procurement packages",
+        "heading": "Four practical ways buyers can use GlobiSun.",
+        "intro": "These are buyer pathways that help schools, studios, resellers, and creative teams explain what they need before a quote.",
+        "cta_label": "Start a Quote Request",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "capability_stack": {
+      "type": "globisun-capability-stack",
+      "settings": {
+        "eyebrow": "Procurement capability",
+        "heading": "Built for buyers who need planning before checkout.",
+        "intro": "GlobiSun is positioned around B2B purchasing conversations: product fit, quantity, timeline, delivery requirements, and practical alternatives.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "supplier_partner": {
+      "type": "globisun-supplier-partner",
+      "settings": {
+        "eyebrow": "Supplier & buyer bridge",
+        "heading": "A cleaner bridge between suppliers, creative buyers, and U.S. purchasing needs.",
+        "intro": "GlobiSun presents a professional front for product sourcing, supplier conversations, and quote-based purchasing requests tied to art education, creative retail, studios, and multimedia projects.",
+        "cta_label": "Contact GlobiSun",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "b2b_faq": {
+      "type": "globisun-b2b-faq",
+      "settings": {
+        "eyebrow": "B2B FAQ",
+        "heading": "Common wholesale questions.",
+        "intro": "Clear answers help buyers understand quotes, sourcing, kits, and documentation before they submit an inquiry.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "resource_hub": {
+      "type": "globisun-resource-hub",
+      "settings": {
+        "eyebrow": "Buyer resource hub",
+        "heading": "Useful purchasing pages before you request a quote.",
+        "intro": "These pages make the site feel more complete for B2B buyers, suppliers, banks, and documentation-heavy conversations.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "solutions_map": {
+      "type": "globisun-solutions-map",
+      "settings": {
+        "eyebrow": "Buyer paths",
+        "heading": "Four practical ways to use GlobiSun.",
+        "intro": "A cleaner path helps visitors understand whether they should browse products, request a kit, ask for custom sourcing, or discuss reseller quantities.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "proof_system": {
+      "type": "globisun-proof-system",
+      "settings": {
+        "eyebrow": "Why GlobiSun",
+        "heading": "A more professional purchasing experience for creative supply needs.",
+        "intro": "Every section of the site is built to make the business easier to understand for buyers, suppliers, banks, and documentation-heavy conversations.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "quote_readiness": {
+      "type": "globisun-quote-readiness",
+      "settings": {
+        "eyebrow": "Quote readiness",
+        "heading": "A better request gets a better B2B response.",
+        "intro": "The fastest way to receive a useful quote is to send a clear purchasing brief. GlobiSun reviews requests by product fit, quantity, supplier availability, delivery feasibility, and timeline.",
+        "cta_label": "Prepare a Wholesale Inquiry",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "catalog_index": {
+      "type": "globisun-catalog-index",
+      "settings": {
+        "eyebrow": "Choose a path",
+        "heading": "Start from the buying need, not only the product name.",
+        "intro": "B2B buyers often begin with a program, class, inventory plan, or resale goal. Use this index to choose the best path before requesting a quote.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "implementation_roadmap": {
+      "type": "globisun-implementation-roadmap",
+      "settings": {
+        "eyebrow": "How the workflow works",
+        "heading": "From catalog interest to a practical purchasing conversation.",
+        "intro": "The goal is to move buyers from browsing into a structured conversation about product fit, quantity, delivery, timing, and documentation.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v7_procurement_brief": {
+      "type": "globisun-procurement-brief",
+      "settings": {
+        "eyebrow": "Purchasing brief",
+        "heading": "A clear request makes bulk pricing and sourcing review easier.",
+        "intro": "Tell us the category, quantity, budget range, ZIP code, timeline, and whether substitutes are acceptable. This gives GlobiSun enough context to review realistic next steps.",
+        "cta_label": "Use the Quote Form",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v8_positioning": {
+      "type": "globisun-market-positioning",
+      "settings": {
+        "eyebrow": "B2B positioning",
+        "heading": "A wholesale-first site that explains what GlobiSun does before a buyer asks for pricing.",
+        "intro": "GlobiSun guides visitors through product discovery, procurement brief preparation, custom sourcing, and quote review so buyers and suppliers can understand the business model quickly.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v8_quality_standards": {
+      "type": "globisun-quality-standards",
+      "settings": {
+        "eyebrow": "Procurement logic",
+        "heading": "Built around the questions serious buyers actually ask.",
+        "intro": "Instead of pushing one-click retail checkout, GlobiSun frames the conversation around MOQ, case pack, delivery ZIP code, order timing, substitutes, and use case.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v10_trust_bar": {
+      "type": "globisun-trust-bar",
+      "settings": {
+        "eyebrow": "B2B operating model",
+        "heading": "A clear wholesale inquiry path for buyers who need quantity, timing, and sourcing reviewed.",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "model": {
+          "type": "item",
+          "settings": {
+            "label": "Order model",
+            "value": "Bulk quote review"
+          }
+        },
+        "buyers": {
+          "type": "item",
+          "settings": {
+            "label": "Primary buyers",
+            "value": "Schools \u00b7 studios \u00b7 resellers"
+          }
+        },
+        "sourcing": {
+          "type": "item",
+          "settings": {
+            "label": "Support focus",
+            "value": "Catalog + custom sourcing"
+          }
+        },
+        "review": {
+          "type": "item",
+          "settings": {
+            "label": "Review point",
+            "value": "$500+ wholesale requests"
+          }
+        }
+      },
+      "block_order": [
+        "model",
+        "buyers",
+        "sourcing",
+        "review"
+      ]
+    },
+    "v10_executive": {
+      "type": "globisun-executive-summary",
+      "settings": {
+        "eyebrow": "Company summary",
+        "heading": "A professional procurement identity for creative supply buyers.",
+        "intro": "GlobiSun helps buyers turn product interest into a clear B2B purchasing conversation: what is needed, how much is needed, where it is going, when it is needed, and whether substitutes or kit formats are acceptable.",
+        "primary_label": "Start a Wholesale Inquiry",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Read About GlobiSun",
+        "secondary_link": "/pages/about-globisun",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "procurement": {
+          "type": "capability",
+          "settings": {
+            "kicker": "01 \u00b7 Procurement",
+            "title": "Structured quote workflow",
+            "text": "A clear route from product reference to quantity review, case-pack discussion, delivery feasibility, and order next steps."
+          }
+        },
+        "catalog": {
+          "type": "capability",
+          "settings": {
+            "kicker": "02 \u00b7 Catalog",
+            "title": "Product lines as buying references",
+            "text": "The catalog helps buyers identify categories and specifications before requesting bulk pricing or related sourcing."
+          }
+        },
+        "sourcing": {
+          "type": "capability",
+          "settings": {
+            "kicker": "03 \u00b7 Sourcing",
+            "title": "Custom supply support",
+            "text": "If a listed item is not the exact fit, GlobiSun can review adjacent products, substitutes, bundles, and kit-friendly formats."
+          }
+        }
+      },
+      "block_order": [
+        "procurement",
+        "catalog",
+        "sourcing"
+      ]
+    },
+    "v10_decision_guide": {
+      "type": "globisun-decision-guide",
+      "settings": {
+        "eyebrow": "Buyer decision guide",
+        "heading": "Start with the request path that matches your buying situation.",
+        "intro": "A focused request helps GlobiSun review the right category, quantity logic, substitutions, and delivery feasibility faster.",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "exact": {
+          "type": "path",
+          "settings": {
+            "badge": "Exact product",
+            "title": "I know the item or category",
+            "text": "Send product reference, desired quantity, ZIP code, and timeline. This is the fastest route for quote review.",
+            "next_step": "Next: request a bulk quote."
+          }
+        },
+        "kit": {
+          "type": "path",
+          "settings": {
+            "badge": "Program kit",
+            "title": "I need supplies for a class or workshop",
+            "text": "Send class size, age range, session length, materials needed, budget, and deadline.",
+            "next_step": "Next: request kit planning support."
+          }
+        },
+        "resale": {
+          "type": "path",
+          "settings": {
+            "badge": "Resale mix",
+            "title": "I am testing inventory for resale",
+            "text": "Send target categories, quantity range, and whether mixed SKUs or substitutes are acceptable.",
+            "next_step": "Next: ask for reseller sourcing."
+          }
+        },
+        "custom": {
+          "type": "path",
+          "settings": {
+            "badge": "Not sure",
+            "title": "I need sourcing guidance",
+            "text": "Send your use case, budget, and examples. We can help narrow the sourcing direction.",
+            "next_step": "Next: start custom sourcing."
+          }
+        }
+      },
+      "block_order": [
+        "exact",
+        "kit",
+        "resale",
+        "custom"
+      ]
+    },
+    "v10_seo_copy": {
+      "type": "globisun-seo-landing-copy",
+      "settings": {
+        "eyebrow": "Wholesale art supply sourcing",
+        "heading": "B2B art supplies for education, studios, resellers, and creative programs.",
+        "body": "<p>GlobiSun supports wholesale art supply inquiries for schools, art studios, workshop organizers, small retailers, and creative production teams. Buyers can use the catalog as a product reference, prepare a procurement brief, and contact us for quote-based review involving quantity, delivery ZIP code, timeline, product fit, and custom sourcing needs.</p>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v101_minimum_order": {
+      "type": "globisun-minimum-order",
+      "settings": {
+        "eyebrow": "Wholesale minimum",
+        "heading": "$500 starting point for efficient B2B sourcing.",
+        "intro": "GlobiSun currently supports wholesale and sourcing orders starting at $500 USD before shipping and taxes. This minimum helps keep overseas freight, carton weight, packaging, supplier coordination, and bulk handling costs practical.",
+        "minimum_label": "$500+ USD",
+        "minimum_text": "Recommended starting point for wholesale quote review before final shipping, taxes, and supplier confirmation.",
+        "note": "Not sure whether your request fits? Submit product category, estimated quantity, budget range, ZIP code, and timeline for review.",
+        "cta_label": "Request Quote Review",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "globisun_b2b_home",
+    "v101_minimum_order",
+    "v10_trust_bar",
+    "v10_executive",
+    "catalog_index",
+    "collection_list_b2b",
+    "featured_collection_b2b",
+    "v10_decision_guide",
+    "implementation_roadmap",
+    "quote_form_home",
+    "v10_seo_copy"
+  ]
+}

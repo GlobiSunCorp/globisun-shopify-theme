@@ -1,0 +1,31 @@
+{%- liquid
+  assign globisun_minimum_order_cents = 50000
+  assign globisun_cart_total = cart.total_price
+  assign globisun_remaining = globisun_minimum_order_cents | minus: globisun_cart_total
+  assign globisun_progress = globisun_cart_total | times: 100 | divided_by: globisun_minimum_order_cents
+  if globisun_progress > 100
+    assign globisun_progress = 100
+  endif
+-%}
+
+{%- if cart != empty -%}
+  <div class="globisun-minimum-cart globisun-minimum-cart--{{ mode | default: 'standard' }}{% if globisun_remaining <= 0 %} globisun-minimum-cart--met{% endif %}" role="status">
+    <div class="globisun-minimum-cart__head">
+      <strong>Wholesale minimum: $500 USD</strong>
+      {%- if globisun_remaining > 0 -%}
+        <span>Add {{ globisun_remaining | money }} more to reach the wholesale checkout target.</span>
+      {%- else -%}
+        <span>Minimum target reached. Your order is ready for checkout or quote review.</span>
+      {%- endif -%}
+    </div>
+    <div class="globisun-minimum-cart__track" aria-hidden="true"><span style="width: {{ globisun_progress }}%"></span></div>
+    <p>
+      GlobiSun uses a $500 wholesale minimum before shipping and taxes to keep freight, packaging, supplier coordination, and bulk handling practical.
+      {%- if globisun_remaining > 0 -%}
+        You can add more items or <a href="/pages/contact">submit a quote request</a> for review.
+      {%- else -%}
+        Final availability, shipping, and lead time are still reviewed by product, quantity, and destination.
+      {%- endif -%}
+    </p>
+  </div>
+{%- endif -%}

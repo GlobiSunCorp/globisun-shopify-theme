@@ -1,0 +1,128 @@
+{
+  "sections": {
+    "catalog_intro": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "Wholesale catalog",
+        "heading": "Wholesale catalog reference",
+        "intro": "Browse this product category as a B2B reference, then send quantity, ZIP code, timeline, budget, and acceptable substitutions for quote review.",
+        "body": "<p>Availability, case-pack options, and wholesale pricing may depend on quantity, supplier conditions, and destination. For faster review, send product names, estimated quantity, delivery ZIP code, budget range, and timeline.</p>",
+        "show_cta": false,
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 36,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
+    "collection_procurement": {
+      "type": "globisun-procurement-matrix",
+      "settings": {
+        "eyebrow": "Buyer pathways",
+        "heading": "Not sure what to choose? Start with a purchasing pathway.",
+        "intro": "These pathways help clarify whether you are buying for a classroom, studio, resale program, or creative project.",
+        "cta_label": "Request Catalog Support",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "collection_quote": {
+      "type": "globisun-quote-form",
+      "settings": {
+        "eyebrow": "Catalog inquiry",
+        "heading": "Request pricing for this category.",
+        "intro": "Tell us which product line you are reviewing, expected quantity, destination ZIP code, budget range, and timeline.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "collection_faq": {
+      "type": "globisun-b2b-faq",
+      "settings": {
+        "eyebrow": "Catalog FAQ",
+        "heading": "Before you request catalog pricing.",
+        "intro": "A few notes that help set expectations for catalog availability, custom sourcing, and B2B quoting.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "resource_hub_collection": {
+      "type": "globisun-resource-hub",
+      "settings": {
+        "eyebrow": "Catalog resources",
+        "heading": "Need policy, lead time, or sourcing details?",
+        "intro": "Review supporting B2B pages before sending a catalog inquiry.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "collection_buyer_guide": {
+      "type": "globisun-collection-buyer-guide",
+      "settings": {
+        "eyebrow": "Catalog buying guide",
+        "heading": "How to use this catalog category",
+        "intro": "Use the products here as references for your purchasing brief. Exact pricing and lead time depend on quantity, case pack, destination, and supplier availability.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "catalog_index_collection": {
+      "type": "globisun-catalog-index",
+      "settings": {
+        "eyebrow": "More ways to source",
+        "heading": "Need a different category or custom kit?",
+        "intro": "Move from this category into custom sourcing, school kits, or another product line if the listed catalog does not match the full request.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "breadcrumbs": {
+      "type": "globisun-breadcrumbs",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
+    "collection_brief": {
+      "type": "globisun-procurement-brief",
+      "settings": {
+        "eyebrow": "Catalog quote brief",
+        "heading": "Turn catalog browsing into a useful bulk request.",
+        "intro": "After reviewing products, send item names, quantities, delivery ZIP code, timeline, and acceptable substitutes so we can review practical B2B options.",
+        "cta_label": "Request Catalog Support",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v8_collection_standards": {
+      "type": "globisun-quality-standards",
+      "settings": {
+        "eyebrow": "Catalog review",
+        "heading": "A better catalog request includes more than a product link.",
+        "intro": "For B2B review, include quantity, delivery destination, timing, use case, and whether alternative products are acceptable.",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "catalog_intro",
+    "main-collection-product-grid",
+    "collection_brief",
+    "collection_buyer_guide",
+    "catalog_index_collection",
+    "collection_quote"
+  ]
+}

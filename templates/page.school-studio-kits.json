@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "main": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "School & Studio Kits",
+        "heading": "Practical art material kits for teaching and creative programs",
+        "intro": "GlobiSun can help organize product combinations for art classes, camps, workshops, studio programs, and visual learning environments.",
+        "body": "<p>School and studio kits are designed around practical use: what students need, what instructors can manage, and what programs can reorder consistently.</p><h2>Potential kit types</h2><ul><li>Intro painting kits</li><li>Drawing and marker kits</li><li>Workshop supply bundles</li><li>Camp or event art material packs</li><li>Studio starter inventory sets</li></ul><p>We can review quantity, budget, age group, class format, and preferred materials to help prepare suitable sourcing options.</p><h2>Kit planning inputs</h2><ul><li>Age group or student level</li><li>Class size or expected number of participants</li><li>Project duration and frequency</li><li>Preferred medium such as acrylic, marker, sketching, or mixed media</li><li>Budget range and acceptable substitutions</li></ul><p>For repeating programs, we can review restock-friendly combinations instead of one-time-only item lists.</p>",
+        "show_cta": true,
+        "cta_eyebrow": "Next step",
+        "cta_heading": "Send us your product list or sourcing request.",
+        "cta_text": "We can review product category, quantity, lead time, and suitable B2B options.",
+        "cta_label": "Request a Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "For educators",
+            "text": "Support for class materials, age-appropriate tools, and repeatable program supply planning."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "For studios",
+            "text": "Flexible product combinations for workshops, private lessons, and group sessions."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "For programs",
+            "text": "Options for camps, events, community art projects, and seasonal creative activities."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

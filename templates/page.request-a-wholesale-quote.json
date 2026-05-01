@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "form": {
+      "type": "globisun-quote-form",
+      "settings": {
+        "eyebrow": "Wholesale inquiry",
+        "heading": "Submit your wholesale inquiry.",
+        "intro": "Share the details needed for review: product scope, quantity, destination, timeline, and intended use.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "prep": {
+      "type": "globisun-procurement-matrix",
+      "settings": {
+        "eyebrow": "Before you request a quote",
+        "heading": "Choose the pathway closest to your purchase.",
+        "intro": "The more specific the use case, quantity, destination, and timeline, the more useful the review can be.",
+        "cta_label": "Go to Form",
+        "cta_link": "#GlobiSunWholesaleContact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v8_quote_positioning": {
+      "type": "globisun-market-positioning",
+      "settings": {
+        "eyebrow": "Wholesale quote process",
+        "heading": "Request pricing with the information a B2B supplier actually needs.",
+        "intro": "A quote request should include product category, quantity, budget, destination ZIP code, timeline, buyer type, and whether comparable substitutes are acceptable.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "breadcrumbs": {
+      "type": "globisun-breadcrumbs",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "v8_quote_positioning",
+    "prep",
+    "form"
+  ]
+}

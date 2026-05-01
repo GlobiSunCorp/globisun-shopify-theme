@@ -1,0 +1,51 @@
+<section class="globisun-hub color-{{ section.settings.color_scheme }} gradient">
+  <div class="globisun-wrap">
+    <div class="globisun-hub__grid">
+      <div>
+        <p class="globisun-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.intro }}</p>
+        <div class="globisun-actions">
+          <a class="button button--primary" href="{{ section.settings.primary_link | default: '/pages/contact' }}">{{ section.settings.primary_label }}</a>
+          <a class="button button--secondary" href="{{ section.settings.secondary_link | default: '/pages/custom-sourcing' }}">{{ section.settings.secondary_label }}</a>
+        </div>
+      </div>
+      <div class="globisun-hub__rail">
+        <article class="globisun-card"><span class="globisun-card__label">Supply planning</span><h3>From single SKU to program kit</h3><p>Use catalog items as a starting point, then request custom combinations, quantity review, and use-case-specific suggestions.</p></article>
+        <article class="globisun-card"><span class="globisun-card__label">Buyer clarity</span><h3>Better quote details, fewer back-and-forth messages</h3><p>Each inquiry is structured around quantity, budget, delivery ZIP code, deadline, and intended use so the request can be reviewed professionally.</p></article>
+      </div>
+    </div>
+
+    <div class="globisun-section-head" style="margin-top: clamp(46px, 7vw, 94px);">
+      <p class="globisun-eyebrow">Capability map</p>
+      <h2>What the site now communicates to B2B buyers.</h2>
+    </div>
+    <div class="globisun-card-grid globisun-card-grid--three">
+      <article class="globisun-card"><h3>Wholesale purchasing</h3><p>MOQ guidance, quantity-based review, and quote-first purchasing for non-retail buyers.</p></article>
+      <article class="globisun-card"><h3>Custom sourcing</h3><p>Support for product categories, color sets, packaging formats, classroom packs, and reseller needs.</p></article>
+      <article class="globisun-card"><h3>School & studio kits</h3><p>Supply bundle planning for class formats, workshops, camps, community programs, and private studios.</p></article>
+      <article class="globisun-card"><h3>Product documentation</h3><p>Clear pages for lead time, wholesale policy, resale certificate notes, and order-specific review.</p></article>
+      <article class="globisun-card"><h3>Creative industry fit</h3><p>Positioning tied to visual communication, concept art, design education, and creative production needs.</p></article>
+      <article class="globisun-card"><h3>Supplier-facing credibility</h3><p>A cleaner company identity that helps when contacting suppliers, partners, banks, and business buyers.</p></article>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "GlobiSun B2B content hub",
+  "tag": "section",
+  "class": "section globisun-section",
+  "settings": [
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "B2B operating model"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "A quote-based supply portal, not just a product grid."},
+    {"type": "textarea", "id": "intro", "label": "Intro", "default": "GlobiSun is structured for organizations that need product planning, bulk quantities, and professional communication before checkout. This makes the site more useful for schools, studios, resellers, and supplier discussions."},
+    {"type": "text", "id": "primary_label", "label": "Primary button label", "default": "Submit Wholesale Inquiry"},
+    {"type": "url", "id": "primary_link", "label": "Primary button link"},
+    {"type": "text", "id": "secondary_label", "label": "Secondary button label", "default": "Explore Custom Sourcing"},
+    {"type": "url", "id": "secondary_link", "label": "Secondary button link"},
+    {"type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1"}
+  ],
+  "presets": [{"name": "GlobiSun B2B content hub"}]
+}
+{% endschema %}

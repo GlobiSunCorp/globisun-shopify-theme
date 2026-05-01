@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "Wholesale policy",
+        "heading": "B2B purchasing guidelines",
+        "intro": "GlobiSun supports quote-based wholesale purchasing and sourcing requests starting at $500 USD before shipping and taxes.",
+        "body": "<h2>$500 wholesale minimum</h2><p>GlobiSun currently supports wholesale and sourcing orders starting at <strong>$500 USD before shipping and taxes</strong>. This minimum helps keep overseas freight, carton weight, packaging, supplier coordination, and bulk handling costs efficient for B2B buyers.</p><h2>Why the minimum exists</h2><p>Many art supply orders are sourced, packed, or reviewed by carton weight, case pack, supplier availability, and shipping feasibility. A $500 starting point keeps the order volume practical enough to review freight, lead time, and product substitutions professionally.</p><h2>Smaller sample requests</h2><p>Smaller sample or planning requests may be reviewed case by case, but they are not guaranteed. If your request is below $500, please submit a quote inquiry instead of checking out directly.</p><h2>Pricing</h2><p>Bulk pricing is reviewed by quantity, product type, availability, delivery destination, and requested timeline. Some products may be available only by quote.</p><h2>Lead time</h2><p>Lead time depends on product availability, quantity, supplier processing, shipping method, and delivery requirements. Please include your target date when submitting an inquiry.</p><h2>Order review</h2><p>Submitting an inquiry does not guarantee availability or final pricing. We review each request and respond with suitable next steps when the request is a fit.</p><h2>Quote validity</h2><p>Wholesale quote details may change if supplier availability, quantity, shipping destination, or requested timeline changes before order confirmation.</p><h2>Product substitutions</h2><p>When a specific product is unavailable, GlobiSun may suggest similar alternatives based on intended use, budget, and timing.</p>",
+        "show_cta": true,
+        "cta_eyebrow": "Next step",
+        "cta_heading": "Send us your product list or sourcing request.",
+        "cta_text": "We can review product category, quantity, lead time, and suitable B2B options.",
+        "cta_label": "Request a Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "MOQ guidance",
+            "text": "Wholesale orders start at $500 before shipping and taxes. Smaller sample requests are reviewed case by case."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Quote-based pricing",
+            "text": "Pricing is reviewed based on product, quantity, destination, and timing."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "B2B communication",
+            "text": "Clear details help us respond faster and more accurately."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ]
+    },
+    "v101_minimum_order": {
+      "type": "globisun-minimum-order",
+      "settings": {
+        "eyebrow": "Wholesale minimum",
+        "heading": "$500 minimum order target before shipping and taxes.",
+        "intro": "This policy supports efficient B2B sourcing, overseas freight planning, packing, supplier coordination, and bulk handling.",
+        "minimum_label": "$500+ USD",
+        "minimum_text": "Applies to standard wholesale order review before shipping, taxes, and final quote confirmation.",
+        "note": "Below the minimum? Submit a quote request for sample or planning review instead of checking out directly.",
+        "cta_label": "Submit Quote Request",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "v101_minimum_order",
+    "main"
+  ]
+}

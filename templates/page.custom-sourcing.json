@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "main": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "Custom sourcing",
+        "heading": "Tell us what you need — we help review product options",
+        "intro": "GlobiSun supports custom sourcing requests for art supplies, classroom kits, studio materials, workshop packages, and reseller product planning.",
+        "body": "<p>Not every B2B purchasing need fits a standard product page. If you need a specific color set, material type, kit format, packaging quantity, or product category, send us the details and we can review suitable sourcing options.</p><h2>Good requests include</h2><ul><li>Product category or reference image</li><li>Estimated quantity or budget range</li><li>Delivery ZIP code and timeline</li><li>Target use case, such as class, studio, camp, resale, or event</li><li>Any packaging, labeling, or kit-combination requirements</li></ul><p>Availability, lead time, and pricing may vary based on quantity and supplier conditions.</p><h2>What we can review</h2><ul><li>Similar products when the exact item is unavailable</li><li>Alternative packaging formats or color combinations</li><li>Classroom pack and studio restock formats</li><li>Budget-sensitive substitutions</li><li>Potential resale-friendly product mixes</li></ul><h2>What we cannot promise automatically</h2><p>Custom sourcing depends on supplier availability, quantity, timeline, and product suitability. A request is reviewed before pricing or availability is confirmed.</p>",
+        "show_cta": true,
+        "cta_eyebrow": "Next step",
+        "cta_heading": "Send us your product list or sourcing request.",
+        "cta_text": "We can review product category, quantity, lead time, and suitable B2B options.",
+        "cta_label": "Request a Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "Classroom kits",
+            "text": "Combine paints, brushes, markers, papers, and accessories for structured learning programs."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Studio inventory",
+            "text": "Source recurring materials for workshops, private studios, and creative sessions."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "Reseller planning",
+            "text": "Review products for small retail, e-commerce, and local resale opportunities."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

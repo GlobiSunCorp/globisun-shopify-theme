@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "main": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "About GlobiSun",
+        "heading": "A California-based creative supply and multimedia business",
+        "intro": "GlobiSun serves artists, educators, studios, creative organizations, and small business buyers through B2B art supply sourcing and creative production support.",
+        "body": "<p>GlobiSun is a California-based creative supply and multimedia business serving artists, educators, studios, and creative organizations.</p><p>Our art supply division focuses on B2B wholesale sourcing for drawing, painting, classroom, studio, and creative program needs. We help schools, art studios, workshop organizers, small retailers, and creative teams access practical, reliable, and cost-conscious art materials through flexible sourcing and bulk-order support.</p><p>Beyond product supply, GlobiSun is built around a broader creative ecosystem. Our background in visual communication, digital media, concept art, and creative production helps us understand how art materials are used in classrooms, studios, content creation, animation, game design, and hands-on learning environments.</p><p>Whether you are preparing a classroom program, building studio inventory, sourcing products for resale, or planning a creative workshop, GlobiSun aims to provide responsive support, practical product options, and a professional B2B purchasing experience.</p><h2>Our operating focus</h2><p>GlobiSun connects product supply, creative education, and multimedia production experience into one practical B2B platform. The company site is designed to communicate clearly with schools, studios, suppliers, small business buyers, and operational partners.</p><h2>Why B2B buyers contact us</h2><ul><li>They need more than a single retail purchase</li><li>They want product combinations for a class, camp, or workshop</li><li>They need supplier availability reviewed before placing a larger order</li><li>They want a clearer quote process for planning and approval</li></ul>",
+        "show_cta": true,
+        "cta_eyebrow": "Next step",
+        "cta_heading": "Send us your product list or sourcing request.",
+        "cta_text": "We can review product category, quantity, lead time, and suitable B2B options.",
+        "cta_label": "Request a Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "extra1": {
+          "type": "card",
+          "settings": {
+            "title": "California-based business identity",
+            "text": "Company presentation, contact flow, and B2B positioning are kept consistent across the site."
+          }
+        },
+        "extra2": {
+          "type": "card",
+          "settings": {
+            "title": "Supply plus creative context",
+            "text": "The site connects art supply sourcing with visual education, digital media, and creative production needs."
+          }
+        },
+        "extra3": {
+          "type": "card",
+          "settings": {
+            "title": "Practical buyer workflow",
+            "text": "Buyers are guided toward quote requests with product, quantity, ZIP code, and timeline details."
+          }
+        }
+      },
+      "block_order": [
+        "extra1",
+        "extra2",
+        "extra3"
+      ]
+    },
+    "proof_system": {
+      "type": "globisun-proof-system",
+      "settings": {
+        "eyebrow": "Business model",
+        "heading": "GlobiSun connects art supply sourcing with creative education and studio needs.",
+        "intro": "The company site is designed to communicate a practical B2B supply model for buyers, suppliers, and professional review.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "solutions_map": {
+      "type": "globisun-solutions-map",
+      "settings": {
+        "eyebrow": "Buyer groups",
+        "heading": "Who GlobiSun is built to support.",
+        "intro": "Schools, studios, resellers, and creative teams can use the site as a starting point for quote-based art supply purchasing.",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "proof_system",
+    "solutions_map"
+  ]
+}

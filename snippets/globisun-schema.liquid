@@ -1,0 +1,72 @@
+{%- comment -%}
+  GlobiSun organization/search structured data.
+  Product schema is intentionally left to Dawn's native {{ product | structured_data }} output to avoid duplicate Product markup.
+{%- endcomment -%}
+{%- liquid
+  assign globisun_org_name = 'GlobiSun Multimedia Corp.'
+  assign globisun_description = 'California-based B2B art supply sourcing and creative supply support for schools, studios, workshops, resellers, and creative teams.'
+  assign globisun_email = 'admin@globisun.art'
+  assign globisun_org_id = shop.url | append: '#organization'
+-%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": {{ globisun_org_id | json }},
+  "name": {{ globisun_org_name | json }},
+  "legalName": {{ globisun_org_name | json }},
+  "alternateName": "GlobiSun Art Supply",
+  "url": {{ shop.url | json }},
+  "email": {{ globisun_email | json }},
+  "description": {{ globisun_description | json }},
+  "areaServed": "United States",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": {{ globisun_email | json }},
+    "contactType": "B2B wholesale inquiry",
+    "areaServed": "US",
+    "availableLanguage": ["English"]
+  }],
+  "slogan": "Wholesale art supply sourcing for schools, studios, and creative buyers",
+  "knowsAbout": [
+    "B2B art supply sourcing",
+    "Wholesale art materials",
+    "Classroom art supplies",
+    "Studio supply planning",
+    "Creative production support",
+    "Custom art kits"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "B2B art supply sourcing catalog",
+    "itemListElement": [
+      {"@type":"OfferCatalog","name":"Painting supplies"},
+      {"@type":"OfferCatalog","name":"Drawing and marker supplies"},
+      {"@type":"OfferCatalog","name":"School and studio kits"},
+      {"@type":"OfferCatalog","name":"Custom sourcing support"}
+    ]
+  }
+}
+</script>
+
+{%- if request.page_type == 'index' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ shop.name | json }},
+  "url": {{ shop.url | json }},
+  "publisher": {"@id": {{ globisun_org_id | json }}},
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {{ shop.url | append: routes.search_url | append: '?q={search_term_string}' | json }},
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{%- endif -%}

@@ -1,0 +1,24 @@
+{%- comment -%}FAQPage schema only on B2B-relevant pages to avoid irrelevant global markup.{%- endcomment -%}
+{%- liquid
+  assign show_faq_schema = false
+  if request.page_type == 'index' or request.page_type == 'product' or request.page_type == 'collection'
+    assign show_faq_schema = true
+  elsif request.page_type == 'page'
+    if page.handle contains 'wholesale' or page.handle contains 'sourcing' or page.handle contains 'school' or page.handle contains 'contact' or page.handle contains 'quote'
+      assign show_faq_schema = true
+    endif
+  endif
+-%}
+{%- if show_faq_schema -%}
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Do you support wholesale or bulk orders?","acceptedAnswer":{"@type":"Answer","text":"GlobiSun reviews bulk purchasing requests by product category, quantity, destination ZIP code, timeline, and supplier availability."}},
+    {"@type":"Question","name":"Can schools or studios request custom supply kits?","acceptedAnswer":{"@type":"Answer","text":"Schools, studios, workshops, and creative programs can request kit review based on class size, project type, budget, and materials needed."}},
+    {"@type":"Question","name":"Can buyers request products not currently listed?","acceptedAnswer":{"@type":"Answer","text":"Buyers may submit custom sourcing requests with product type, specification, quantity, budget, acceptable substitutes, and delivery timeline."}}
+  ]
+}
+</script>
+{%- endif -%}

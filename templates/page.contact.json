@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "intro": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "Wholesale inquiry",
+        "heading": "Request a wholesale quote.",
+        "intro": "Send a structured procurement brief so GlobiSun can review product fit, quantity, delivery feasibility, timeline, sourcing options, and the $500 wholesale minimum.",
+        "body": "<p>For the fastest review, include the product category, expected quantity, budget range, delivery ZIP code, deadline, and whether similar alternatives are acceptable.</p><p>GlobiSun supports B2B inquiries for schools, art studios, workshops, small retailers, creative programs, and sourcing partners. Standard wholesale orders start at $500 USD before shipping and taxes; smaller sample requests may be reviewed case by case.</p>",
+        "show_cta": false,
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "Wholesale supply",
+            "text": "Bulk art materials for schools, studios, workshops, creative programs, and small retailers."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Custom sourcing",
+            "text": "Support for product combinations, classroom kits, color sets, and supplier availability review."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "Professional response",
+            "text": "Send clear order details so we can review pricing, lead time, and next steps."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ]
+    },
+    "form": {
+      "type": "globisun-quote-form",
+      "settings": {
+        "eyebrow": "B2B intake form",
+        "heading": "Submit your procurement brief.",
+        "intro": "Clear details help us review the $500 minimum, pricing, case packs, lead time, substitutions, and fulfillment options more efficiently.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "quote_readiness": {
+      "type": "globisun-quote-readiness",
+      "settings": {
+        "eyebrow": "Before you submit",
+        "heading": "Send a clear purchasing brief.",
+        "intro": "Quantity, destination ZIP code, timeline, buyer type, and product scope make it easier to respond with a practical next step.",
+        "cta_label": "Go to the form",
+        "cta_link": "#shopify-section-template--contact__form",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "implementation_roadmap": {
+      "type": "globisun-implementation-roadmap",
+      "settings": {
+        "eyebrow": "How requests move forward",
+        "heading": "From inquiry to quote review.",
+        "intro": "A structured inquiry helps GlobiSun review the product category, quantity, delivery ZIP code, timing, and possible sourcing path.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "breadcrumbs": {
+      "type": "globisun-breadcrumbs",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
+    "contact_brief": {
+      "type": "globisun-procurement-brief",
+      "settings": {
+        "eyebrow": "Before you submit",
+        "heading": "What to include in your request",
+        "intro": "A complete procurement brief helps us review product fit, substitutes, delivery timing, quote feasibility, and whether the request meets the $500 wholesale minimum.",
+        "cta_label": "Go to Inquiry Form",
+        "cta_link": "#shopify-section-template--contact__form",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v8_contact_standards": {
+      "type": "globisun-quality-standards",
+      "settings": {
+        "eyebrow": "Before submitting",
+        "heading": "A complete inquiry helps separate real purchasing requests from general messages.",
+        "intro": "The best requests include category, quantity, budget, delivery ZIP code, timeline, buyer type, and acceptable alternatives.",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "intro",
+    "contact_brief",
+    "form",
+    "implementation_roadmap"
+  ]
+}

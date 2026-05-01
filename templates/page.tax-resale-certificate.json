@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "main": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "Tax & Resale Certificate",
+        "heading": "Tax-inclusive pricing and resale documentation may depend on order type",
+        "intro": "For business buyers and resellers, tax handling may vary based on order details, location, and documentation.",
+        "body": "<p>Some wholesale orders may require resale certificate review or other business documentation. Requirements can depend on buyer type, destination, product category, and applicable tax rules.</p><p>If you are purchasing for resale, please mention that in your inquiry and include your business name, state, and available resale documentation details. We will review the request and provide next steps where applicable.</p><p>This page is provided for general purchasing workflow information and is not tax or legal advice.</p><h2>Business buyer notes</h2><p>Business name, state, resale documentation status, and intended resale use should be included in the inquiry when applicable.</p><h2>Important limitation</h2><p>Tax and resale certificate handling is reviewed case by case and this information is not legal or tax advice.</p>",
+        "show_cta": true,
+        "cta_eyebrow": "Next step",
+        "cta_heading": "Send us your product list or sourcing request.",
+        "cta_text": "We can review product category, quantity, lead time, and suitable B2B options.",
+        "cta_label": "Request a Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "For resellers",
+            "text": "Mention resale use clearly when submitting a wholesale inquiry."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Documentation",
+            "text": "Resale certificate review may be required before tax treatment is confirmed."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "Order-specific review",
+            "text": "Tax and documentation requirements can depend on buyer and destination."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

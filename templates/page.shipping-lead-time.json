@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "main": {
+      "type": "globisun-content-page",
+      "settings": {
+        "eyebrow": "Shipping & Lead Time",
+        "heading": "Delivery timing depends on product availability and order details",
+        "intro": "For wholesale and sourcing requests, delivery timing is reviewed based on product category, quantity, supplier availability, and destination.",
+        "body": "<p>GlobiSun reviews shipping and lead time on a case-by-case basis for B2B orders. Larger quantities, custom kits, or special sourcing requests may require additional preparation time.</p><h2>To help us estimate timing</h2><ul><li>Include your delivery ZIP code</li><li>Share the quantity and product category</li><li>Tell us your required delivery date</li><li>Note whether substitutes or similar products are acceptable</li></ul><p>Shipping costs, free-shipping eligibility, and delivery method may depend on order size and destination.</p><h2>Rush requests</h2><p>Urgent orders should clearly include the target delivery date and whether substitute products are acceptable. Rush feasibility is reviewed by product category and destination.</p><h2>Large or custom orders</h2><p>Orders requiring kitting, special quantities, or supplier sourcing may require additional preparation time before shipment.</p>",
+        "show_cta": true,
+        "cta_eyebrow": "Next step",
+        "cta_heading": "Send us your product list or sourcing request.",
+        "cta_text": "We can review product category, quantity, lead time, and suitable B2B options.",
+        "cta_label": "Request a Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "Delivery ZIP matters",
+            "text": "Shipping options and costs can change by destination."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Quantity matters",
+            "text": "Large and custom orders may require additional coordination."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "Timeline matters",
+            "text": "Tell us your target date so we can review feasibility."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

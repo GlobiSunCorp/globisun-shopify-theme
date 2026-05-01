@@ -1,0 +1,64 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "company_info": {
+          "type": "text",
+          "settings": {
+            "heading": "GlobiSun Multimedia Corp.",
+            "subtext": "<p>California-based B2B art supply sourcing and creative supply support for schools, studios, workshops, resellers, and creative teams.</p><p>Email: admin@globisun.art</p><p>$500 wholesale minimum \u00b7 Quote review \u00b7 Classroom kits \u00b7 Studio purchasing \u00b7 Custom sourcing review</p>"
+          }
+        },
+        "link_list_shop": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Catalog",
+            "menu": "shop"
+          }
+        },
+        "link_list_policy": {
+          "type": "link_list",
+          "settings": {
+            "heading": "B2B Support",
+            "menu": "policy"
+          }
+        }
+      },
+      "block_order": [
+        "company_info",
+        "link_list_shop",
+        "link_list_policy"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 44,
+        "padding_bottom": 48
+      }
+    },
+    "sticky_inquiry": {
+      "type": "globisun-sticky-inquiry",
+      "settings": {
+        "text": "Wholesale orders start at $500 before shipping and taxes. Send quantity, ZIP code, timeline, and substitutes for review.",
+        "label": "Request Quote",
+        "link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "sticky_inquiry",
+    "footer"
+  ]
+}

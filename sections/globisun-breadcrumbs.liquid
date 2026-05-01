@@ -1,0 +1,80 @@
+{%- comment -%}
+  GlobiSun B2B breadcrumbs. Lightweight HTML/CSS only; improves buyer navigation without adding JavaScript.
+{%- endcomment -%}
+<nav class="globisun-breadcrumbs color-{{ section.settings.color_scheme }} gradient" aria-label="Breadcrumb">
+  <div class="globisun-wrap">
+    <ol class="globisun-breadcrumbs__list">
+      <li><a href="{{ routes.root_url }}">Home</a></li>
+      {%- if request.page_type == 'collection' and collection -%}
+        <li aria-current="page">{{ collection.title }}</li>
+      {%- elsif request.page_type == 'product' and product -%}
+        <li><a href="{{ routes.collections_url }}">Catalog</a></li>
+        {%- if collection -%}<li><a href="{{ collection.url }}">{{ collection.title }}</a></li>{%- endif -%}
+        <li aria-current="page">{{ product.title }}</li>
+      {%- elsif request.page_type == 'page' and page -%}
+        <li aria-current="page">{{ page.title }}</li>
+      {%- else -%}
+        <li aria-current="page">{{ page_title }}</li>
+      {%- endif -%}
+    </ol>
+  </div>
+</nav>
+
+{%- liquid
+  assign breadcrumb_second_name = ''
+  assign breadcrumb_second_url = ''
+  assign breadcrumb_third_name = ''
+  assign breadcrumb_third_url = ''
+  if request.page_type == 'collection' and collection
+    assign breadcrumb_second_name = collection.title
+    assign breadcrumb_second_url = collection.url
+  elsif request.page_type == 'product' and product
+    assign breadcrumb_second_name = 'Catalog'
+    assign breadcrumb_second_url = routes.collections_url
+    assign breadcrumb_third_name = product.title
+    assign breadcrumb_third_url = product.url
+  elsif request.page_type == 'page' and page
+    assign breadcrumb_second_name = page.title
+    assign breadcrumb_second_url = page.url
+  endif
+-%}
+{%- if breadcrumb_second_name != blank -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ shop.url | json }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ breadcrumb_second_name | json }},
+      "item": {{ shop.url | append: breadcrumb_second_url | json }}
+    }{% if breadcrumb_third_name != blank %},
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_third_name | json }},
+      "item": {{ shop.url | append: breadcrumb_third_url | json }}
+    }{% endif %}
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "GlobiSun breadcrumbs",
+  "tag": "section",
+  "class": "section globisun-breadcrumbs-section",
+  "settings": [
+    {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}
+  ],
+  "presets": [{"name":"GlobiSun breadcrumbs"}]
+}
+{% endschema %}

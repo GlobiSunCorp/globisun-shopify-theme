@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "b2b_note": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"globisun-product-note globisun-product-note--v9\"><span>B2B catalog reference</span><strong>{{ product.title }}</strong><p>Use this item as a reference for bulk quote review, classroom or studio kit planning, reseller inventory exploration, or related sourcing. GlobiSun wholesale orders start at <strong>$500 USD before shipping and taxes</strong>. For faster review, include quantity, destination ZIP code, timeline, and whether similar substitutes are acceptable.</p></div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "bulk_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wholesale & Bulk Orders",
+            "icon": "box",
+            "content": "<p>GlobiSun wholesale orders start at $500 USD before shipping and taxes. Minimums, bulk pricing, package options, and lead time depend on quantity, supplier availability, carton weight, destination ZIP code, and timeline. Smaller sample requests may be reviewed case by case through the quote form.</p>",
+            "page": ""
+          }
+        },
+        "use_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Best For",
+            "icon": "clipboard",
+            "content": "<p>Classrooms, art studios, workshops, camps, creative programs, small retailers, and project-based visual teams.</p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "procurement_summary": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"globisun-product-note globisun-product-note--compact\"><strong>Before requesting a quote:</strong> confirm expected quantity, budget range, delivery ZIP code, deadline, and whether similar alternatives are acceptable.</div>"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "b2b_note",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "bulk_tab",
+        "use_tab",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "globisun_product_support": {
+      "type": "globisun-product-b2b",
+      "settings": {
+        "heading": "Bulk quote support for this product line.",
+        "intro": "Use this product as a reference point for wholesale pricing, classroom or studio quantities, case-pack review, lead time, and related sourcing options. Standard wholesale review starts at $500 USD before shipping and taxes.",
+        "quote_link": "/pages/contact",
+        "color_scheme": "scheme-1",
+        "default_moq": "$500+ before shipping/taxes",
+        "default_case_pack": "Reviewed by item",
+        "default_lead_time": "Based on quantity and destination",
+        "default_best_for": "Schools, studios, workshops, resellers",
+        "eyebrow": "Wholesale support"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Related product lines",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    },
+    "product_faq": {
+      "type": "globisun-b2b-faq",
+      "settings": {
+        "eyebrow": "Product quote notes",
+        "heading": "Buying this product for a group or program?",
+        "intro": "Use the product page as a reference point, then submit a quote request for quantity, timeline, and delivery review.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "resource_hub_product": {
+      "type": "globisun-resource-hub",
+      "settings": {
+        "eyebrow": "Product buying resources",
+        "heading": "Plan the order before you request product pricing.",
+        "intro": "Use these support pages for wholesale policy, shipping expectations, tax/resale notes, custom sourcing, and kit planning.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product_fit_guide": {
+      "type": "globisun-product-fit-guide",
+      "settings": {
+        "heading": "Check fit before requesting a quote.",
+        "intro": "Use this guide to frame your inquiry around quantity, packaging, timing, and practical use case.",
+        "default_moq": "$500+ order review",
+        "default_case_pack": "By request",
+        "default_lead_time": "Reviewed by quantity",
+        "default_best_for": "Schools, studios, workshops, resellers",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "breadcrumbs": {
+      "type": "globisun-breadcrumbs",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product_brief": {
+      "type": "globisun-procurement-brief",
+      "settings": {
+        "eyebrow": "Product quote brief",
+        "heading": "Turn this product page into a practical purchasing request.",
+        "intro": "Use the product name as a reference, then add quantity, use case, delivery ZIP code, target date, and any flexibility around substitutes or packaging.",
+        "cta_label": "Request Product Quote",
+        "cta_link": "/pages/contact",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "v8_product_standards": {
+      "type": "globisun-quality-standards",
+      "settings": {
+        "eyebrow": "Product review logic",
+        "heading": "Bulk product review depends on fit, quantity, timing, and destination.",
+        "intro": "For serious B2B orders, the product page is the starting point. Final availability, case pack, lead time, and pricing require a quote review.",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "globisun_product_support",
+    "product_fit_guide",
+    "related-products",
+    "resource_hub_product"
+  ]
+}

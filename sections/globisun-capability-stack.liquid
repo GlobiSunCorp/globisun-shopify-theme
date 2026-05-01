@@ -1,0 +1,35 @@
+<section class="globisun-capability color-{{ section.settings.color_scheme }} gradient">
+  <div class="globisun-wrap">
+    <div class="globisun-section-head globisun-section-head--center">
+      <p class="globisun-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.intro }}</p>
+    </div>
+    <div class="globisun-capability__grid">
+      <article class="globisun-capability__feature">
+        <span>01</span><h3>Classroom & program supply</h3>
+        <p>Structured art materials for classes, camps, after-school programs, workshops, and recurring studio sessions.</p>
+      </article>
+      <article class="globisun-capability__feature">
+        <span>02</span><h3>Wholesale inventory planning</h3>
+        <p>Product mix review for small retailers, resellers, community programs, and creative organizations.</p>
+      </article>
+      <article class="globisun-capability__feature">
+        <span>03</span><h3>Custom sourcing support</h3>
+        <p>Product category, size, color, packaging, and substitute review through supplier-side coordination.</p>
+      </article>
+      <article class="globisun-capability__feature">
+        <span>04</span><h3>Creative production fit</h3>
+        <p>Supply support informed by visual communication, concept art, multimedia, design education, and hands-on creative workflows.</p>
+      </article>
+    </div>
+    <div class="globisun-evidence-row" aria-label="B2B credibility signals">
+      <div><strong>Quote-first</strong><span>Better for non-standard quantities and project-based buying.</span></div>
+      <div><strong>Procurement-friendly</strong><span>MOQ, delivery ZIP, timeline, and tax/resale notes collected upfront.</span></div>
+      <div><strong>Category-flexible</strong><span>Supports current catalog items and sourcing requests beyond listed products.</span></div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{"name":"GlobiSun capability stack","tag":"section","class":"section globisun-section","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Procurement capability"},{"type":"text","id":"heading","label":"Heading","default":"Built for buyers who need planning before checkout."},{"type":"textarea","id":"intro","label":"Intro","default":"GlobiSun is positioned around B2B purchasing conversations: product fit, quantity, timeline, delivery requirements, and practical alternatives."},{"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}],"presets":[{"name":"GlobiSun capability stack"}]}
+{% endschema %}

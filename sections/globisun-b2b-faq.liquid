@@ -1,0 +1,45 @@
+<section class="globisun-faq color-{{ section.settings.color_scheme }} gradient">
+  <div class="globisun-wrap globisun-wrap--narrow">
+    <div class="globisun-section-head globisun-section-head--center">
+      <p class="globisun-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.intro }}</p>
+    </div>
+    <div class="globisun-faq__list">
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          <details {% if forloop.first %}open{% endif %} {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.question }}</summary>
+            <p>{{ block.settings.answer }}</p>
+          </details>
+        {%- endfor -%}
+      {%- else -%}
+        <details open><summary>Do you support wholesale or bulk orders?</summary><p>Yes. GlobiSun reviews bulk purchasing requests by product category, quantity, destination ZIP code, timeline, and supplier availability. A typical wholesale review starts around $500, depending on the order type.</p></details>
+        <details><summary>Can schools or studios request custom supply kits?</summary><p>Yes. Buyers can share class size, age range, project type, material preferences, and budget. GlobiSun can review suitable kit combinations or sourcing options.</p></details>
+        <details><summary>Are all products always in stock?</summary><p>Availability may change. Some products are catalog-ready, while others may require sourcing confirmation, case-pack review, or supplier-side availability checks before final pricing.</p></details>
+        <details><summary>Do you accept resale certificate information?</summary><p>Qualified resale or tax-exempt documentation can be reviewed during the quote process where applicable. Final tax treatment depends on order details and documentation.</p></details>
+        <details><summary>Can I request products not currently listed?</summary><p>Yes. The catalog is a starting point. For custom sourcing, send the product type, specification, quantity, budget, acceptable substitutes, and delivery timeline.</p></details>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name":"GlobiSun B2B FAQ",
+  "tag":"section",
+  "class":"section globisun-section",
+  "settings":[
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"B2B FAQ"},
+    {"type":"text","id":"heading","label":"Heading","default":"Common wholesale questions."},
+    {"type":"textarea","id":"intro","label":"Intro","default":"Clear answers help buyers understand how GlobiSun handles quotes, sourcing, kits, and documentation before they submit an inquiry."},
+    {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}
+  ],
+  "blocks":[
+    {"type":"faq_item","name":"FAQ item","settings":[
+      {"type":"text","id":"question","label":"Question","default":"Do you support wholesale or bulk orders?"},
+      {"type":"textarea","id":"answer","label":"Answer","default":"GlobiSun reviews bulk purchasing requests by category, quantity, ZIP code, timeline, and supplier availability."}
+    ]}
+  ],
+  "presets":[{"name":"GlobiSun B2B FAQ"}]
+}
+{% endschema %}
