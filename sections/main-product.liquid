@@ -1,0 +1,58 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<section class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width" style="padding:28px 20px 72px;">
+    <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px;">
+      <a href="/" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:rgb(var(--color-foreground));font-weight:900;"><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:#364247;color:#fff;">G</span><span>GlobiSun</span></a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;"><a class="button button--secondary" href="/">Home</a><a class="button button--secondary" href="/#shop-products">All Products</a><a class="button button--primary" href="/#bulk-inquiry">Bulk Inquiry</a></div>
+    </nav>
+
+    <div class="product product--medium product--left product--thumbnail grid grid--1-col grid--2-col-tablet">
+      <div class="grid__item product__media-wrapper">
+        {% if product.media.size > 0 %}
+          <div style="display:grid;gap:14px;">
+            {% for media in product.media limit: 8 %}
+              {% if media.media_type == 'image' %}
+                {{ media | image_url: width: 1200 | image_tag: loading: 'lazy', style: 'width:100%;height:auto;border-radius:14px;border:1px solid rgba(0,0,0,.08);' }}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="product__info-wrapper grid__item">
+        <div class="product__info-container">
+          <p style="margin:0 0 10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:rgba(var(--color-foreground),.62);">Product reference</p>
+          <h1>{{ product.title | escape }}</h1>
+          <div class="price price--large">{{ product.selected_or_first_available_variant.price | money }}</div>
+          <div style="margin:22px 0;padding:18px;border:1px solid rgba(var(--color-foreground),.12);border-radius:16px;background:rgba(var(--color-foreground),.03);">
+            <strong>B2B bulk order note</strong>
+            <p style="margin:.6rem 0 0;color:rgba(var(--color-foreground),.72);">Use this product page as a reference for bulk quote review. Wholesale review works best at $500+ before shipping and taxes. Include quantity, ZIP code, timeline, and acceptable substitutes.</p>
+          </div>
+          {% form 'product', product %}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <div style="margin:18px 0;">
+              <label for="Quantity-{{ section.id }}">Quantity</label>
+              <input id="Quantity-{{ section.id }}" name="quantity" type="number" value="1" min="1" style="display:block;margin-top:8px;max-width:130px;padding:12px;border:1px solid rgba(var(--color-foreground),.18);border-radius:10px;">
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin:22px 0;">
+              <button type="submit" name="add" class="button button--primary" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>{% if product.selected_or_first_available_variant.available %}Add to Cart{% else %}Sold Out{% endif %}</button>
+              <a class="button button--secondary" href="/#bulk-inquiry">Request Bulk Quote</a>
+            </div>
+          {% endform %}
+          {% if product.description != blank %}<div class="product__description rte">{{ product.description }}</div>{% endif %}
+          <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;"><a href="/#shop-products">Back to products</a><span>·</span><a href="/collections/all">All products</a><span>·</span><a href="/#bulk-inquiry">Bulk inquiry</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name":"Main product",
+  "tag":"section",
+  "class":"section",
+  "settings":[{"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}]
+}
+{% endschema %}
