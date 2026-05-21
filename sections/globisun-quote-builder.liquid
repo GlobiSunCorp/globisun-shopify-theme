@@ -1,112 +1,77 @@
-<section class="globisun-quote-builder color-{{ section.settings.color_scheme }} gradient" id="bulk-inquiry">
+<section class='globisun-quote-builder color-{{ section.settings.color_scheme }} gradient' id='bulk-inquiry'>
   <style>
-    .gqb-wrap{max-width:1200px;margin:0 auto;padding:72px 20px}.gqb-shell{border:1px solid rgba(54,66,71,.14);border-radius:32px;background:linear-gradient(135deg,#f8f6f1 0%,#fff 46%,#f2f7ff 100%);box-shadow:0 24px 80px rgba(24,33,38,.08);overflow:hidden}.gqb-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;padding:42px}.gqb-kicker{margin:0 0 12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#728084}.gqb-title{margin:0;color:#364247;font-size:clamp(34px,5vw,68px);line-height:.98;letter-spacing:-.045em}.gqb-lead{margin:18px 0 0;max-width:760px;color:#667074;font-size:17px;line-height:1.65}.gqb-hero-card{border-radius:26px;background:#364247;color:#fff;padding:30px;display:grid;align-content:space-between;min-height:240px}.gqb-hero-card strong{font-size:clamp(26px,3vw,42px);line-height:1.05;letter-spacing:-.035em}.gqb-hero-card span{color:rgba(255,255,255,.72);line-height:1.55}.gqb-share{margin-top:20px;border:1px solid rgba(54,66,71,.13);border-radius:18px;background:rgba(255,255,255,.78);padding:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.gqb-share input{flex:1;min-width:240px;border:1px solid rgba(54,66,71,.16);border-radius:12px;padding:12px 14px;background:#fff;color:#364247}.gqb-share button{border:0;border-radius:12px;background:#364247;color:#fff;padding:12px 16px;font-weight:900;cursor:pointer}.gqb-body{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:28px;padding:0 42px 42px}.gqb-panel{border:1px solid rgba(54,66,71,.13);border-radius:24px;background:rgba(255,255,255,.76);padding:24px}.gqb-panel h3{margin:0 0 16px;color:#364247;font-size:24px;letter-spacing:-.025em}.gqb-hint{margin:-8px 0 16px;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.gqb-options--two{grid-template-columns:repeat(2,minmax(0,1fr))}.gqb-option{position:relative;display:block;cursor:pointer}.gqb-option input{position:absolute;opacity:0;pointer-events:none}.gqb-option span{display:block;min-height:96px;border:1px solid rgba(54,66,71,.14);border-radius:18px;background:#fff;padding:16px;color:#364247;transition:.18s ease}.gqb-option b{display:block;font-size:15px;margin-bottom:6px;line-height:1.2}.gqb-option small{display:block;color:#6f7a7d;line-height:1.35}.gqb-option input:checked + span{border-color:#2f6fbd;background:#eef5ff;box-shadow:0 12px 28px rgba(47,111,189,.14);transform:translateY(-1px)}.gqb-option input:checked + span:after{content:'✓';position:absolute;right:14px;top:12px;width:24px;height:24px;border-radius:999px;background:#2f6fbd;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.gqb-service input:checked + span{border-color:#c94a3a;background:#fff3ef;box-shadow:0 12px 28px rgba(201,74,58,.12)}.gqb-service input:checked + span:after{background:#c94a3a}.gqb-radio input:checked + span{border-color:#2d9b74;background:#eefaf5;box-shadow:0 12px 28px rgba(45,155,116,.12)}.gqb-radio input:checked + span:after{background:#2d9b74}.gqb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gqb-field{display:grid;gap:8px}.gqb-field label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#6f7a7d}.gqb-field input,.gqb-field select,.gqb-field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;padding:14px 15px;color:#364247;font:inherit}.gqb-field textarea{min-height:150px;resize:vertical}.gqb-full{grid-column:1/-1}.gqb-summary-box{position:sticky;top:24px}.gqb-summary-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.gqb-summary-title h3{margin:0}.gqb-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eef5ff;color:#2f6fbd;padding:8px 12px;font-size:12px;font-weight:900}.gqb-live-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.gqb-live-pills span{border-radius:999px;background:#f1f3f2;color:#4c5a5e;padding:8px 10px;font-size:12px;font-weight:800}.gqb-field textarea#gqb-summary{min-height:360px;font-size:14px;line-height:1.55}.gqb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.gqb-submit{border:0;border-radius:14px;background:#2f6fbd;color:#fff;min-height:56px;padding:0 24px;font-weight:900;letter-spacing:.03em;cursor:pointer;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gqb-copy{border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;color:#364247;min-height:56px;padding:0 22px;font-weight:900;cursor:pointer}.gqb-note{margin:14px 0 0;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-success{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#edf8ef;color:#276738;font-weight:800}.gqb-error{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#fff1f1;color:#8d2d2d;font-weight:800}@media(max-width:1000px){.gqb-options{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.gqb-head,.gqb-body{grid-template-columns:1fr;padding:28px}.gqb-summary-box{position:static}}@media(max-width:640px){.gqb-wrap{padding:48px 16px}.gqb-form-grid,.gqb-options,.gqb-options--two{grid-template-columns:1fr}.gqb-head,.gqb-body{padding:22px}.gqb-title{font-size:40px}.gqb-submit,.gqb-copy,.gqb-share button{width:100%}}
+    .gqb-wrap{max-width:1200px;margin:0 auto;padding:72px 20px}.gqb-shell{border:1px solid rgba(54,66,71,.14);border-radius:32px;background:linear-gradient(135deg,#f8f6f1 0%,#fff 46%,#f2f7ff 100%);box-shadow:0 24px 80px rgba(24,33,38,.08);overflow:hidden}.gqb-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;padding:42px}.gqb-kicker{margin:0 0 12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#728084}.gqb-title{margin:0;color:#364247;font-size:clamp(34px,5vw,68px);line-height:.98;letter-spacing:-.045em}.gqb-lead{margin:18px 0 0;max-width:760px;color:#667074;font-size:17px;line-height:1.65}.gqb-hero-card{border-radius:26px;background:#364247;color:#fff;padding:30px;display:grid;align-content:space-between;min-height:240px}.gqb-hero-card strong{font-size:clamp(26px,3vw,42px);line-height:1.05;letter-spacing:-.035em}.gqb-hero-card span{color:rgba(255,255,255,.72);line-height:1.55}.gqb-share{margin-top:20px;border:1px solid rgba(54,66,71,.13);border-radius:18px;background:rgba(255,255,255,.78);padding:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.gqb-share input{flex:1;min-width:240px;border:1px solid rgba(54,66,71,.16);border-radius:12px;padding:12px 14px;background:#fff;color:#364247}.gqb-share button{border:0;border-radius:12px;background:#364247;color:#fff;padding:12px 16px;font-weight:900;cursor:pointer}.gqb-body{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:28px;padding:0 42px 42px}.gqb-panel{border:1px solid rgba(54,66,71,.13);border-radius:24px;background:rgba(255,255,255,.76);padding:24px}.gqb-panel h3{margin:0 0 16px;color:#364247;font-size:24px;letter-spacing:-.025em}.gqb-hint{margin:-8px 0 16px;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.gqb-option{position:relative;display:block;border:1px solid rgba(54,66,71,.14);border-radius:18px;background:#fff;padding:16px;color:#364247;transition:.18s ease;cursor:pointer;min-height:116px}.gqb-option input[type='checkbox'],.gqb-option input[type='radio']{position:absolute;opacity:0;pointer-events:none}.gqb-option b{display:block;font-size:15px;margin-bottom:6px;line-height:1.2;padding-right:28px}.gqb-option small{display:block;color:#6f7a7d;line-height:1.35}.gqb-option.is-selected{border-color:#2f6fbd;background:#eef5ff;box-shadow:0 12px 28px rgba(47,111,189,.14);transform:translateY(-1px)}.gqb-option.is-selected:after{content:'✓';position:absolute;right:14px;top:12px;width:24px;height:24px;border-radius:999px;background:#2f6fbd;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.gqb-service.is-selected{border-color:#c94a3a;background:#fff3ef;box-shadow:0 12px 28px rgba(201,74,58,.12)}.gqb-service.is-selected:after{background:#c94a3a}.gqb-radio.is-selected{border-color:#2d9b74;background:#eefaf5;box-shadow:0 12px 28px rgba(45,155,116,.12)}.gqb-radio.is-selected:after{background:#2d9b74}.gqb-option-note{display:none;margin-top:10px;width:100%;border:1px solid rgba(54,66,71,.18);border-radius:12px;background:rgba(255,255,255,.92);padding:10px 11px;color:#364247;font:inherit;font-size:13px}.gqb-option.is-selected .gqb-option-note{display:block}.gqb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gqb-field{display:grid;gap:8px}.gqb-field label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#6f7a7d}.gqb-field input,.gqb-field select,.gqb-field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;padding:14px 15px;color:#364247;font:inherit}.gqb-field textarea{min-height:150px;resize:vertical}.gqb-full{grid-column:1/-1}.gqb-summary-box{position:sticky;top:24px}.gqb-summary-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.gqb-summary-title h3{margin:0}.gqb-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eef5ff;color:#2f6fbd;padding:8px 12px;font-size:12px;font-weight:900}.gqb-live-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.gqb-live-pills span{border-radius:999px;background:#f1f3f2;color:#4c5a5e;padding:8px 10px;font-size:12px;font-weight:800}.gqb-field textarea#gqb-summary{min-height:390px;font-size:14px;line-height:1.55}.gqb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.gqb-submit{border:0;border-radius:14px;background:#2f6fbd;color:#fff;min-height:56px;padding:0 24px;font-weight:900;letter-spacing:.03em;cursor:pointer;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gqb-copy{border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;color:#364247;min-height:56px;padding:0 22px;font-weight:900;cursor:pointer}.gqb-note{margin:14px 0 0;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-success{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#edf8ef;color:#276738;font-weight:800}.gqb-error{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#fff1f1;color:#8d2d2d;font-weight:800}@media(max-width:1000px){.gqb-options{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.gqb-head,.gqb-body{grid-template-columns:1fr;padding:28px}.gqb-summary-box{position:static}}@media(max-width:640px){.gqb-wrap{padding:48px 16px}.gqb-form-grid,.gqb-options{grid-template-columns:1fr}.gqb-head,.gqb-body{padding:22px}.gqb-title{font-size:40px}.gqb-submit,.gqb-copy,.gqb-share button{width:100%}}
   </style>
 
-  <div class="gqb-wrap">
-    <div class="gqb-shell">
-      <div class="gqb-head">
+  <div class='gqb-wrap'>
+    <div class='gqb-shell'>
+      <div class='gqb-head'>
         <div>
-          <p class="gqb-kicker">Bulk Quote Builder</p>
-          <h2 class="gqb-title">Build your art supply request like a smart inquiry cart.</h2>
-          <p class="gqb-lead">Click product categories, custom services, quantity range, budget, and timeline. The summary updates instantly so buyers can send a clear B2B request with minimal typing.</p>
-          <div class="gqb-share">
-            <input id="gqb-share-url" type="text" readonly value="/#bulk-inquiry" aria-label="Bulk quote link">
-            <button type="button" data-gqb-copy-link>Copy customer link</button>
+          <p class='gqb-kicker'>Bulk Quote Builder</p>
+          <h2 class='gqb-title'>Build your art supply request like a smart inquiry cart.</h2>
+          <p class='gqb-lead'>Click product categories, custom services, quantity range, budget, and timeline. Each selected option includes an optional note box, so buyers only type when they want to add details.</p>
+          <div class='gqb-share'>
+            <input id='gqb-share-url' type='text' readonly value='https://artglobisun.myshopify.com/#bulk-inquiry' aria-label='Bulk quote link'>
+            <button type='button' data-gqb-copy-link>Copy customer link</button>
           </div>
         </div>
-        <div class="gqb-hero-card">
+        <div class='gqb-hero-card'>
           <span>Dedicated link for customers, schools, studios, workshops, and resellers.</span>
-          <strong>$500+ bulk sourcing review · clickable request builder · automatic email summary.</strong>
+          <strong>$500+ bulk sourcing review · clickable request builder · optional notes per choice.</strong>
         </div>
       </div>
 
-      <div class="gqb-body">
+      <div class='gqb-body'>
         {% form 'contact', id: 'GlobiSunQuoteBuilder', class: 'gqb-form' %}
-          {% if form.posted_successfully? %}<div class="gqb-success">Thank you. Your bulk request was sent successfully.</div>{% endif %}
-          {% if form.errors %}<div class="gqb-error">Please check the required fields and try again.</div>{% endif %}
+          {% if form.posted_successfully? %}<div class='gqb-success'>Thank you. Your bulk request was sent successfully.</div>{% endif %}
+          {% if form.errors %}<div class='gqb-error'>Please check the required fields and try again.</div>{% endif %}
 
-          <div class="gqb-panel">
+          <div class='gqb-panel'>
             <h3>1. Choose product categories</h3>
-            <p class="gqb-hint">Let the buyer click as many as possible. They do not need to know exact SKU names yet.</p>
-            <div class="gqb-options" data-gqb-group="Products">
-              <label class="gqb-option"><input type="checkbox" value="Acrylic paints / bottled paints"><span><b>Acrylic Paints</b><small>Bottled paints, color sets, classroom paint supply.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Markers / drawing pens"><span><b>Markers & Pens</b><small>Alcohol markers, acrylic markers, drawing pens.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Brushes / palettes / painting tools"><span><b>Brushes & Tools</b><small>Brush sets, palettes, painting accessories.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Canvas / paper / boards / surfaces"><span><b>Surfaces & Paper</b><small>Canvas, paper, panels, boards, practice surfaces.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Glue / craft materials"><span><b>Glue & Crafts</b><small>Glue sticks, classroom craft materials, project supplies.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Aprons / studio protection"><span><b>Aprons & Protection</b><small>Kids aprons, adult aprons, studio protection items.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Storage boxes / classroom organization"><span><b>Storage & Organization</b><small>Art supply boxes, classroom storage, kit organization.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="School / studio kits"><span><b>School & Studio Kits</b><small>Class packs, camp kits, workshop bundles.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Display / banner / event materials"><span><b>Display Materials</b><small>Banners, stands, event display and program support.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Seasonal art program supplies"><span><b>Seasonal Programs</b><small>Summer camp, holiday workshops, themed class packs.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Resale / retail-ready products"><span><b>Resale Products</b><small>Products for small retailers, online sellers, and shops.</small></span></label>
-              <label class="gqb-option"><input type="checkbox" value="Custom / not listed products"><span><b>Custom Sourcing</b><small>Products not listed yet, substitute brands, special requests.</small></span></label>
-            </div>
+            <p class='gqb-hint'>Select as many as needed. Optional note boxes appear after selection for colors, quantity, brand preference, or substitutes.</p>
+            <div class='gqb-options' data-gqb-group='Products' data-gqb-render='products'></div>
           </div>
 
-          <div class="gqb-panel" style="margin-top:18px;">
+          <div class='gqb-panel' style='margin-top:18px;'>
             <h3>2. Add custom services</h3>
-            <p class="gqb-hint">These make the request feel more like a professional B2B sourcing intake instead of a basic contact form.</p>
-            <div class="gqb-options" data-gqb-group="Services">
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Logo printing / custom branding"><span><b>Logo Printing</b><small>School logo, studio logo, event identity, branded item request.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Private label / packaging review"><span><b>Private Label</b><small>Packaging, barcode, resale presentation, brand-ready review.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Kit assembly / class pack planning"><span><b>Kit Assembly</b><small>Class sets, workshop kits, camp packs, program bundles.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Color / variant planning"><span><b>Color Planning</b><small>Color count, variant mix, classroom distribution, substitutes.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Supplier substitute options"><span><b>Substitute Options</b><small>Comparable products if exact item is unavailable or costly.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Shipping carton / freight review"><span><b>Freight Review</b><small>Carton quantity, weight, lead time, overseas freight review.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Sample order / approval review"><span><b>Sample Review</b><small>Pre-order sample discussion before larger bulk order.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Recurring reorder program"><span><b>Reorder Program</b><small>Repeat class, studio, or retail replenishment planning.</small></span></label>
-              <label class="gqb-option gqb-service"><input type="checkbox" value="Product photo / listing support"><span><b>Product Photo Support</b><small>Basic product presentation support for resale or catalog use.</small></span></label>
-            </div>
+            <p class='gqb-hint'>Use these for logo printing, private label, kit assembly, packaging, freight, and recurring order needs.</p>
+            <div class='gqb-options' data-gqb-group='Services' data-gqb-render='services'></div>
           </div>
 
-          <div class="gqb-panel" style="margin-top:18px;">
+          <div class='gqb-panel' style='margin-top:18px;'>
             <h3>3. Quick order presets</h3>
-            <div class="gqb-options" data-gqb-group="BuyerType">
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Buyer type]" value="School / Education Program" checked><span><b>School</b><small>Classroom, district, program, camp, education buyer.</small></span></label>
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Buyer type]" value="Art Studio / Workshop"><span><b>Studio</b><small>Private studio, instructor, workshop, recurring class.</small></span></label>
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Buyer type]" value="Retailer / Reseller"><span><b>Reseller</b><small>Small retailer, online seller, resale project.</small></span></label>
-            </div>
-            <div class="gqb-options" data-gqb-group="Quantity" style="margin-top:12px;">
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Quantity range]" value="Starter bulk: $500-$1,000 / small program" checked><span><b>Starter Bulk</b><small>$500-$1,000 or small program order.</small></span></label>
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Quantity range]" value="Class / workshop pack: 30-100 students"><span><b>Class Pack</b><small>30-100 students, class or workshop bundle.</small></span></label>
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Quantity range]" value="Carton / resale order: 100-500+ units"><span><b>Carton / Resale</b><small>100-500+ units or carton-based review.</small></span></label>
-            </div>
-            <div class="gqb-options" data-gqb-group="Timeline" style="margin-top:12px;">
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Timeline]" value="Flexible / planning stage" checked><span><b>Flexible</b><small>Planning stage, best value sourcing.</small></span></label>
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Timeline]" value="Need within 2-4 weeks"><span><b>2-4 Weeks</b><small>Need sooner, review available options first.</small></span></label>
-              <label class="gqb-option gqb-radio"><input type="radio" name="contact[Timeline]" value="Seasonal / fixed event date"><span><b>Event Date</b><small>Camp, show, semester, workshop, or launch date.</small></span></label>
-            </div>
+            <div class='gqb-options' data-gqb-group='BuyerType' data-gqb-render='buyer'></div>
+            <div class='gqb-options' data-gqb-group='Quantity' data-gqb-render='quantity' style='margin-top:12px;'></div>
+            <div class='gqb-options' data-gqb-group='Timeline' data-gqb-render='timeline' style='margin-top:12px;'></div>
           </div>
 
-          <div class="gqb-panel" style="margin-top:18px;">
+          <div class='gqb-panel' style='margin-top:18px;'>
             <h3>4. Minimal details</h3>
-            <div class="gqb-form-grid">
-              <div class="gqb-field"><label for="gqb-company">Company / School / Studio</label><input id="gqb-company" name="contact[Organization]" type="text" placeholder="Optional"></div>
-              <div class="gqb-field"><label for="gqb-zip">Delivery ZIP code</label><input id="gqb-zip" name="contact[Delivery ZIP]" type="text" placeholder="ZIP code helps review freight"></div>
-              <div class="gqb-field"><label for="gqb-budget">Target budget</label><select id="gqb-budget" name="contact[Target budget]"><option>$500 - $1,000</option><option>$1,000 - $2,500</option><option>$2,500 - $5,000</option><option>$5,000+</option><option>Not sure yet</option></select></div>
-              <div class="gqb-field"><label for="gqb-email">Email *</label><input id="gqb-email" name="contact[email]" type="email" placeholder="you@example.com" required></div>
-              <div class="gqb-field"><label for="gqb-name">Name</label><input id="gqb-name" name="contact[name]" type="text" placeholder="Optional"></div>
-              <div class="gqb-field"><label for="gqb-phone">Phone</label><input id="gqb-phone" name="contact[phone]" type="tel" placeholder="Optional"></div>
-              <div class="gqb-field gqb-full"><label for="gqb-notes">Extra notes</label><textarea id="gqb-notes" name="contact[Extra notes]" placeholder="Optional: paste product links, logo printing notes, preferred colors, deadline, or anything important."></textarea></div>
-              <input id="gqb-subject" name="contact[Subject]" type="hidden" value="GlobiSun bulk quote request">
+            <div class='gqb-form-grid'>
+              <div class='gqb-field'><label for='gqb-company'>Company / School / Studio</label><input id='gqb-company' name='contact[Organization]' type='text' placeholder='Optional'></div>
+              <div class='gqb-field'><label for='gqb-zip'>Delivery ZIP code</label><input id='gqb-zip' name='contact[Delivery ZIP]' type='text' placeholder='ZIP code helps review freight'></div>
+              <div class='gqb-field'><label for='gqb-budget'>Target budget</label><select id='gqb-budget' name='contact[Target budget]'><option>$500 - $1,000</option><option>$1,000 - $2,500</option><option>$2,500 - $5,000</option><option>$5,000+</option><option>Not sure yet</option></select></div>
+              <div class='gqb-field'><label for='gqb-email'>Email *</label><input id='gqb-email' name='contact[email]' type='email' placeholder='you@example.com' required></div>
+              <div class='gqb-field'><label for='gqb-name'>Name</label><input id='gqb-name' name='contact[name]' type='text' placeholder='Optional'></div>
+              <div class='gqb-field'><label for='gqb-phone'>Phone</label><input id='gqb-phone' name='contact[phone]' type='tel' placeholder='Optional'></div>
+              <div class='gqb-field gqb-full'><label for='gqb-notes'>Extra notes</label><textarea id='gqb-notes' name='contact[Extra notes]' placeholder='Optional: paste product links, logo printing notes, preferred colors, deadline, or anything important.'></textarea></div>
+              <input id='gqb-subject' name='contact[Subject]' type='hidden' value='GlobiSun bulk quote request'>
             </div>
           </div>
         </div>
 
-        <aside class="gqb-panel gqb-summary-box">
-          <div class="gqb-summary-title"><h3>Request summary</h3><span class="gqb-chip" data-gqb-count>0 selected</span></div>
-          <div class="gqb-live-pills" data-gqb-pills><span>Choose options on the left</span></div>
-          <div class="gqb-field">
-            <label for="gqb-summary">Generated request sent to GlobiSun</label>
-            <textarea id="gqb-summary" name="contact[body]" readonly></textarea>
+        <aside class='gqb-panel gqb-summary-box'>
+          <div class='gqb-summary-title'><h3>Request summary</h3><span class='gqb-chip' data-gqb-count>0 selected</span></div>
+          <div class='gqb-live-pills' data-gqb-pills><span>Choose options on the left</span></div>
+          <div class='gqb-field'>
+            <label for='gqb-summary'>Generated request sent to GlobiSun</label>
+            <textarea id='gqb-summary' name='contact[body]' readonly></textarea>
           </div>
-          <div class="gqb-actions">
-            <button type="submit" class="gqb-submit">Send Bulk Request</button>
-            <button type="button" class="gqb-copy" data-gqb-copy>Copy Summary</button>
+          <div class='gqb-actions'>
+            <button type='submit' class='gqb-submit'>Send Bulk Request</button>
+            <button type='button' class='gqb-copy' data-gqb-copy>Copy Summary</button>
           </div>
-          <p class="gqb-note">The top of the summary updates immediately after clicking product and service options. This makes the request easier for both buyer and seller.</p>
+          <p class='gqb-note'>Selected options and their optional notes appear at the top of the summary. Buyers can click first and type only when needed.</p>
         </aside>
       {% endform %}
     </div>
@@ -117,6 +82,62 @@
       (root || document).querySelectorAll('.globisun-quote-builder').forEach(function(section){
         if(section.dataset.gqbReady === 'true') return;
         section.dataset.gqbReady = 'true';
+        var productItems = [
+          ['Acrylic Paints','Bottled paints, color sets, classroom paint supply.','Acrylic paints / bottled paints'],
+          ['Markers & Pens','Alcohol markers, acrylic markers, drawing pens.','Markers / drawing pens'],
+          ['Brushes & Tools','Brush sets, palettes, painting accessories.','Brushes / palettes / painting tools'],
+          ['Surfaces & Paper','Canvas, paper, panels, boards, practice surfaces.','Canvas / paper / boards / surfaces'],
+          ['Glue & Crafts','Glue sticks, classroom craft materials, project supplies.','Glue / craft materials'],
+          ['Aprons & Protection','Kids aprons, adult aprons, studio protection items.','Aprons / studio protection'],
+          ['Storage & Organization','Art supply boxes, classroom storage, kit organization.','Storage boxes / classroom organization'],
+          ['School & Studio Kits','Class packs, camp kits, workshop bundles.','School / studio kits'],
+          ['Display Materials','Banners, stands, event display and program support.','Display / banner / event materials'],
+          ['Seasonal Programs','Summer camp, holiday workshops, themed class packs.','Seasonal art program supplies'],
+          ['Resale Products','Products for small retailers, online sellers, and shops.','Resale / retail-ready products'],
+          ['Custom Sourcing','Products not listed yet, substitute brands, special requests.','Custom / not listed products']
+        ];
+        var serviceItems = [
+          ['Logo Printing','School logo, studio logo, event identity, branded item request.','Logo printing / custom branding'],
+          ['Private Label','Packaging, barcode, resale presentation, brand-ready review.','Private label / packaging review'],
+          ['Kit Assembly','Class sets, workshop kits, camp packs, program bundles.','Kit assembly / class pack planning'],
+          ['Color Planning','Color count, variant mix, classroom distribution, substitutes.','Color / variant planning'],
+          ['Substitute Options','Comparable products if exact item is unavailable or costly.','Supplier substitute options'],
+          ['Freight Review','Carton quantity, weight, lead time, overseas freight review.','Shipping carton / freight review'],
+          ['Sample Review','Pre-order sample discussion before larger bulk order.','Sample order / approval review'],
+          ['Reorder Program','Repeat class, studio, or retail replenishment planning.','Recurring reorder program'],
+          ['Product Photo Support','Basic product presentation support for resale or catalog use.','Product photo / listing support']
+        ];
+        var buyerItems = [
+          ['School','Classroom, district, program, camp, education buyer.','School / Education Program'],
+          ['Studio','Private studio, instructor, workshop, recurring class.','Art Studio / Workshop'],
+          ['Reseller','Small retailer, online seller, resale project.','Retailer / Reseller']
+        ];
+        var quantityItems = [
+          ['Starter Bulk','$500-$1,000 or small program order.','Starter bulk: $500-$1,000 / small program'],
+          ['Class Pack','30-100 students, class or workshop bundle.','Class / workshop pack: 30-100 students'],
+          ['Carton / Resale','100-500+ units or carton-based review.','Carton / resale order: 100-500+ units']
+        ];
+        var timelineItems = [
+          ['Flexible','Planning stage, best value sourcing.','Flexible / planning stage'],
+          ['2-4 Weeks','Need sooner, review available options first.','Need within 2-4 weeks'],
+          ['Event Date','Camp, show, semester, workshop, or launch date.','Seasonal / fixed event date']
+        ];
+        function esc(s){return String(s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];});}
+        function render(container, items, group, type, service){
+          if(!container || container.dataset.rendered === 'true') return;
+          container.dataset.rendered = 'true';
+          container.innerHTML = items.map(function(item, idx){
+            var checked = type === 'radio' && idx === 0 ? ' checked' : '';
+            var note = type === 'checkbox' ? '<input class="gqb-option-note" type="text" data-gqb-note placeholder="Optional note for this choice">' : '';
+            return '<label class="gqb-option '+(service?'gqb-service ':'')+(type==='radio'?'gqb-radio':'')+'"><input type="'+type+'" name="gqb_'+group+'" value="'+esc(item[2])+'" data-gqb-control data-gqb-group-name="'+group+'"'+checked+'><b>'+esc(item[0])+'</b><small>'+esc(item[1])+'</small>'+note+'</label>';
+          }).join('');
+        }
+        render(section.querySelector('[data-gqb-render="products"]'), productItems, 'Products', 'checkbox', false);
+        render(section.querySelector('[data-gqb-render="services"]'), serviceItems, 'Services', 'checkbox', true);
+        render(section.querySelector('[data-gqb-render="buyer"]'), buyerItems, 'BuyerType', 'radio', false);
+        render(section.querySelector('[data-gqb-render="quantity"]'), quantityItems, 'Quantity', 'radio', false);
+        render(section.querySelector('[data-gqb-render="timeline"]'), timelineItems, 'Timeline', 'radio', false);
+        section.querySelectorAll('.gqb-option-note').forEach(function(note){note.addEventListener('click',function(e){e.stopPropagation();});note.addEventListener('keydown',function(e){e.stopPropagation();});});
         var summary = section.querySelector('#gqb-summary');
         var copyBtn = section.querySelector('[data-gqb-copy]');
         var linkBtn = section.querySelector('[data-gqb-copy-link]');
@@ -124,65 +145,30 @@
         var countEl = section.querySelector('[data-gqb-count]');
         var pillsEl = section.querySelector('[data-gqb-pills]');
         function val(sel){ var el = section.querySelector(sel); return el && el.value ? el.value.trim() : ''; }
-        function checkedValues(group){ return Array.from(section.querySelectorAll('[data-gqb-group="'+group+'"] input:checked')).map(function(i){return i.value;}); }
-        function radioValue(group){ var el = section.querySelector('[data-gqb-group="'+group+'"] input:checked'); return el ? el.value : 'Not selected'; }
+        function selected(group){ return Array.from(section.querySelectorAll('[data-gqb-group-name="'+group+'"]:checked')).map(function(input){var label=input.closest('.gqb-option');var note=label ? (label.querySelector('[data-gqb-note]')||{}).value || '' : '';return {value:input.value,note:note.trim()};}); }
+        function radioValue(group){ var el = section.querySelector('[data-gqb-group-name="'+group+'"]:checked'); return el ? el.value : 'Not selected'; }
+        function linesFor(arr){ return arr.length ? arr.map(function(x){return '- '+x.value+(x.note ? ' | Note: '+x.note : '');}).join('\n') : '- Not selected yet'; }
         function update(){
           if(!summary) return;
-          var products = checkedValues('Products');
-          var services = checkedValues('Services');
+          section.querySelectorAll('.gqb-option').forEach(function(label){var input=label.querySelector('[data-gqb-control]');label.classList.toggle('is-selected',!!(input && input.checked));});
+          var products = selected('Products');
+          var services = selected('Services');
           var buyerType = radioValue('BuyerType');
           var quantity = radioValue('Quantity');
           var timeline = radioValue('Timeline');
           var selectedCount = products.length + services.length;
           if(countEl) countEl.textContent = selectedCount + ' selected';
-          if(pillsEl){
-            var pills = products.concat(services).slice(0,6);
-            pillsEl.innerHTML = pills.length ? pills.map(function(p){return '<span>'+p+'</span>';}).join('') : '<span>Choose options on the left</span>';
-          }
-          if(shareInput){ shareInput.value = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/#bulk-inquiry'; }
-          var lines = [
-            'GlobiSun Bulk Quote Request',
-            '----------------------------',
-            'SELECTED PRODUCT CATEGORIES:',
-            products.length ? products.map(function(p){return '- '+p;}).join('\n') : '- Not selected yet',
-            '',
-            'SELECTED CUSTOM SERVICES:',
-            services.length ? services.map(function(s){return '- '+s;}).join('\n') : '- Not selected yet',
-            '',
-            'QUICK PRESETS:',
-            'Buyer type: ' + buyerType,
-            'Quantity range: ' + quantity,
-            'Timeline: ' + timeline,
-            'Target budget: ' + (val('#gqb-budget') || 'Not provided'),
-            'Delivery ZIP: ' + (val('#gqb-zip') || 'Not provided'),
-            '',
-            'CONTACT:',
-            'Name: ' + (val('#gqb-name') || 'Not provided'),
-            'Email: ' + (val('#gqb-email') || 'Not provided'),
-            'Phone: ' + (val('#gqb-phone') || 'Not provided'),
-            'Organization: ' + (val('#gqb-company') || 'Not provided'),
-            '',
-            'EXTRA NOTES:',
-            val('#gqb-notes') || 'No extra notes yet.',
-            '',
-            'REQUESTED REVIEW:',
-            'Pricing, sourcing feasibility, case-pack/carton options, logo/customization feasibility, substitutes, lead time, and bulk fulfillment path.'
-          ];
-          summary.value = lines.join('\n');
+          if(pillsEl){ var pills = products.concat(services).slice(0,6).map(function(x){return x.value;}); pillsEl.innerHTML = pills.length ? pills.map(function(p){return '<span>'+esc(p)+'</span>';}).join('') : '<span>Choose options on the left</span>'; }
+          if(shareInput){ shareInput.value = window.location.origin + '/#bulk-inquiry'; }
+          summary.value = [
+            'GlobiSun Bulk Quote Request','----------------------------','SELECTED PRODUCT CATEGORIES:',linesFor(products),'','SELECTED CUSTOM SERVICES:',linesFor(services),'','QUICK PRESETS:','Buyer type: '+buyerType,'Quantity range: '+quantity,'Timeline: '+timeline,'Target budget: '+(val('#gqb-budget') || 'Not provided'),'Delivery ZIP: '+(val('#gqb-zip') || 'Not provided'),'','CONTACT:','Name: '+(val('#gqb-name') || 'Not provided'),'Email: '+(val('#gqb-email') || 'Not provided'),'Phone: '+(val('#gqb-phone') || 'Not provided'),'Organization: '+(val('#gqb-company') || 'Not provided'),'','EXTRA NOTES:',val('#gqb-notes') || 'No extra notes yet.','','REQUESTED REVIEW:','Pricing, sourcing feasibility, case-pack/carton options, logo/customization feasibility, substitutes, lead time, and bulk fulfillment path.'
+          ].join('\n');
           summary.scrollTop = 0;
         }
         section.addEventListener('change', update);
         section.addEventListener('input', update);
-        copyBtn && copyBtn.addEventListener('click', function(){
-          update();
-          try{ navigator.clipboard.writeText(summary.value); copyBtn.textContent='Copied ✓'; setTimeout(function(){copyBtn.textContent='Copy Summary';},1600); }
-          catch(e){ summary.focus(); summary.select(); document.execCommand('copy'); }
-        });
-        linkBtn && linkBtn.addEventListener('click', function(){
-          if(shareInput){ shareInput.value = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/#bulk-inquiry'; }
-          try{ navigator.clipboard.writeText(shareInput.value); linkBtn.textContent='Link copied ✓'; setTimeout(function(){linkBtn.textContent='Copy customer link';},1600); }
-          catch(e){ shareInput.focus(); shareInput.select(); document.execCommand('copy'); }
-        });
+        copyBtn && copyBtn.addEventListener('click', function(){update();try{navigator.clipboard.writeText(summary.value);copyBtn.textContent='Copied ✓';setTimeout(function(){copyBtn.textContent='Copy Summary';},1600);}catch(e){summary.focus();summary.select();document.execCommand('copy');}});
+        linkBtn && linkBtn.addEventListener('click', function(){if(shareInput){shareInput.value = window.location.origin + '/#bulk-inquiry';}try{navigator.clipboard.writeText(shareInput.value);linkBtn.textContent='Link copied ✓';setTimeout(function(){linkBtn.textContent='Copy customer link';},1600);}catch(e){shareInput.focus();shareInput.select();document.execCommand('copy');}});
         update();
       });
     }
