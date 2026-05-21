@@ -1,0 +1,44 @@
+<section class="globisun-page color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width" style="padding:48px 20px 80px;">
+    <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:40px;">
+      <a href="/" style="display:inline-flex;align-items:center;gap:10px;color:rgb(var(--color-foreground));text-decoration:none;font-weight:900;letter-spacing:.04em;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#364247;color:#fff;">G</span>
+        <span>GlobiSun</span>
+      </a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="button button--secondary" href="/">Home</a>
+        <a class="button button--secondary" href="/#shop-products">Browse Products</a>
+        <a class="button button--primary" href="/#bulk-inquiry">Bulk Inquiry</a>
+      </div>
+    </nav>
+
+    <div style="max-width:920px;margin:0 auto;">
+      <p style="margin:0 0 12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:rgba(var(--color-foreground),.62);">GlobiSun · Information</p>
+      <h1 class="main-page-title page-title h0" style="margin-top:0;">{{ page.title | escape }}</h1>
+      <div class="rte" style="font-size:1.65rem;line-height:1.75;">
+        {{ page.content }}
+      </div>
+      <div style="margin-top:42px;padding:24px;border:1px solid rgba(var(--color-foreground),.12);border-radius:18px;background:rgba(var(--color-foreground),.03);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div>
+          <strong>Need help with a bulk order?</strong>
+          <p style="margin:.4rem 0 0;color:rgba(var(--color-foreground),.72);">Return to the product catalog or send a bulk inquiry with quantity, ZIP code, and timeline.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="button button--secondary" href="/#shop-products">Browse Products</a>
+          <a class="button button--primary" href="/#bulk-inquiry">Bulk Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}
+  ]
+}
+{% endschema %}
