@@ -1,6 +1,6 @@
 <section class='globisun-quote-builder color-{{ section.settings.color_scheme }} gradient' id='bulk-inquiry'>
   <style>
-    .gqb-wrap{max-width:1200px;margin:0 auto;padding:72px 20px}.gqb-shell{border:1px solid rgba(54,66,71,.14);border-radius:32px;background:linear-gradient(135deg,#f8f6f1 0%,#fff 46%,#f2f7ff 100%);box-shadow:0 24px 80px rgba(24,33,38,.08);overflow:hidden}.gqb-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;padding:42px}.gqb-kicker{margin:0 0 12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#728084}.gqb-title{margin:0;color:#364247;font-size:clamp(34px,5vw,68px);line-height:.98;letter-spacing:-.045em}.gqb-lead{margin:18px 0 0;max-width:760px;color:#667074;font-size:17px;line-height:1.65}.gqb-hero-card{border-radius:26px;background:#364247;color:#fff;padding:30px;display:grid;align-content:space-between;min-height:240px}.gqb-hero-card strong{font-size:clamp(26px,3vw,42px);line-height:1.05;letter-spacing:-.035em}.gqb-hero-card span{color:rgba(255,255,255,.72);line-height:1.55}.gqb-share{margin-top:20px;border:1px solid rgba(54,66,71,.13);border-radius:18px;background:rgba(255,255,255,.78);padding:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.gqb-share input{flex:1;min-width:240px;border:1px solid rgba(54,66,71,.16);border-radius:12px;padding:12px 14px;background:#fff;color:#364247}.gqb-share button{border:0;border-radius:12px;background:#364247;color:#fff;padding:12px 16px;font-weight:900;cursor:pointer}.gqb-body{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:28px;padding:0 42px 42px}.gqb-panel{border:1px solid rgba(54,66,71,.13);border-radius:24px;background:rgba(255,255,255,.76);padding:24px}.gqb-panel h3{margin:0 0 16px;color:#364247;font-size:24px;letter-spacing:-.025em}.gqb-hint{margin:-8px 0 16px;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.gqb-option{position:relative;display:block;border:1px solid rgba(54,66,71,.14);border-radius:18px;background:#fff;padding:16px;color:#364247;transition:.18s ease;cursor:pointer;min-height:116px}.gqb-option input[type='checkbox'],.gqb-option input[type='radio']{position:absolute;opacity:0;pointer-events:none}.gqb-option b{display:block;font-size:15px;margin-bottom:6px;line-height:1.2;padding-right:28px}.gqb-option small{display:block;color:#6f7a7d;line-height:1.35}.gqb-option.is-selected{border-color:#2f6fbd;background:#eef5ff;box-shadow:0 12px 28px rgba(47,111,189,.14);transform:translateY(-1px)}.gqb-option.is-selected:after{content:'✓';position:absolute;right:14px;top:12px;width:24px;height:24px;border-radius:999px;background:#2f6fbd;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.gqb-service.is-selected{border-color:#c94a3a;background:#fff3ef;box-shadow:0 12px 28px rgba(201,74,58,.12)}.gqb-service.is-selected:after{background:#c94a3a}.gqb-radio.is-selected{border-color:#2d9b74;background:#eefaf5;box-shadow:0 12px 28px rgba(45,155,116,.12)}.gqb-radio.is-selected:after{background:#2d9b74}.gqb-option-note{display:none;margin-top:10px;width:100%;border:1px solid rgba(54,66,71,.18);border-radius:12px;background:rgba(255,255,255,.92);padding:10px 11px;color:#364247;font:inherit;font-size:13px}.gqb-option.is-selected .gqb-option-note{display:block}.gqb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gqb-field{display:grid;gap:8px}.gqb-field label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#6f7a7d}.gqb-field input,.gqb-field select,.gqb-field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;padding:14px 15px;color:#364247;font:inherit}.gqb-field textarea{min-height:150px;resize:vertical}.gqb-full{grid-column:1/-1}.gqb-summary-box{position:sticky;top:24px}.gqb-summary-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.gqb-summary-title h3{margin:0}.gqb-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eef5ff;color:#2f6fbd;padding:8px 12px;font-size:12px;font-weight:900}.gqb-live-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.gqb-live-pills span{border-radius:999px;background:#f1f3f2;color:#4c5a5e;padding:8px 10px;font-size:12px;font-weight:800}.gqb-field textarea#gqb-summary{min-height:390px;font-size:14px;line-height:1.55}.gqb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.gqb-submit{border:0;border-radius:14px;background:#2f6fbd;color:#fff;min-height:56px;padding:0 24px;font-weight:900;letter-spacing:.03em;cursor:pointer;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gqb-copy{border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;color:#364247;min-height:56px;padding:0 22px;font-weight:900;cursor:pointer}.gqb-note{margin:14px 0 0;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-success{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#edf8ef;color:#276738;font-weight:800}.gqb-error{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#fff1f1;color:#8d2d2d;font-weight:800}@media(max-width:1000px){.gqb-options{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.gqb-head,.gqb-body{grid-template-columns:1fr;padding:28px}.gqb-summary-box{position:static}}@media(max-width:640px){.gqb-wrap{padding:48px 16px}.gqb-form-grid,.gqb-options{grid-template-columns:1fr}.gqb-head,.gqb-body{padding:22px}.gqb-title{font-size:40px}.gqb-submit,.gqb-copy,.gqb-share button{width:100%}}
+    .gqb-wrap{max-width:1200px;margin:0 auto;padding:72px 20px}.gqb-shell{border:1px solid rgba(54,66,71,.14);border-radius:32px;background:linear-gradient(135deg,#f8f6f1 0%,#fff 46%,#f2f7ff 100%);box-shadow:0 24px 80px rgba(24,33,38,.08);overflow:hidden}.gqb-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;padding:42px}.gqb-kicker{margin:0 0 12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#728084}.gqb-title{margin:0;color:#364247;font-size:clamp(34px,5vw,68px);line-height:.98;letter-spacing:-.045em}.gqb-lead{margin:18px 0 0;max-width:760px;color:#667074;font-size:17px;line-height:1.65}.gqb-hero-card{border-radius:26px;background:#364247;color:#fff;padding:30px;display:grid;align-content:space-between;min-height:240px}.gqb-hero-card strong{font-size:clamp(26px,3vw,42px);line-height:1.05;letter-spacing:-.035em}.gqb-hero-card span{color:rgba(255,255,255,.72);line-height:1.55}.gqb-share{margin-top:20px;border:1px solid rgba(54,66,71,.13);border-radius:18px;background:rgba(255,255,255,.78);padding:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.gqb-share input{flex:1;min-width:240px;border:1px solid rgba(54,66,71,.16);border-radius:12px;padding:12px 14px;background:#fff;color:#364247}.gqb-share button{border:0;border-radius:12px;background:#364247;color:#fff;padding:12px 16px;font-weight:900;cursor:pointer}.gqb-body{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:28px;padding:0 42px 42px}.gqb-panel{border:1px solid rgba(54,66,71,.13);border-radius:24px;background:rgba(255,255,255,.76);padding:24px}.gqb-panel h3{margin:0 0 16px;color:#364247;font-size:24px;letter-spacing:-.025em}.gqb-hint{margin:-8px 0 16px;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.gqb-options--two{grid-template-columns:repeat(2,minmax(0,1fr))}.gqb-option{position:relative;display:block;border:1px solid rgba(54,66,71,.14);border-radius:18px;background:#fff;padding:16px;color:#364247;transition:.18s ease;cursor:pointer;min-height:116px}.gqb-option input[type='checkbox'],.gqb-option input[type='radio']{position:absolute;opacity:0;pointer-events:none}.gqb-option b{display:block;font-size:15px;margin-bottom:6px;line-height:1.2;padding-right:28px}.gqb-option small{display:block;color:#6f7a7d;line-height:1.35}.gqb-option.is-selected{border-color:#2f6fbd;background:#eef5ff;box-shadow:0 12px 28px rgba(47,111,189,.14);transform:translateY(-1px)}.gqb-option.is-selected:after{content:'✓';position:absolute;right:14px;top:12px;width:24px;height:24px;border-radius:999px;background:#2f6fbd;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.gqb-service.is-selected{border-color:#c94a3a;background:#fff3ef;box-shadow:0 12px 28px rgba(201,74,58,.12)}.gqb-service.is-selected:after{background:#c94a3a}.gqb-radio.is-selected{border-color:#2d9b74;background:#eefaf5;box-shadow:0 12px 28px rgba(45,155,116,.12)}.gqb-radio.is-selected:after{background:#2d9b74}.gqb-usecase.is-selected{border-color:#7b61ff;background:#f3f0ff;box-shadow:0 12px 28px rgba(123,97,255,.13)}.gqb-usecase.is-selected:after{background:#7b61ff}.gqb-template{min-height:150px;background:linear-gradient(135deg,#fff,#f8f5ef)}.gqb-template b{font-size:17px}.gqb-template em{display:inline-flex;margin-top:10px;border-radius:999px;background:#364247;color:#fff;padding:7px 10px;font-style:normal;font-size:12px;font-weight:900}.gqb-template.is-selected{border-color:#c94a3a;background:#fff3ef}.gqb-template.is-selected:after{background:#c94a3a}.gqb-option-note{display:none;margin-top:10px;width:100%;border:1px solid rgba(54,66,71,.18);border-radius:12px;background:rgba(255,255,255,.92);padding:10px 11px;color:#364247;font:inherit;font-size:13px}.gqb-option.is-selected .gqb-option-note{display:block}.gqb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gqb-field{display:grid;gap:8px}.gqb-field label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#6f7a7d}.gqb-field input,.gqb-field select,.gqb-field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;padding:14px 15px;color:#364247;font:inherit}.gqb-field textarea{min-height:150px;resize:vertical}.gqb-full{grid-column:1/-1}.gqb-summary-box{position:sticky;top:24px}.gqb-summary-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.gqb-summary-title h3{margin:0}.gqb-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eef5ff;color:#2f6fbd;padding:8px 12px;font-size:12px;font-weight:900}.gqb-live-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.gqb-live-pills span{border-radius:999px;background:#f1f3f2;color:#4c5a5e;padding:8px 10px;font-size:12px;font-weight:800}.gqb-cart{display:grid;gap:10px;margin-bottom:14px}.gqb-cart-card{border:1px solid rgba(54,66,71,.12);border-radius:16px;background:#fff;padding:14px}.gqb-cart-card strong{display:block;color:#364247;font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.gqb-cart-card p{margin:0;color:#667074;font-size:14px;line-height:1.45}.gqb-cart-empty{border:1px dashed rgba(54,66,71,.24);border-radius:16px;padding:16px;color:#667074;background:rgba(255,255,255,.55)}.gqb-field textarea#gqb-summary{min-height:390px;font-size:14px;line-height:1.55}.gqb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.gqb-submit{border:0;border-radius:14px;background:#2f6fbd;color:#fff;min-height:56px;padding:0 24px;font-weight:900;letter-spacing:.03em;cursor:pointer;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gqb-copy{border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;color:#364247;min-height:56px;padding:0 22px;font-weight:900;cursor:pointer}.gqb-note{margin:14px 0 0;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-success{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#edf8ef;color:#276738;font-weight:800}.gqb-error{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#fff1f1;color:#8d2d2d;font-weight:800}@media(max-width:1000px){.gqb-options{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.gqb-head,.gqb-body{grid-template-columns:1fr;padding:28px}.gqb-summary-box{position:static}}@media(max-width:640px){.gqb-wrap{padding:48px 16px}.gqb-form-grid,.gqb-options,.gqb-options--two{grid-template-columns:1fr}.gqb-head,.gqb-body{padding:22px}.gqb-title{font-size:40px}.gqb-submit,.gqb-copy,.gqb-share button{width:100%}}
   </style>
 
   <div class='gqb-wrap'>
@@ -9,7 +9,7 @@
         <div>
           <p class='gqb-kicker'>Bulk Quote Builder</p>
           <h2 class='gqb-title'>Build your art supply request like a smart inquiry cart.</h2>
-          <p class='gqb-lead'>Click product categories, custom services, quantity range, budget, and timeline. Each selected option includes an optional note box, so buyers only type when they want to add details.</p>
+          <p class='gqb-lead'>Choose a ready-made request template, use case, product categories, services, quantity, budget, and delivery priority. Optional note boxes appear only after a choice is selected.</p>
           <div class='gqb-share'>
             <input id='gqb-share-url' type='text' readonly value='https://artglobisun.myshopify.com/#bulk-inquiry' aria-label='Bulk quote link'>
             <button type='button' data-gqb-copy-link>Copy customer link</button>
@@ -17,7 +17,7 @@
         </div>
         <div class='gqb-hero-card'>
           <span>Dedicated link for customers, schools, studios, workshops, and resellers.</span>
-          <strong>$500+ bulk sourcing review · clickable request builder · optional notes per choice.</strong>
+          <strong>$500+ bulk sourcing review · request templates · optional notes · smart summary.</strong>
         </div>
       </div>
 
@@ -27,26 +27,40 @@
           {% if form.errors %}<div class='gqb-error'>Please check the required fields and try again.</div>{% endif %}
 
           <div class='gqb-panel'>
-            <h3>1. Choose product categories</h3>
+            <h3>1. Start with a popular request template</h3>
+            <p class='gqb-hint'>One click can pre-select common B2B combinations. Buyers can still edit everything below.</p>
+            <div class='gqb-options gqb-options--two' data-gqb-group='Templates' data-gqb-render='templates'></div>
+          </div>
+
+          <div class='gqb-panel' style='margin-top:18px;'>
+            <h3>2. What is this order for?</h3>
+            <p class='gqb-hint'>Use case helps us recommend the right product mix even if the buyer is not sure what exact items to order.</p>
+            <div class='gqb-options' data-gqb-group='UseCase' data-gqb-render='usecase'></div>
+          </div>
+
+          <div class='gqb-panel' style='margin-top:18px;'>
+            <h3>3. Choose product categories</h3>
             <p class='gqb-hint'>Select as many as needed. Optional note boxes appear after selection for colors, quantity, brand preference, or substitutes.</p>
             <div class='gqb-options' data-gqb-group='Products' data-gqb-render='products'></div>
           </div>
 
           <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>2. Add custom services</h3>
+            <h3>4. Add custom services</h3>
             <p class='gqb-hint'>Use these for logo printing, private label, kit assembly, packaging, freight, and recurring order needs.</p>
             <div class='gqb-options' data-gqb-group='Services' data-gqb-render='services'></div>
           </div>
 
           <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>3. Quick order presets</h3>
+            <h3>5. Quick order presets</h3>
             <div class='gqb-options' data-gqb-group='BuyerType' data-gqb-render='buyer'></div>
             <div class='gqb-options' data-gqb-group='Quantity' data-gqb-render='quantity' style='margin-top:12px;'></div>
+            <div class='gqb-options' data-gqb-group='BudgetPreference' data-gqb-render='budgetPreference' style='margin-top:12px;'></div>
+            <div class='gqb-options' data-gqb-group='DeliveryPriority' data-gqb-render='deliveryPriority' style='margin-top:12px;'></div>
             <div class='gqb-options' data-gqb-group='Timeline' data-gqb-render='timeline' style='margin-top:12px;'></div>
           </div>
 
           <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>4. Minimal details</h3>
+            <h3>6. Minimal details</h3>
             <div class='gqb-form-grid'>
               <div class='gqb-field'><label for='gqb-company'>Company / School / Studio</label><input id='gqb-company' name='contact[Organization]' type='text' placeholder='Optional'></div>
               <div class='gqb-field'><label for='gqb-zip'>Delivery ZIP code</label><input id='gqb-zip' name='contact[Delivery ZIP]' type='text' placeholder='ZIP code helps review freight'></div>
@@ -61,8 +75,9 @@
         </div>
 
         <aside class='gqb-panel gqb-summary-box'>
-          <div class='gqb-summary-title'><h3>Request summary</h3><span class='gqb-chip' data-gqb-count>0 selected</span></div>
+          <div class='gqb-summary-title'><h3>Your Request Cart</h3><span class='gqb-chip' data-gqb-count>0 selected</span></div>
           <div class='gqb-live-pills' data-gqb-pills><span>Choose options on the left</span></div>
+          <div class='gqb-cart' data-gqb-cart><div class='gqb-cart-empty'>Selected templates, use cases, products, and services will appear here.</div></div>
           <div class='gqb-field'>
             <label for='gqb-summary'>Generated request sent to GlobiSun</label>
             <textarea id='gqb-summary' name='contact[body]' readonly></textarea>
@@ -71,7 +86,7 @@
             <button type='submit' class='gqb-submit'>Send Bulk Request</button>
             <button type='button' class='gqb-copy' data-gqb-copy>Copy Summary</button>
           </div>
-          <p class='gqb-note'>Selected options and their optional notes appear at the top of the summary. Buyers can click first and type only when needed.</p>
+          <p class='gqb-note'>This summary is the real message sent to GlobiSun. Buyers can click first and type only when they want to add details.</p>
         </aside>
       {% endform %}
     </div>
@@ -82,6 +97,22 @@
       (root || document).querySelectorAll('.globisun-quote-builder').forEach(function(section){
         if(section.dataset.gqbReady === 'true') return;
         section.dataset.gqbReady = 'true';
+        var templateItems = [
+          ['Classroom Starter Kit','Basic classroom art supply bundle for schools and education programs.','Classroom Starter Kit','Acrylic paints / bottled paints|Markers / drawing pens|Brushes / palettes / painting tools|Canvas / paper / boards / surfaces','Kit assembly / class pack planning|Color / variant planning'],
+          ['Summer Camp Art Kit','Fast program kit for kids camps, art workshops, and seasonal classes.','Summer Camp Art Kit','Markers / drawing pens|Glue / craft materials|Aprons / studio protection|Storage boxes / classroom organization|Seasonal art program supplies','Kit assembly / class pack planning|Supplier substitute options|Shipping carton / freight review'],
+          ['Painting Workshop Kit','Painting-focused bundle for studios, classes, and creative events.','Painting Workshop Kit','Acrylic paints / bottled paints|Brushes / palettes / painting tools|Canvas / paper / boards / surfaces|Aprons / studio protection','Color / variant planning|Sample order / approval review'],
+          ['Retail Resale Starter Pack','Product mix for small retailers, online sellers, and resale projects.','Retail Resale Starter Pack','Resale / retail-ready products|Acrylic paints / bottled paints|Markers / drawing pens|Storage boxes / classroom organization','Private label / packaging review|Product photo / listing support|Recurring reorder program'],
+          ['Custom Logo Supply Pack','Best for schools, studios, events, or brands that want printed logo options.','Custom Logo Art Supply Pack','School / studio kits|Display / banner / event materials|Custom / not listed products','Logo printing / custom branding|Private label / packaging review|Kit assembly / class pack planning'],
+          ['Custom Sourcing Request','For products not currently listed, substitute brands, or special B2B sourcing.','Custom Sourcing Request','Custom / not listed products|Resale / retail-ready products','Supplier substitute options|Shipping carton / freight review|Sample order / approval review']
+        ];
+        var useCaseItems = [
+          ['Classroom Art Class','Structured class use, student packs, recurring supply needs.','Classroom art class'],
+          ['Summer Camp','Seasonal camp, children program, multi-day art activities.','Summer camp'],
+          ['Private Studio Workshop','Studio class, instructor-led workshop, recurring sessions.','Private studio workshop'],
+          ['Retail Resale','Small retail, online store, product bundle or resale-ready request.','Retail resale'],
+          ['Event / Exhibition','Event setup, display, themed art activity, group project.','Event / exhibition'],
+          ['Custom Branded Program','Logo printing, custom packaging, private label, school identity.','Custom branded art supply program']
+        ];
         var productItems = [
           ['Acrylic Paints','Bottled paints, color sets, classroom paint supply.','Acrylic paints / bottled paints'],
           ['Markers & Pens','Alcohol markers, acrylic markers, drawing pens.','Markers / drawing pens'],
@@ -107,36 +138,33 @@
           ['Reorder Program','Repeat class, studio, or retail replenishment planning.','Recurring reorder program'],
           ['Product Photo Support','Basic product presentation support for resale or catalog use.','Product photo / listing support']
         ];
-        var buyerItems = [
-          ['School','Classroom, district, program, camp, education buyer.','School / Education Program'],
-          ['Studio','Private studio, instructor, workshop, recurring class.','Art Studio / Workshop'],
-          ['Reseller','Small retailer, online seller, resale project.','Retailer / Reseller']
-        ];
-        var quantityItems = [
-          ['Starter Bulk','$500-$1,000 or small program order.','Starter bulk: $500-$1,000 / small program'],
-          ['Class Pack','30-100 students, class or workshop bundle.','Class / workshop pack: 30-100 students'],
-          ['Carton / Resale','100-500+ units or carton-based review.','Carton / resale order: 100-500+ units']
-        ];
-        var timelineItems = [
-          ['Flexible','Planning stage, best value sourcing.','Flexible / planning stage'],
-          ['2-4 Weeks','Need sooner, review available options first.','Need within 2-4 weeks'],
-          ['Event Date','Camp, show, semester, workshop, or launch date.','Seasonal / fixed event date']
-        ];
+        var buyerItems = [['School','Classroom, district, program, camp, education buyer.','School / Education Program'],['Studio','Private studio, instructor, workshop, recurring class.','Art Studio / Workshop'],['Reseller','Small retailer, online seller, resale project.','Retailer / Reseller']];
+        var quantityItems = [['Starter Bulk','$500-$1,000 or small program order.','Starter bulk: $500-$1,000 / small program'],['Class Pack','30-100 students, class or workshop bundle.','Class / workshop pack: 30-100 students'],['Carton / Resale','100-500+ units or carton-based review.','Carton / resale order: 100-500+ units']];
+        var budgetPreferenceItems = [['Lowest Cost','Prioritize cost control and value options.','Lowest cost first'],['Balanced','Balance price, quality, and availability.','Balanced quality and price'],['Better Quality','Prefer stronger quality even if cost is higher.','Better quality preferred']];
+        var deliveryPriorityItems = [['Cheapest Shipping','Lowest practical freight and slower timeline is okay.','Cheapest shipping'],['Balanced Delivery','Balanced cost and speed.','Balanced cost and speed'],['Fastest Available','Speed matters more than cheapest option.','Fastest available']];
+        var timelineItems = [['Flexible','Planning stage, best value sourcing.','Flexible / planning stage'],['2-4 Weeks','Need sooner, review available options first.','Need within 2-4 weeks'],['Event Date','Camp, show, semester, workshop, or launch date.','Seasonal / fixed event date']];
         function esc(s){return String(s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];});}
-        function render(container, items, group, type, service){
+        function render(container, items, group, type, variant){
           if(!container || container.dataset.rendered === 'true') return;
           container.dataset.rendered = 'true';
           container.innerHTML = items.map(function(item, idx){
             var checked = type === 'radio' && idx === 0 ? ' checked' : '';
             var note = type === 'checkbox' ? '<input class="gqb-option-note" type="text" data-gqb-note placeholder="Optional note for this choice">' : '';
-            return '<label class="gqb-option '+(service?'gqb-service ':'')+(type==='radio'?'gqb-radio':'')+'"><input type="'+type+'" name="gqb_'+group+'" value="'+esc(item[2])+'" data-gqb-control data-gqb-group-name="'+group+'"'+checked+'><b>'+esc(item[0])+'</b><small>'+esc(item[1])+'</small>'+note+'</label>';
+            var data = '';
+            if(group === 'Templates'){ data = ' data-template-products="'+esc(item[3])+'" data-template-services="'+esc(item[4])+'"'; }
+            var badge = group === 'Templates' ? '<em>Apply template</em>' : '';
+            return '<label class="gqb-option '+(variant || '')+'"><input type="'+type+'" name="gqb_'+group+'" value="'+esc(item[2])+'" data-gqb-control data-gqb-group-name="'+group+'"'+checked+data+'><b>'+esc(item[0])+'</b><small>'+esc(item[1])+'</small>'+badge+note+'</label>';
           }).join('');
         }
-        render(section.querySelector('[data-gqb-render="products"]'), productItems, 'Products', 'checkbox', false);
-        render(section.querySelector('[data-gqb-render="services"]'), serviceItems, 'Services', 'checkbox', true);
-        render(section.querySelector('[data-gqb-render="buyer"]'), buyerItems, 'BuyerType', 'radio', false);
-        render(section.querySelector('[data-gqb-render="quantity"]'), quantityItems, 'Quantity', 'radio', false);
-        render(section.querySelector('[data-gqb-render="timeline"]'), timelineItems, 'Timeline', 'radio', false);
+        render(section.querySelector('[data-gqb-render="templates"]'), templateItems, 'Templates', 'checkbox', 'gqb-template');
+        render(section.querySelector('[data-gqb-render="usecase"]'), useCaseItems, 'UseCase', 'radio', 'gqb-radio gqb-usecase');
+        render(section.querySelector('[data-gqb-render="products"]'), productItems, 'Products', 'checkbox', '');
+        render(section.querySelector('[data-gqb-render="services"]'), serviceItems, 'Services', 'checkbox', 'gqb-service');
+        render(section.querySelector('[data-gqb-render="buyer"]'), buyerItems, 'BuyerType', 'radio', 'gqb-radio');
+        render(section.querySelector('[data-gqb-render="quantity"]'), quantityItems, 'Quantity', 'radio', 'gqb-radio');
+        render(section.querySelector('[data-gqb-render="budgetPreference"]'), budgetPreferenceItems, 'BudgetPreference', 'radio', 'gqb-radio');
+        render(section.querySelector('[data-gqb-render="deliveryPriority"]'), deliveryPriorityItems, 'DeliveryPriority', 'radio', 'gqb-radio');
+        render(section.querySelector('[data-gqb-render="timeline"]'), timelineItems, 'Timeline', 'radio', 'gqb-radio');
         section.querySelectorAll('.gqb-option-note').forEach(function(note){note.addEventListener('click',function(e){e.stopPropagation();});note.addEventListener('keydown',function(e){e.stopPropagation();});});
         var summary = section.querySelector('#gqb-summary');
         var copyBtn = section.querySelector('[data-gqb-copy]');
@@ -144,28 +172,44 @@
         var shareInput = section.querySelector('#gqb-share-url');
         var countEl = section.querySelector('[data-gqb-count]');
         var pillsEl = section.querySelector('[data-gqb-pills]');
+        var cartEl = section.querySelector('[data-gqb-cart]');
         function val(sel){ var el = section.querySelector(sel); return el && el.value ? el.value.trim() : ''; }
-        function selected(group){ return Array.from(section.querySelectorAll('[data-gqb-group-name="'+group+'"]:checked')).map(function(input){var label=input.closest('.gqb-option');var note=label ? (label.querySelector('[data-gqb-note]')||{}).value || '' : '';return {value:input.value,note:note.trim()};}); }
+        function controls(group){ return Array.from(section.querySelectorAll('[data-gqb-group-name="'+group+'"]')); }
+        function selected(group){ return controls(group).filter(function(input){return input.checked;}).map(function(input){var label=input.closest('.gqb-option');var note=label ? (label.querySelector('[data-gqb-note]')||{}).value || '' : '';return {value:input.value,note:note.trim()};}); }
         function radioValue(group){ var el = section.querySelector('[data-gqb-group-name="'+group+'"]:checked'); return el ? el.value : 'Not selected'; }
         function linesFor(arr){ return arr.length ? arr.map(function(x){return '- '+x.value+(x.note ? ' | Note: '+x.note : '');}).join('\n') : '- Not selected yet'; }
+        function setCheckedByValue(group, values){ controls(group).forEach(function(input){ if(values.indexOf(input.value) >= 0){ input.checked = true; } }); }
+        function applyTemplate(input){
+          if(!input.checked) return;
+          var products = (input.getAttribute('data-template-products') || '').split('|').filter(Boolean);
+          var services = (input.getAttribute('data-template-services') || '').split('|').filter(Boolean);
+          setCheckedByValue('Products', products);
+          setCheckedByValue('Services', services);
+        }
+        function cartCard(title, arr){ return '<div class="gqb-cart-card"><strong>'+esc(title)+'</strong><p>'+(arr.length ? arr.map(function(x){return esc(x.value)+(x.note?' — '+esc(x.note):'');}).join('<br>') : 'Not selected yet')+'</p></div>'; }
         function update(){
           if(!summary) return;
           section.querySelectorAll('.gqb-option').forEach(function(label){var input=label.querySelector('[data-gqb-control]');label.classList.toggle('is-selected',!!(input && input.checked));});
+          var templates = selected('Templates');
+          var useCase = selected('UseCase');
           var products = selected('Products');
           var services = selected('Services');
           var buyerType = radioValue('BuyerType');
           var quantity = radioValue('Quantity');
+          var budgetPreference = radioValue('BudgetPreference');
+          var deliveryPriority = radioValue('DeliveryPriority');
           var timeline = radioValue('Timeline');
-          var selectedCount = products.length + services.length;
+          var selectedCount = templates.length + useCase.length + products.length + services.length;
           if(countEl) countEl.textContent = selectedCount + ' selected';
-          if(pillsEl){ var pills = products.concat(services).slice(0,6).map(function(x){return x.value;}); pillsEl.innerHTML = pills.length ? pills.map(function(p){return '<span>'+esc(p)+'</span>';}).join('') : '<span>Choose options on the left</span>'; }
+          if(pillsEl){ var pills = templates.concat(useCase, products, services).slice(0,7).map(function(x){return x.value;}); pillsEl.innerHTML = pills.length ? pills.map(function(p){return '<span>'+esc(p)+'</span>';}).join('') : '<span>Choose options on the left</span>'; }
+          if(cartEl){ cartEl.innerHTML = cartCard('Templates', templates)+cartCard('Use case', useCase)+cartCard('Products', products)+cartCard('Services', services)+cartCard('Order preferences', [{value:buyerType},{value:quantity},{value:budgetPreference},{value:deliveryPriority},{value:timeline}]); }
           if(shareInput){ shareInput.value = window.location.origin + '/#bulk-inquiry'; }
           summary.value = [
-            'GlobiSun Bulk Quote Request','----------------------------','SELECTED PRODUCT CATEGORIES:',linesFor(products),'','SELECTED CUSTOM SERVICES:',linesFor(services),'','QUICK PRESETS:','Buyer type: '+buyerType,'Quantity range: '+quantity,'Timeline: '+timeline,'Target budget: '+(val('#gqb-budget') || 'Not provided'),'Delivery ZIP: '+(val('#gqb-zip') || 'Not provided'),'','CONTACT:','Name: '+(val('#gqb-name') || 'Not provided'),'Email: '+(val('#gqb-email') || 'Not provided'),'Phone: '+(val('#gqb-phone') || 'Not provided'),'Organization: '+(val('#gqb-company') || 'Not provided'),'','EXTRA NOTES:',val('#gqb-notes') || 'No extra notes yet.','','REQUESTED REVIEW:','Pricing, sourcing feasibility, case-pack/carton options, logo/customization feasibility, substitutes, lead time, and bulk fulfillment path.'
+            'GlobiSun Bulk Quote Request','----------------------------','SELECTED REQUEST TEMPLATES:',linesFor(templates),'','USE CASE:',linesFor(useCase),'','SELECTED PRODUCT CATEGORIES:',linesFor(products),'','SELECTED CUSTOM SERVICES:',linesFor(services),'','ORDER PREFERENCES:','Buyer type: '+buyerType,'Quantity range: '+quantity,'Budget preference: '+budgetPreference,'Delivery priority: '+deliveryPriority,'Timeline: '+timeline,'Target budget: '+(val('#gqb-budget') || 'Not provided'),'Delivery ZIP: '+(val('#gqb-zip') || 'Not provided'),'','CONTACT:','Name: '+(val('#gqb-name') || 'Not provided'),'Email: '+(val('#gqb-email') || 'Not provided'),'Phone: '+(val('#gqb-phone') || 'Not provided'),'Organization: '+(val('#gqb-company') || 'Not provided'),'','EXTRA NOTES:',val('#gqb-notes') || 'No extra notes yet.','','REQUESTED REVIEW:','Pricing, sourcing feasibility, case-pack/carton options, logo/customization feasibility, substitutes, lead time, and bulk fulfillment path.'
           ].join('\n');
           summary.scrollTop = 0;
         }
-        section.addEventListener('change', update);
+        section.addEventListener('change', function(e){ var input = e.target && e.target.matches('[data-gqb-group-name="Templates"]') ? e.target : null; if(input){ applyTemplate(input); } update(); });
         section.addEventListener('input', update);
         copyBtn && copyBtn.addEventListener('click', function(){update();try{navigator.clipboard.writeText(summary.value);copyBtn.textContent='Copied ✓';setTimeout(function(){copyBtn.textContent='Copy Summary';},1600);}catch(e){summary.focus();summary.select();document.execCommand('copy');}});
         linkBtn && linkBtn.addEventListener('click', function(){if(shareInput){shareInput.value = window.location.origin + '/#bulk-inquiry';}try{navigator.clipboard.writeText(shareInput.value);linkBtn.textContent='Link copied ✓';setTimeout(function(){linkBtn.textContent='Copy customer link';},1600);}catch(e){shareInput.focus();shareInput.select();document.execCommand('copy');}});
