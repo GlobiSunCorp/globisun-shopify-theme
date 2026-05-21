@@ -1,0 +1,55 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<section class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width" style="padding:36px 20px 72px;">
+    <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px;">
+      <a href="/" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:rgb(var(--color-foreground));font-weight:900;"><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:#364247;color:#fff;">G</span><span>GlobiSun</span></a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;"><a class="button button--secondary" href="/">Home</a><a class="button button--secondary" href="/#shop-products">All Products</a><a class="button button--primary" href="/#bulk-inquiry">Bulk Inquiry</a></div>
+    </nav>
+
+    <div style="margin-bottom:28px;">
+      <p style="margin:0 0 8px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:rgba(var(--color-foreground),.62);">Wholesale catalog</p>
+      <h1 class="collection-hero__title">{% if collection.handle == 'all' %}All Products{% else %}{{ collection.title | escape }}{% endif %}</h1>
+      {% if collection.description != blank %}<div class="collection-hero__description rte">{{ collection.description }}</div>{% endif %}
+      <p style="max-width:760px;color:rgba(var(--color-foreground),.72);">Browse products as catalog references. For bulk review, send product names, expected quantity, destination ZIP code, and timeline.</p>
+    </div>
+
+    {% paginate collection.products by section.settings.products_per_page %}
+      {% if collection.products.size == 0 %}
+        <div class="collection collection--empty"><div class="title-wrapper center"><h2 class="title title--primary">No products found</h2><p>Products assigned to this collection will appear here.</p></div></div>
+      {% else %}
+        <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+          {% for product in collection.products %}
+            <li class="grid__item">{% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio, image_shape: section.settings.image_shape, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, quick_add: section.settings.quick_add, section_id: section.id %}</li>
+          {% endfor %}
+        </ul>
+        {% if paginate.pages > 1 %}{% render 'pagination', paginate: paginate, anchor: '' %}{% endif %}
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name":"Product grid",
+  "tag":"section",
+  "class":"section",
+  "settings":[
+    {"type":"range","id":"products_per_page","min":8,"max":48,"step":4,"default":36,"label":"Products per page"},
+    {"type":"range","id":"columns_desktop","min":1,"max":5,"step":1,"default":4,"label":"Number of columns on desktop"},
+    {"type":"select","id":"columns_mobile","default":"2","label":"Number of columns on mobile","options":[{"value":"1","label":"1 column"},{"value":"2","label":"2 columns"}]},
+    {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"},
+    {"type":"select","id":"image_ratio","options":[{"value":"adapt","label":"Adapt"},{"value":"portrait","label":"Portrait"},{"value":"square","label":"Square"}],"default":"square","label":"Image ratio"},
+    {"type":"select","id":"image_shape","options":[{"value":"default","label":"Default"},{"value":"round","label":"Round"}],"default":"default","label":"Image shape"},
+    {"type":"checkbox","id":"show_secondary_image","default":true,"label":"Show second image on hover"},
+    {"type":"checkbox","id":"show_vendor","default":false,"label":"Show vendor"},
+    {"type":"checkbox","id":"show_rating","default":false,"label":"Show product rating"},
+    {"type":"select","id":"quick_add","default":"none","label":"Quick add","options":[{"value":"none","label":"None"},{"value":"standard","label":"Standard"}]},
+    {"type":"checkbox","id":"enable_filtering","default":false,"label":"Enable filtering"},
+    {"type":"select","id":"filter_type","default":"horizontal","label":"Filter type","options":[{"value":"horizontal","label":"Horizontal"},{"value":"vertical","label":"Vertical"},{"value":"drawer","label":"Drawer"}]},
+    {"type":"checkbox","id":"enable_sorting","default":true,"label":"Enable sorting"}
+  ]
+}
+{% endschema %}
