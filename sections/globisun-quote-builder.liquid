@@ -186,6 +186,20 @@
           setCheckedByValue('Products', products);
           setCheckedByValue('Services', services);
         }
+        function removeTemplate(input){
+          var products = (input.getAttribute('data-template-products') || '').split('|').filter(Boolean);
+          var services = (input.getAttribute('data-template-services') || '').split('|').filter(Boolean);
+          var keptProducts = [];
+          var keptServices = [];
+          controls('Templates').forEach(function(t){
+            if(t !== input && t.checked){
+              keptProducts = keptProducts.concat((t.getAttribute('data-template-products') || '').split('|').filter(Boolean));
+              keptServices = keptServices.concat((t.getAttribute('data-template-services') || '').split('|').filter(Boolean));
+            }
+          });
+          controls('Products').forEach(function(p){ if(products.indexOf(p.value) >= 0 && keptProducts.indexOf(p.value) < 0){ p.checked = false; } });
+          controls('Services').forEach(function(s){ if(services.indexOf(s.value) >= 0 && keptServices.indexOf(s.value) < 0){ s.checked = false; } });
+        }
         function cartCard(title, arr){ return '<div class="gqb-cart-card"><strong>'+esc(title)+'</strong><p>'+(arr.length ? arr.map(function(x){return esc(x.value)+(x.note?' — '+esc(x.note):'');}).join('<br>') : 'Not selected yet')+'</p></div>'; }
         function update(){
           if(!summary) return;
@@ -209,6 +223,19 @@
           ].join('\n');
           summary.scrollTop = 0;
         }
+        document.addEventListener('click', function(e){
+          var card = e.target && e.target.closest ? e.target.closest('.gqb-template') : null;
+          if(!card || !section.contains(card)) return;
+          if(e.target.closest('[data-gqb-note]')) return;
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          var input = card.querySelector('[data-gqb-group-name="Templates"]');
+          if(!input) return;
+          if(input.checked){ input.checked = false; removeTemplate(input); }
+          else { input.checked = true; applyTemplate(input); }
+          update();
+        }, true);
         section.addEventListener('change', function(e){ var input = e.target && e.target.matches('[data-gqb-group-name="Templates"]') ? e.target : null; if(input){ applyTemplate(input); } update(); });
         section.addEventListener('input', update);
         copyBtn && copyBtn.addEventListener('click', function(){update();try{navigator.clipboard.writeText(summary.value);copyBtn.textContent='Copied ✓';setTimeout(function(){copyBtn.textContent='Copy Summary';},1600);}catch(e){summary.focus();summary.select();document.execCommand('copy');}});
