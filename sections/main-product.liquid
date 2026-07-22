@@ -1,51 +1,139 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-<section class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width" style="padding:28px 20px 72px;">
-    <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px;">
-      <a href="/" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:rgb(var(--color-foreground));font-weight:900;"><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:#364247;color:#fff;">G</span><span>GlobiSun</span></a>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;"><a class="button button--secondary" href="/">Home</a><a class="button button--secondary" href="/#shop-products">All Products</a><a class="button button--primary" href="/#bulk-inquiry">Bulk Inquiry</a></div>
+<section class="gs-product color-{{ section.settings.color_scheme }} gradient" data-gs-product>
+  <style>
+    .gs-product{padding:28px 0 78px}.gs-product__wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}.gs-product__nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px}.gs-product__brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#364247;font-weight:900}.gs-product__brand span:first-child{display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#364247;color:#fff}.gs-product__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:clamp(28px,5vw,70px);align-items:start}.gs-product__media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gs-product__media figure{margin:0}.gs-product__media img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(54,66,71,.1);background:#fff}.gs-product__info{position:sticky;top:24px}.gs-product__eyebrow{margin:0 0 10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#6f7a7d}.gs-product h1{margin:0;color:#364247;font-size:clamp(34px,4vw,58px);line-height:1.02;letter-spacing:-.04em}.gs-product__price{margin-top:16px;color:#364247;font-size:28px;font-weight:900}.gs-product__stock{display:inline-flex;margin-top:12px;padding:7px 10px;border-radius:999px;background:#eefaf5;color:#257c5d;font-size:12px;font-weight:900}.gs-product__stock--out{background:#fff1ee;color:#a94339}.gs-product__policy{margin:22px 0;padding:18px;border:1px solid rgba(47,111,189,.16);border-radius:18px;background:linear-gradient(135deg,#eef5ff,#fff);color:#566267;line-height:1.55}.gs-product__policy strong{display:block;color:#364247;margin-bottom:6px}.gs-product__form{display:grid;gap:18px}.gs-product__field{display:grid;gap:7px}.gs-product__field label,.gs-product__legend{font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#667074}.gs-product__field input,.gs-product__field select,.gs-product__field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:13px;background:#fff;padding:13px 14px;color:#364247;font:inherit}.gs-product__field textarea{min-height:92px;resize:vertical}.gs-product__two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gs-product__advanced{border:1px solid rgba(54,66,71,.14);border-radius:18px;background:rgba(255,255,255,.65);overflow:hidden}.gs-product__advanced summary{cursor:pointer;padding:16px 18px;color:#364247;font-weight:900}.gs-product__advanced-body{display:grid;gap:14px;padding:0 18px 18px}.gs-product__actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}.gs-product__add{border:0;border-radius:14px;background:#c94a3a;color:#fff;min-height:58px;padding:0 24px;font-weight:900;font-size:15px;cursor:pointer;box-shadow:0 14px 34px rgba(201,74,58,.24)}.gs-product__add[disabled]{background:#aeb5b8;box-shadow:none;cursor:not-allowed}.gs-product__review{display:flex;align-items:center;justify-content:center;border:1px solid rgba(54,66,71,.2);border-radius:14px;background:#fff;color:#364247;min-height:58px;padding:0 20px;text-decoration:none;font-weight:900}.gs-product__micro{margin:0;color:#6f7a7d;font-size:12px;line-height:1.45}.gs-product__description{margin-top:28px;padding-top:24px;border-top:1px solid rgba(54,66,71,.13);color:#596569;line-height:1.7}.gs-product__links{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;font-size:13px}.gs-product__links a{color:#2f6fbd;font-weight:800}@media(max-width:900px){.gs-product__grid{grid-template-columns:1fr}.gs-product__info{position:static}.gs-product__media{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.gs-product__media{grid-template-columns:1fr}.gs-product__two,.gs-product__actions{grid-template-columns:1fr}}
+  </style>
+
+  <div class="gs-product__wrap">
+    <nav class="gs-product__nav">
+      <a class="gs-product__brand" href="/"><span>G</span><span>GlobiSun</span></a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="button button--secondary" href="/collections/all">All Products</a>
+        <a class="button button--primary" href="{{ routes.cart_url }}">Order Builder{% if cart.item_count > 0 %} ({{ cart.item_count }}){% endif %}</a>
+      </div>
     </nav>
 
-    <div class="product product--medium product--left product--thumbnail grid grid--1-col grid--2-col-tablet">
-      <div class="grid__item product__media-wrapper">
+    <div class="gs-product__grid">
+      <div class="gs-product__media">
         {% if product.media.size > 0 %}
-          <div style="display:grid;gap:14px;">
-            {% for media in product.media limit: 8 %}
-              {% if media.media_type == 'image' %}
-                {{ media | image_url: width: 1200 | image_tag: loading: 'lazy', style: 'width:100%;height:auto;border-radius:14px;border:1px solid rgba(0,0,0,.08);' }}
-              {% endif %}
-            {% endfor %}
-          </div>
+          {% for media in product.media limit: 8 %}
+            {% if media.media_type == 'image' %}
+              <figure>{{ media | image_url: width: 1200 | image_tag: loading: 'lazy', alt: media.alt | default: product.title }}</figure>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {{ 'product-1' | placeholder_svg_tag }}
         {% endif %}
       </div>
-      <div class="product__info-wrapper grid__item">
-        <div class="product__info-container">
-          <p style="margin:0 0 10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:rgba(var(--color-foreground),.62);">Product reference</p>
-          <h1>{{ product.title | escape }}</h1>
-          <div class="price price--large">{{ product.selected_or_first_available_variant.price | money }}</div>
-          <div style="margin:22px 0;padding:18px;border:1px solid rgba(var(--color-foreground),.12);border-radius:16px;background:rgba(var(--color-foreground),.03);">
-            <strong>B2B bulk order note</strong>
-            <p style="margin:.6rem 0 0;color:rgba(var(--color-foreground),.72);">Use this product page as a reference for bulk quote review. Wholesale review works best at $500+ before shipping and taxes. Include quantity, ZIP code, timeline, and acceptable substitutes.</p>
-          </div>
-          {% form 'product', product %}
-            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-            <div style="margin:18px 0;">
-              <label for="Quantity-{{ section.id }}">Quantity</label>
-              <input id="Quantity-{{ section.id }}" name="quantity" type="number" value="1" min="1" style="display:block;margin-top:8px;max-width:130px;padding:12px;border:1px solid rgba(var(--color-foreground),.18);border-radius:10px;">
-            </div>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;margin:22px 0;">
-              <button type="submit" name="add" class="button button--primary" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>{% if product.selected_or_first_available_variant.available %}Add to Cart{% else %}Sold Out{% endif %}</button>
-              <a class="button button--secondary" href="/#bulk-inquiry">Request Bulk Quote</a>
-            </div>
-          {% endform %}
-          {% if product.description != blank %}<div class="product__description rte">{{ product.description }}</div>{% endif %}
-          <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;"><a href="/#shop-products">Back to products</a><span>·</span><a href="/collections/all">All products</a><span>·</span><a href="/#bulk-inquiry">Bulk inquiry</a></div>
+
+      <div class="gs-product__info">
+        <p class="gs-product__eyebrow">Fixed-price wholesale product</p>
+        <h1>{{ product.title | escape }}</h1>
+        <div class="gs-product__price" data-gs-price>{{ product.selected_or_first_available_variant.price | money_with_currency }}</div>
+        <span class="gs-product__stock{% unless product.selected_or_first_available_variant.available %} gs-product__stock--out{% endunless %}" data-gs-stock>
+          {% if product.selected_or_first_available_variant.available %}In stock and available to order{% else %}Currently unavailable{% endif %}
+        </span>
+
+        <div class="gs-product__policy">
+          <strong>$500 minimum · Free U.S. shipping · Applicable sales tax included</strong>
+          Listed pricing is fixed. Choose the available variant and quantity, then add optional color, logo, packaging, substitution, or program notes.
         </div>
+
+        {% form 'product', product, id: 'GlobiSunProductForm', class: 'gs-product__form' %}
+          {% unless product.has_only_default_variant %}
+            <div class="gs-product__field">
+              <label for="Variant-{{ section.id }}">Product option</label>
+              <select id="Variant-{{ section.id }}" name="id" data-gs-variant>
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}" data-price="{{ variant.price | money_with_currency | escape }}" data-available="{{ variant.available }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>
+                    {{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} — Sold out{% endunless %}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          {% else %}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          {% endunless %}
+
+          <div class="gs-product__two">
+            <div class="gs-product__field">
+              <label for="Quantity-{{ section.id }}">Quantity</label>
+              <input id="Quantity-{{ section.id }}" name="quantity" type="number" value="1" min="1" step="1">
+            </div>
+            <div class="gs-product__field">
+              <label for="NeededDate-{{ section.id }}">Needed date</label>
+              <input id="NeededDate-{{ section.id }}" name="properties[Needed date]" type="date">
+            </div>
+          </div>
+
+          <details class="gs-product__advanced" open>
+            <summary>Optional product adjustments</summary>
+            <div class="gs-product__advanced-body">
+              <div class="gs-product__field">
+                <label for="ColorMix-{{ section.id }}">Preferred color / variant mix</label>
+                <input id="ColorMix-{{ section.id }}" name="properties[Preferred color or variant mix]" type="text" placeholder="Example: equal mix of 8 colors">
+              </div>
+              <div class="gs-product__field">
+                <label for="Logo-{{ section.id }}">Logo / personalization</label>
+                <input id="Logo-{{ section.id }}" name="properties[Logo or personalization]" type="text" placeholder="Optional school, studio, camp, or event details">
+              </div>
+              <div class="gs-product__two">
+                <div class="gs-product__field">
+                  <label for="Packaging-{{ section.id }}">Packaging preference</label>
+                  <input id="Packaging-{{ section.id }}" name="properties[Packaging preference]" type="text" placeholder="Individual packs, class sets, cartons…">
+                </div>
+                <div class="gs-product__field">
+                  <label for="Substitutes-{{ section.id }}">Comparable substitutes</label>
+                  <select id="Substitutes-{{ section.id }}" name="properties[Comparable substitutes allowed]">
+                    <option value="Ask me before substituting">Ask me before substituting</option>
+                    <option value="Yes, comparable substitutes are acceptable">Yes, comparable substitutes are acceptable</option>
+                    <option value="No substitutions">No substitutions</option>
+                  </select>
+                </div>
+              </div>
+              <div class="gs-product__field">
+                <label for="ProductNotes-{{ section.id }}">Product notes</label>
+                <textarea id="ProductNotes-{{ section.id }}" name="properties[Customer note]" placeholder="Class size, age group, exact color needs, logo placement, or any other request"></textarea>
+              </div>
+            </div>
+          </details>
+
+          <div class="gs-product__actions">
+            <button type="submit" name="add" class="gs-product__add" data-gs-add {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+              {% if product.selected_or_first_available_variant.available %}Add to Order Builder{% else %}Currently Unavailable{% endif %}
+            </button>
+            <a class="gs-product__review" href="/#bulk-inquiry">Ask Before Ordering</a>
+          </div>
+          <p class="gs-product__micro">You can adjust quantities and product notes again inside the Order Builder before checkout.</p>
+        {% endform %}
+
+        {% if product.description != blank %}<div class="gs-product__description rte">{{ product.description }}</div>{% endif %}
+        <div class="gs-product__links"><a href="/collections/all">All products</a><span>·</span><a href="{{ routes.cart_url }}">Open Order Builder</a><span>·</span><a href="/#bulk-inquiry">Configuration review</a></div>
       </div>
     </div>
   </div>
+
+  <script>
+    (function(){
+      var section=document.currentScript.closest('[data-gs-product]');
+      if(!section)return;
+      var select=section.querySelector('[data-gs-variant]');
+      var price=section.querySelector('[data-gs-price]');
+      var stock=section.querySelector('[data-gs-stock]');
+      var add=section.querySelector('[data-gs-add]');
+      if(!select)return;
+      function update(){
+        var option=select.options[select.selectedIndex];
+        var available=option&&option.dataset.available==='true';
+        if(price&&option)price.textContent=option.dataset.price;
+        if(stock){stock.textContent=available?'In stock and available to order':'Currently unavailable';stock.classList.toggle('gs-product__stock--out',!available);}
+        if(add){add.disabled=!available;add.textContent=available?'Add to Order Builder':'Currently Unavailable';}
+      }
+      select.addEventListener('change',update);update();
+    })();
+  </script>
 </section>
 
 {% schema %}
