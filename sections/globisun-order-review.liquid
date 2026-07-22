@@ -1,0 +1,118 @@
+<section class="gs-order-review color-{{ section.settings.color_scheme }} gradient" id="bulk-inquiry">
+  <style>
+    .gs-order-review{padding:72px 0}.gs-order-review__wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}.gs-order-review__shell{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:34px;border:1px solid rgba(54,66,71,.14);border-radius:30px;background:linear-gradient(135deg,#f8f6f1,#fff 52%,#eef5ff);padding:clamp(24px,4vw,46px);box-shadow:0 24px 70px rgba(24,33,38,.07)}.gs-order-review__kicker{margin:0 0 10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#6f7a7d}.gs-order-review h2{margin:0;color:#364247;font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.045em}.gs-order-review__lead{color:#667074;font-size:16px;line-height:1.65}.gs-order-review__rules{display:grid;gap:10px;margin-top:22px}.gs-order-review__rule{border:1px solid rgba(54,66,71,.12);border-radius:16px;background:rgba(255,255,255,.75);padding:14px 16px;color:#596569}.gs-order-review__rule strong{display:block;color:#364247;margin-bottom:3px}.gs-order-review__link{display:inline-flex;margin-top:18px;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border-radius:13px;background:#364247;color:#fff;text-decoration:none;font-weight:900}.gs-order-review__form{border:1px solid rgba(54,66,71,.13);border-radius:24px;background:rgba(255,255,255,.9);padding:22px}.gs-order-review__step{margin:0 0 18px;padding-bottom:18px;border-bottom:1px solid rgba(54,66,71,.12)}.gs-order-review__step:last-of-type{border-bottom:0}.gs-order-review__step h3{margin:0 0 12px;color:#364247;font-size:20px}.gs-order-review__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.gs-order-review__field{display:grid;gap:7px}.gs-order-review__field--full{grid-column:1/-1}.gs-order-review__field label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:#667074}.gs-order-review__field input,.gs-order-review__field select,.gs-order-review__field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:12px;background:#fff;padding:12px 13px;color:#364247;font:inherit}.gs-order-review__field textarea{min-height:105px;resize:vertical}.gs-order-review__submit{width:100%;min-height:56px;border:0;border-radius:14px;background:#2f6fbd;color:#fff;font-weight:900;font-size:15px;cursor:pointer;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gs-order-review__notice{margin-bottom:16px;padding:14px 16px;border-radius:14px;font-weight:800}.gs-order-review__notice--success{background:#edf8ef;color:#276738}.gs-order-review__notice--error{background:#fff1f1;color:#8d2d2d}.gs-order-review__micro{margin:12px 0 0;color:#6f7a7d;font-size:12px;line-height:1.5}@media(max-width:900px){.gs-order-review__shell{grid-template-columns:1fr}}@media(max-width:600px){.gs-order-review__grid{grid-template-columns:1fr}.gs-order-review__field--full{grid-column:auto}}
+  </style>
+
+  <div class="gs-order-review__wrap">
+    <div class="gs-order-review__shell">
+      <div>
+        <p class="gs-order-review__kicker">Configuration review</p>
+        <h2>Need help building or adjusting the order?</h2>
+        <p class="gs-order-review__lead">Use the catalog and Order Builder for direct checkout. Use this short form when you need product combinations, logo options, color mixes, class kits, packaging, or help choosing an alternative.</p>
+        <div class="gs-order-review__rules">
+          <div class="gs-order-review__rule"><strong>Fixed listed pricing</strong>Review is for configuration and product fit, not discount negotiation.</div>
+          <div class="gs-order-review__rule"><strong>$500 order minimum</strong>Combine products and adjust quantities inside the Order Builder.</div>
+          <div class="gs-order-review__rule"><strong>All-in U.S. pricing</strong>Free U.S. shipping and applicable sales tax are included in listed prices.</div>
+        </div>
+        <a class="gs-order-review__link" href="{{ routes.cart_url }}">Open My Order Builder →</a>
+      </div>
+
+      {% form 'contact', id: 'GlobiSunOrderReview', class: 'gs-order-review__form' %}
+        {% if form.posted_successfully? %}<div class="gs-order-review__notice gs-order-review__notice--success">Thank you. Your configuration request was sent successfully.</div>{% endif %}
+        {% if form.errors %}<div class="gs-order-review__notice gs-order-review__notice--error">Please check the required fields and try again.</div>{% endif %}
+
+        <div class="gs-order-review__step">
+          <h3>1. What are you preparing?</h3>
+          <div class="gs-order-review__grid">
+            <div class="gs-order-review__field">
+              <label for="ReviewUseCase-{{ section.id }}">Use case</label>
+              <select id="ReviewUseCase-{{ section.id }}" name="contact[Use case]">
+                <option>Classroom or school program</option>
+                <option>Art studio or workshop</option>
+                <option>Summer camp or seasonal program</option>
+                <option>Retail resale</option>
+                <option>Event or exhibition</option>
+                <option>Custom sourcing</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="gs-order-review__field">
+              <label for="ReviewQuantity-{{ section.id }}">People / units</label>
+              <input id="ReviewQuantity-{{ section.id }}" name="contact[People or units]" type="text" placeholder="Example: 40 students or 120 units">
+            </div>
+          </div>
+        </div>
+
+        <div class="gs-order-review__step">
+          <h3>2. Products and adjustments</h3>
+          <div class="gs-order-review__grid">
+            <div class="gs-order-review__field gs-order-review__field--full">
+              <label for="ReviewProducts-{{ section.id }}">Product names or links</label>
+              <textarea id="ReviewProducts-{{ section.id }}" name="contact[Products]" placeholder="Paste product names, product links, or describe what you need"></textarea>
+            </div>
+            <div class="gs-order-review__field gs-order-review__field--full">
+              <label for="ReviewAdjustments-{{ section.id }}">Adjustments</label>
+              <textarea id="ReviewAdjustments-{{ section.id }}" name="contact[Adjustments]" placeholder="Colors, logo text, packaging, substitutions, age group, quality preference, or other requirements"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="gs-order-review__step">
+          <h3>3. Budget and delivery</h3>
+          <div class="gs-order-review__grid">
+            <div class="gs-order-review__field">
+              <label for="ReviewBudget-{{ section.id }}">Target order total</label>
+              <select id="ReviewBudget-{{ section.id }}" name="contact[Target order total]">
+                <option>$500–$1,000</option>
+                <option>$1,000–$2,500</option>
+                <option>$2,500–$5,000</option>
+                <option>$5,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="gs-order-review__field">
+              <label for="ReviewDate-{{ section.id }}">Needed date</label>
+              <input id="ReviewDate-{{ section.id }}" name="contact[Needed date]" type="date">
+            </div>
+            <div class="gs-order-review__field gs-order-review__field--full">
+              <label for="ReviewZip-{{ section.id }}">Delivery ZIP code</label>
+              <input id="ReviewZip-{{ section.id }}" name="contact[Delivery ZIP]" type="text" inputmode="numeric" placeholder="U.S. ZIP code">
+            </div>
+          </div>
+        </div>
+
+        <div class="gs-order-review__step">
+          <h3>4. Contact</h3>
+          <div class="gs-order-review__grid">
+            <div class="gs-order-review__field">
+              <label for="ReviewOrganization-{{ section.id }}">Organization</label>
+              <input id="ReviewOrganization-{{ section.id }}" name="contact[Organization]" type="text" placeholder="School, studio, business, or program">
+            </div>
+            <div class="gs-order-review__field">
+              <label for="ReviewName-{{ section.id }}">Name</label>
+              <input id="ReviewName-{{ section.id }}" name="contact[name]" type="text">
+            </div>
+            <div class="gs-order-review__field gs-order-review__field--full">
+              <label for="ReviewEmail-{{ section.id }}">Email *</label>
+              <input id="ReviewEmail-{{ section.id }}" name="contact[email]" type="email" required>
+            </div>
+          </div>
+        </div>
+
+        <input type="hidden" name="contact[Subject]" value="GlobiSun order configuration review">
+        <button class="gs-order-review__submit" type="submit">Send Configuration Request</button>
+        <p class="gs-order-review__micro">For a ready-to-buy order, add products directly to the Order Builder and adjust quantities before checkout.</p>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name":"GlobiSun order review",
+  "tag":"section",
+  "class":"section",
+  "settings":[{"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}],
+  "presets":[{"name":"GlobiSun order review"}]
+}
+{% endschema %}
