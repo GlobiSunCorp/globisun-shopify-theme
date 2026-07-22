@@ -1,1 +1,0 @@
-This repository currently does not include an automated Shopify theme preview workflow. Changes on feature branches should be connected to an unpublished Shopify theme and tested through a Shopify preview link before merge or publication.
