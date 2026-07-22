@@ -1,0 +1,150 @@
+{% liquid
+  assign wholesale_minimum = 50000
+  assign minimum_reached = false
+  if cart.total_price >= wholesale_minimum
+    assign minimum_reached = true
+  endif
+  assign amount_remaining = wholesale_minimum | minus: cart.total_price
+  assign progress = cart.total_price | times: 100 | divided_by: wholesale_minimum | at_most: 100
+%}
+
+<section class="gs-order-cart color-{{ section.settings.color_scheme }} gradient">
+  <style>
+    .gs-order-cart{padding:38px 0 80px}.gs-order-cart__wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}.gs-order-cart__nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}.gs-order-cart__brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#364247;font-weight:900}.gs-order-cart__brand span:first-child{display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#364247;color:#fff}.gs-order-cart__hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,380px);gap:24px;align-items:start;margin-bottom:28px}.gs-order-cart h1{margin:0;color:#364247;font-size:clamp(38px,5vw,66px);line-height:1;letter-spacing:-.045em}.gs-order-cart__lead{max-width:720px;color:#667074;font-size:17px;line-height:1.6}.gs-order-cart__status{border:1px solid rgba(54,66,71,.14);border-radius:24px;padding:22px;background:#fff;box-shadow:0 16px 44px rgba(24,33,38,.06)}.gs-order-cart__status strong{display:block;color:#364247;font-size:18px}.gs-order-cart__status p{margin:8px 0 0;color:#667074;line-height:1.45}.gs-order-cart__bar{height:10px;border-radius:999px;background:#e6e8e7;overflow:hidden;margin:16px 0 8px}.gs-order-cart__bar span{display:block;height:100%;width:var(--gs-progress);background:linear-gradient(90deg,#2f6fbd,#2d9b74);border-radius:inherit}.gs-order-cart__layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:24px;align-items:start}.gs-order-cart__items,.gs-order-cart__summary{border:1px solid rgba(54,66,71,.14);border-radius:26px;background:rgba(255,255,255,.82);padding:22px;box-shadow:0 16px 48px rgba(24,33,38,.05)}.gs-order-cart__summary{position:sticky;top:24px}.gs-order-cart__item{display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid rgba(54,66,71,.12)}.gs-order-cart__item:first-child{padding-top:0}.gs-order-cart__item:last-child{border-bottom:0;padding-bottom:0}.gs-order-cart__image img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(54,66,71,.1);background:#fff}.gs-order-cart__item h2{margin:0;font-size:19px;line-height:1.25}.gs-order-cart__item h2 a{text-decoration:none;color:#364247}.gs-order-cart__variant,.gs-order-cart__properties{margin:7px 0 0;color:#6c777b;font-size:13px;line-height:1.45}.gs-order-cart__controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-top:14px}.gs-order-cart__field{display:grid;gap:6px}.gs-order-cart__field label{font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#6c777b}.gs-order-cart input[type=number],.gs-order-cart textarea{border:1px solid rgba(54,66,71,.22);border-radius:12px;background:#fff;padding:11px 12px;font:inherit;color:#364247}.gs-order-cart input[type=number]{width:100px}.gs-order-cart textarea{width:100%;min-height:92px;resize:vertical}.gs-order-cart__remove{color:#a94339;font-weight:800;font-size:13px}.gs-order-cart__item-note{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(54,66,71,.16)}.gs-order-cart__save-note{margin-top:8px;border:1px solid rgba(47,111,189,.25);border-radius:10px;background:#eef5ff;color:#2f6fbd;padding:9px 12px;font-weight:900;cursor:pointer}.gs-order-cart__save-note[disabled]{opacity:.6;cursor:wait}.gs-order-cart__summary h2{margin:0 0 18px;color:#364247}.gs-order-cart__row{display:flex;justify-content:space-between;gap:18px;padding:10px 0;color:#667074}.gs-order-cart__row--total{border-top:1px solid rgba(54,66,71,.14);margin-top:8px;padding-top:18px;color:#364247;font-size:20px;font-weight:900}.gs-order-cart__policy{margin:18px 0;padding:15px;border-radius:16px;background:#f6f4f2;color:#5e696d;font-size:13px;line-height:1.55}.gs-order-cart__actions{display:grid;gap:10px;margin-top:16px}.gs-order-cart__button{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:14px;padding:0 20px;text-decoration:none;font-weight:900;cursor:pointer}.gs-order-cart__button--primary{border:0;background:#2f6fbd;color:#fff;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gs-order-cart__button--secondary{border:1px solid rgba(54,66,71,.2);background:#fff;color:#364247}.gs-order-cart__button[disabled]{background:#b9c0c3;box-shadow:none;cursor:not-allowed}.gs-order-cart__empty{text-align:center;padding:70px 24px;border:1px solid rgba(54,66,71,.14);border-radius:26px;background:#fff}.gs-order-cart__empty h1{font-size:clamp(36px,5vw,58px)}.gs-order-cart__update{border:1px solid rgba(54,66,71,.2);background:#fff;color:#364247;border-radius:12px;min-height:44px;padding:0 16px;font-weight:900;cursor:pointer}@media(max-width:900px){.gs-order-cart__hero,.gs-order-cart__layout{grid-template-columns:1fr}.gs-order-cart__summary{position:static}}@media(max-width:600px){.gs-order-cart__item{grid-template-columns:82px minmax(0,1fr)}.gs-order-cart__items,.gs-order-cart__summary{padding:17px}.gs-order-cart__controls{align-items:stretch}.gs-order-cart__update{width:100%}}
+  </style>
+
+  <div class="gs-order-cart__wrap">
+    <nav class="gs-order-cart__nav">
+      <a class="gs-order-cart__brand" href="/"><span>G</span><span>GlobiSun</span></a>
+      <a class="button button--secondary" href="/collections/all">Continue Shopping</a>
+    </nav>
+
+    {% if cart.item_count == 0 %}
+      <div class="gs-order-cart__empty">
+        <h1>Your Order Builder is empty.</h1>
+        <p>Add products, quantities, and customization notes. Orders can be adjusted before checkout.</p>
+        <a class="gs-order-cart__button gs-order-cart__button--primary" href="/collections/all">Browse Products</a>
+      </div>
+    {% else %}
+      <div class="gs-order-cart__hero">
+        <div>
+          <p class="globisun-eyebrow">Fixed-price wholesale order builder</p>
+          <h1>Review products, quantities, and customer notes.</h1>
+          <p class="gs-order-cart__lead">The listed price is fixed and includes free U.S. shipping and applicable sales tax. The wholesale order minimum is $500.</p>
+        </div>
+        <div class="gs-order-cart__status">
+          {% if minimum_reached %}
+            <strong>Wholesale minimum reached ✓</strong>
+            <p>Your order can proceed to checkout.</p>
+          {% else %}
+            <strong>{{ amount_remaining | money }} more needed</strong>
+            <p>Add products or increase quantities to reach the $500 minimum.</p>
+          {% endif %}
+          <div class="gs-order-cart__bar" style="--gs-progress:{{ progress }}%;"><span></span></div>
+          <p>{{ cart.total_price | money }} of {{ wholesale_minimum | money }}</p>
+        </div>
+      </div>
+
+      <form action="{{ routes.cart_url }}" method="post" id="cart" novalidate>
+        <div class="gs-order-cart__layout">
+          <div class="gs-order-cart__items">
+            {% for item in cart.items %}
+              <article class="gs-order-cart__item">
+                <a class="gs-order-cart__image" href="{{ item.url }}">
+                  {% if item.image %}{{ item.image | image_url: width: 260 | image_tag: loading: 'lazy', alt: item.product.title }}{% endif %}
+                </a>
+                <div>
+                  <h2><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h2>
+                  {% unless item.product.has_only_default_variant %}<p class="gs-order-cart__variant">{{ item.variant.title }}</p>{% endunless %}
+                  {% if item.properties.size > 0 %}
+                    <div class="gs-order-cart__properties">
+                      {% for property in item.properties %}
+                        {% assign first_character = property.first | slice: 0 %}
+                        {% if property.last != blank and first_character != '_' %}<div><strong>{{ property.first }}:</strong> {{ property.last }}</div>{% endif %}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  <div class="gs-order-cart__controls">
+                    <div class="gs-order-cart__field">
+                      <label for="Quantity-{{ forloop.index }}">Quantity</label>
+                      <input id="Quantity-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0" step="1">
+                    </div>
+                    <div><strong>{{ item.final_line_price | money }}</strong></div>
+                    <a class="gs-order-cart__remove" href="{{ item.url_to_remove }}">Remove</a>
+                  </div>
+                  <div class="gs-order-cart__item-note">
+                    {% assign customer_note = item.properties['Customer note'] %}
+                    <div class="gs-order-cart__field">
+                      <label for="LineNote-{{ forloop.index }}">Customer adjustment note for this product</label>
+                      <textarea id="LineNote-{{ forloop.index }}" data-gs-line-note data-key="{{ item.key }}" data-quantity="{{ item.quantity }}" data-properties="{{ item.properties | json | escape }}" placeholder="Color mix, logo text, packaging, substitutions, or other changes">{{ customer_note }}</textarea>
+                    </div>
+                    <button class="gs-order-cart__save-note" type="button" data-gs-save-note>Save product note</button>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+            <button class="gs-order-cart__update" type="submit" name="update">Update Quantities</button>
+          </div>
+
+          <aside class="gs-order-cart__summary">
+            <h2>Order Summary</h2>
+            <div class="gs-order-cart__row"><span>Products</span><strong>{{ cart.total_price | money }}</strong></div>
+            <div class="gs-order-cart__row"><span>U.S. shipping</span><strong>Free</strong></div>
+            <div class="gs-order-cart__row"><span>Applicable sales tax</span><strong>Included</strong></div>
+            <div class="gs-order-cart__row gs-order-cart__row--total"><span>Total</span><span>{{ cart.total_price | money_with_currency }}</span></div>
+
+            <div class="gs-order-cart__field" style="margin-top:18px;">
+              <label for="CartNote">General order notes</label>
+              <textarea id="CartNote" name="note" placeholder="Organization, delivery deadline, class size, purchase order number, or overall instructions">{{ cart.note }}</textarea>
+            </div>
+
+            <div class="gs-order-cart__policy">$500 minimum order. Fixed listed pricing. Free U.S. shipping. Applicable sales tax is included in listed prices. Product availability and selected variants are shown before checkout.</div>
+
+            <div class="gs-order-cart__actions">
+              <button class="gs-order-cart__button gs-order-cart__button--primary" type="submit" name="checkout" {% unless minimum_reached %}disabled aria-disabled="true"{% endunless %}>
+                {% if minimum_reached %}Proceed to Secure Checkout{% else %}Add {{ amount_remaining | money }} to Checkout{% endif %}
+              </button>
+              <a class="gs-order-cart__button gs-order-cart__button--secondary" href="/#bulk-inquiry">Send for Configuration Review</a>
+            </div>
+          </aside>
+        </div>
+      </form>
+    {% endif %}
+  </div>
+
+  <script>
+    (function(){
+      function endpoint(){
+        var base=(window.routes&&window.routes.cart_change_url)||'/cart/change';
+        return base.replace(/\.js$/,'')+'.js';
+      }
+      document.addEventListener('click',function(event){
+        var button=event.target.closest('[data-gs-save-note]');
+        if(!button)return;
+        var wrapper=button.closest('.gs-order-cart__item-note');
+        var field=wrapper&&wrapper.querySelector('[data-gs-line-note]');
+        if(!field)return;
+        var properties={};
+        try{properties=JSON.parse(field.dataset.properties||'{}')||{};}catch(error){properties={};}
+        properties['Customer note']=field.value.trim();
+        button.disabled=true;button.textContent='Saving…';
+        fetch(endpoint(),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({id:field.dataset.key,quantity:Number(field.dataset.quantity||1),properties:properties})})
+          .then(function(response){if(!response.ok)throw new Error('Unable to save note');return response.json();})
+          .then(function(){button.textContent='Saved ✓';setTimeout(function(){window.location.reload();},500);})
+          .catch(function(){button.disabled=false;button.textContent='Try saving again';});
+      });
+    })();
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "GlobiSun order builder cart",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}
+  ],
+  "presets": [{"name":"GlobiSun order builder cart"}]
+}
+{% endschema %}
