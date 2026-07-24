@@ -1,1 +1,14 @@
-{%- comment -%}GlobiSun schema intentionally disabled before customer launch to keep the storefront clean if Shopify sync is incomplete.{%- endcomment -%}
+{%- comment -%}
+  GlobiSun storefront helpers.
+  Keeps internal payment products out of customer-facing discovery and loads
+  the B2B availability treatment for unavailable products.
+{%- endcomment -%}
+
+{%- if template.name == 'product' -%}
+  {%- assign globisun_product_title = product.title | downcase -%}
+  {%- if globisun_product_title contains 'balance payment' -%}
+    <meta name="robots" content="noindex,nofollow">
+  {%- endif -%}
+{%- endif -%}
+
+<script src="{{ 'globisun-availability.js' | asset_url }}" defer="defer"></script>
