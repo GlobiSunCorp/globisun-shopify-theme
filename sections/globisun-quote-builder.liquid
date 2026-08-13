@@ -1,262 +1,207 @@
-<section class='globisun-quote-builder color-{{ section.settings.color_scheme }} gradient' id='bulk-inquiry'>
+<section class="gpb color-{{ section.settings.color_scheme }} gradient" id="procurement-builder">
   <style>
-    .gqb-wrap{max-width:1200px;margin:0 auto;padding:72px 20px}.gqb-shell{border:1px solid rgba(54,66,71,.14);border-radius:32px;background:linear-gradient(135deg,#f8f6f1 0%,#fff 46%,#f2f7ff 100%);box-shadow:0 24px 80px rgba(24,33,38,.08);overflow:hidden}.gqb-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;padding:42px}.gqb-kicker{margin:0 0 12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;color:#728084}.gqb-title{margin:0;color:#364247;font-size:clamp(34px,5vw,68px);line-height:.98;letter-spacing:-.045em}.gqb-lead{margin:18px 0 0;max-width:760px;color:#667074;font-size:17px;line-height:1.65}.gqb-hero-card{border-radius:26px;background:#364247;color:#fff;padding:30px;display:grid;align-content:space-between;min-height:240px}.gqb-hero-card strong{font-size:clamp(26px,3vw,42px);line-height:1.05;letter-spacing:-.035em}.gqb-hero-card span{color:rgba(255,255,255,.72);line-height:1.55}.gqb-share{margin-top:20px;border:1px solid rgba(54,66,71,.13);border-radius:18px;background:rgba(255,255,255,.78);padding:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.gqb-share input{flex:1;min-width:240px;border:1px solid rgba(54,66,71,.16);border-radius:12px;padding:12px 14px;background:#fff;color:#364247}.gqb-share button{border:0;border-radius:12px;background:#364247;color:#fff;padding:12px 16px;font-weight:900;cursor:pointer}.gqb-body{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:28px;padding:0 42px 42px}.gqb-panel{border:1px solid rgba(54,66,71,.13);border-radius:24px;background:rgba(255,255,255,.76);padding:24px}.gqb-panel h3{margin:0 0 16px;color:#364247;font-size:24px;letter-spacing:-.025em}.gqb-hint{margin:-8px 0 16px;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.gqb-options--two{grid-template-columns:repeat(2,minmax(0,1fr))}.gqb-option{position:relative;display:block;border:1px solid rgba(54,66,71,.14);border-radius:18px;background:#fff;padding:16px;color:#364247;transition:.18s ease;cursor:pointer;min-height:116px}.gqb-option input[type='checkbox'],.gqb-option input[type='radio']{position:absolute;opacity:0;pointer-events:none}.gqb-option b{display:block;font-size:15px;margin-bottom:6px;line-height:1.2;padding-right:28px}.gqb-option small{display:block;color:#6f7a7d;line-height:1.35}.gqb-option.is-selected{border-color:#2f6fbd;background:#eef5ff;box-shadow:0 12px 28px rgba(47,111,189,.14);transform:translateY(-1px)}.gqb-option.is-selected:after{content:'✓';position:absolute;right:14px;top:12px;width:24px;height:24px;border-radius:999px;background:#2f6fbd;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.gqb-service.is-selected{border-color:#c94a3a;background:#fff3ef;box-shadow:0 12px 28px rgba(201,74,58,.12)}.gqb-service.is-selected:after{background:#c94a3a}.gqb-radio.is-selected{border-color:#2d9b74;background:#eefaf5;box-shadow:0 12px 28px rgba(45,155,116,.12)}.gqb-radio.is-selected:after{background:#2d9b74}.gqb-usecase.is-selected{border-color:#7b61ff;background:#f3f0ff;box-shadow:0 12px 28px rgba(123,97,255,.13)}.gqb-usecase.is-selected:after{background:#7b61ff}.gqb-template{min-height:150px;background:linear-gradient(135deg,#fff,#f8f5ef)}.gqb-template b{font-size:17px}.gqb-template em{display:inline-flex;margin-top:10px;border-radius:999px;background:#364247;color:#fff;padding:7px 10px;font-style:normal;font-size:12px;font-weight:900}.gqb-template.is-selected{border-color:#c94a3a;background:#fff3ef}.gqb-template.is-selected:after{background:#c94a3a}.gqb-option-note{display:none;margin-top:10px;width:100%;border:1px solid rgba(54,66,71,.18);border-radius:12px;background:rgba(255,255,255,.92);padding:10px 11px;color:#364247;font:inherit;font-size:13px}.gqb-option.is-selected .gqb-option-note{display:block}.gqb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gqb-field{display:grid;gap:8px}.gqb-field label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#6f7a7d}.gqb-field input,.gqb-field select,.gqb-field textarea{width:100%;border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;padding:14px 15px;color:#364247;font:inherit}.gqb-field textarea{min-height:150px;resize:vertical}.gqb-full{grid-column:1/-1}.gqb-summary-box{position:sticky;top:24px}.gqb-summary-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.gqb-summary-title h3{margin:0}.gqb-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eef5ff;color:#2f6fbd;padding:8px 12px;font-size:12px;font-weight:900}.gqb-live-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.gqb-live-pills span{border-radius:999px;background:#f1f3f2;color:#4c5a5e;padding:8px 10px;font-size:12px;font-weight:800}.gqb-cart{display:grid;gap:10px;margin-bottom:14px}.gqb-cart-card{border:1px solid rgba(54,66,71,.12);border-radius:16px;background:#fff;padding:14px}.gqb-cart-card strong{display:block;color:#364247;font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.gqb-cart-card p{margin:0;color:#667074;font-size:14px;line-height:1.45}.gqb-cart-empty{border:1px dashed rgba(54,66,71,.24);border-radius:16px;padding:16px;color:#667074;background:rgba(255,255,255,.55)}.gqb-field textarea#gqb-summary{min-height:390px;font-size:14px;line-height:1.55}.gqb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.gqb-submit{border:0;border-radius:14px;background:#2f6fbd;color:#fff;min-height:56px;padding:0 24px;font-weight:900;letter-spacing:.03em;cursor:pointer;box-shadow:0 14px 32px rgba(47,111,189,.22)}.gqb-copy{border:1px solid rgba(54,66,71,.22);border-radius:14px;background:#fff;color:#364247;min-height:56px;padding:0 22px;font-weight:900;cursor:pointer}.gqb-note{margin:14px 0 0;color:#6f7a7d;font-size:13px;line-height:1.5}.gqb-success{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#edf8ef;color:#276738;font-weight:800}.gqb-error{margin:0 0 20px;padding:16px 18px;border-radius:16px;background:#fff1f1;color:#8d2d2d;font-weight:800}@media(max-width:1000px){.gqb-options{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.gqb-head,.gqb-body{grid-template-columns:1fr;padding:28px}.gqb-summary-box{position:static}}@media(max-width:640px){.gqb-wrap{padding:48px 16px}.gqb-form-grid,.gqb-options,.gqb-options--two{grid-template-columns:1fr}.gqb-head,.gqb-body{padding:22px}.gqb-title{font-size:40px}.gqb-submit,.gqb-copy,.gqb-share button{width:100%}}
+    .gpb{--ink:#273238;--muted:#66757b;--line:rgba(39,50,56,.14);--soft:#f6f8f8;--blue:#2768c7;--green:#237a5b;--warm:#fff7ef}.gpb *{box-sizing:border-box}.gpb-wrap{max-width:1240px;margin:0 auto;padding:64px 20px 80px}.gpb-hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:24px;align-items:stretch;margin-bottom:26px}.gpb-hero-main,.gpb-hero-side,.gpb-panel,.gpb-summary{border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:0 18px 60px rgba(23,34,41,.06)}.gpb-hero-main{padding:38px}.gpb-kicker{margin:0 0 12px;font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}.gpb h1{margin:0;color:var(--ink);font-size:clamp(38px,5vw,68px);line-height:1;letter-spacing:-.045em}.gpb-lead{max-width:780px;margin:18px 0 0;color:var(--muted);font-size:17px;line-height:1.65}.gpb-hero-side{padding:28px;background:linear-gradient(145deg,#273238,#35454d);color:#fff;display:grid;align-content:space-between;gap:20px}.gpb-hero-side strong{font-size:clamp(24px,2.7vw,38px);line-height:1.08;letter-spacing:-.03em}.gpb-hero-side p{margin:0;color:rgba(255,255,255,.74);line-height:1.6}.gpb-badges{display:flex;gap:8px;flex-wrap:wrap}.gpb-badge{display:inline-flex;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:12px;font-weight:800}.gpb-grid{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(330px,.72fr);gap:24px;align-items:start}.gpb-panel{padding:26px;margin-bottom:18px}.gpb-panel h2,.gpb-panel h3,.gpb-summary h2{margin:0;color:var(--ink);letter-spacing:-.025em}.gpb-panel h2{font-size:28px}.gpb-panel h3{font-size:21px}.gpb-copy{margin:7px 0 0;color:var(--muted);line-height:1.55}.gpb-source-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}.gpb-source{border:1px solid var(--line);border-radius:18px;background:var(--soft);padding:16px;text-align:left;color:var(--ink);font:inherit;cursor:pointer;min-height:112px;transition:.16s ease}.gpb-source b{display:block;margin-bottom:6px}.gpb-source span{display:block;color:var(--muted);font-size:12px;line-height:1.4}.gpb-source.is-active{border-color:rgba(39,104,199,.45);background:#eef5ff;box-shadow:0 10px 24px rgba(39,104,199,.10)}.gpb-add-panel{display:none;margin-top:16px;padding:18px;border:1px solid var(--line);border-radius:20px;background:#fbfcfc}.gpb-add-panel.is-active{display:block}.gpb-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gpb-field{display:grid;gap:7px}.gpb-field--full{grid-column:1/-1}.gpb-field label{font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#66757b}.gpb-field input,.gpb-field select,.gpb-field textarea{width:100%;border:1px solid rgba(39,50,56,.20);border-radius:13px;background:#fff;color:var(--ink);padding:13px 14px;font:inherit}.gpb-field textarea{min-height:104px;resize:vertical}.gpb-field input:focus,.gpb-field select:focus,.gpb-field textarea:focus{outline:2px solid rgba(39,104,199,.18);border-color:rgba(39,104,199,.55)}.gpb-add-button,.gpb-submit,.gpb-secondary{border:0;border-radius:13px;min-height:48px;padding:0 18px;font-weight:900;cursor:pointer}.gpb-add-button,.gpb-submit{background:var(--blue);color:#fff}.gpb-secondary{background:#eef1f2;color:var(--ink)}.gpb-inline-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.gpb-search-results{display:grid;gap:8px;margin-top:10px}.gpb-search-result{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px;text-align:left;width:100%;cursor:pointer}.gpb-search-result img{width:54px;height:54px;border-radius:10px;object-fit:cover;background:#f2f2f2}.gpb-search-result b{color:var(--ink);display:block}.gpb-search-result small{color:var(--muted)}.gpb-search-result em{font-style:normal;font-weight:900;color:var(--blue)}.gpb-empty{padding:16px;border:1px dashed rgba(39,50,56,.25);border-radius:15px;color:var(--muted);background:#fafbfb}.gpb-items{display:grid;gap:14px;margin-top:16px}.gpb-item{border:1px solid var(--line);border-radius:22px;background:#fff;overflow:hidden}.gpb-item-head{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;padding:16px;background:linear-gradient(180deg,#fff,#fafbfb);border-bottom:1px solid var(--line)}.gpb-item-thumb{width:58px;height:58px;border-radius:12px;object-fit:cover;background:#eef1f2;display:flex;align-items:center;justify-content:center;color:#879398;font-weight:900}.gpb-item-head h3{font-size:17px;margin:0 0 4px}.gpb-item-head a,.gpb-item-head small{color:var(--muted);font-size:12px}.gpb-item-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.gpb-icon-btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:8px 10px;font-size:12px;font-weight:800;cursor:pointer}.gpb-item-body{padding:16px}.gpb-priorities{display:flex;gap:7px;flex-wrap:wrap}.gpb-priority{position:relative}.gpb-priority input{position:absolute;opacity:0;pointer-events:none}.gpb-priority span{display:inline-flex;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#5c696e;font-size:12px;font-weight:800;cursor:pointer}.gpb-priority input:checked+span{border-color:rgba(39,104,199,.45);background:#eef5ff;color:var(--blue)}.gpb-help{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.gpb-summary{position:sticky;top:20px;padding:24px}.gpb-summary-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.gpb-count{display:inline-flex;padding:7px 10px;border-radius:999px;background:#eef5ff;color:var(--blue);font-size:12px;font-weight:900}.gpb-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.gpb-metric{padding:13px;border-radius:14px;background:var(--soft)}.gpb-metric span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.gpb-metric strong{display:block;margin-top:4px;color:var(--ink);font-size:19px}.gpb-review{display:grid;gap:8px;max-height:360px;overflow:auto;padding-right:2px}.gpb-review-row{padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff}.gpb-review-row b{display:block;color:var(--ink);font-size:13px}.gpb-review-row span{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.4}.gpb-summary .gpb-submit{width:100%;margin-top:16px;min-height:54px}.gpb-submit-note{margin:9px 0 0;text-align:center;color:var(--muted);font-size:11px;line-height:1.4}.gpb-status{margin-bottom:18px;padding:15px 17px;border-radius:14px;font-weight:800}.gpb-status--ok{background:#edf8f1;color:#216641}.gpb-status--error{background:#fff0f0;color:#8d3030}.gpb-contact{background:linear-gradient(145deg,#fff,#fbfcfd)}.gpb-contact .gpb-fields{margin-top:16px}.gpb-hidden{display:none!important}@media(max-width:1050px){.gpb-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gpb-grid{grid-template-columns:1fr}.gpb-summary{position:static}.gpb-hero{grid-template-columns:1fr}}@media(max-width:680px){.gpb-wrap{padding:40px 14px 60px}.gpb-hero-main,.gpb-hero-side,.gpb-panel,.gpb-summary{border-radius:20px}.gpb-hero-main{padding:26px}.gpb-panel{padding:18px}.gpb-source-grid,.gpb-fields{grid-template-columns:1fr}.gpb-item-head{grid-template-columns:48px 1fr}.gpb-item-actions{grid-column:1/-1;justify-content:flex-start}.gpb-item-thumb{width:48px;height:48px}.gpb-metrics{grid-template-columns:1fr}}
   </style>
 
-  <div class='gqb-wrap'>
-    <div class='gqb-shell'>
-      <div class='gqb-head'>
-        <div>
-          <p class='gqb-kicker'>Bulk Quote Builder</p>
-          <h2 class='gqb-title'>Build your art supply request like a smart inquiry cart.</h2>
-          <p class='gqb-lead'>Choose a ready-made request template, use case, product categories, services, quantity, budget, and delivery priority. Optional note boxes appear only after a choice is selected.</p>
-          <div class='gqb-share'>
-            <input id='gqb-share-url' type='text' readonly value='https://artglobisun.myshopify.com/#bulk-inquiry' aria-label='Bulk quote link'>
-            <button type='button' data-gqb-copy-link>Copy customer link</button>
-          </div>
-        </div>
-        <div class='gqb-hero-card'>
-          <span>Dedicated link for customers, schools, studios, workshops, and resellers.</span>
-          <strong>$500+ bulk sourcing review · request templates · optional notes · smart summary.</strong>
-        </div>
+  <div class="gpb-wrap">
+    <div class="gpb-hero">
+      <div class="gpb-hero-main">
+        <p class="gpb-kicker">Procurement Builder</p>
+        <h1>{{ section.settings.heading }}</h1>
+        <p class="gpb-lead">{{ section.settings.intro }}</p>
       </div>
+      <div class="gpb-hero-side">
+        <p>Use GlobiSun like a sourcing desk, not a fixed catalog. Add what you already buy, what you found elsewhere, or simply describe what you need.</p>
+        <strong>One request can contain products from anywhere.</strong>
+        <div class="gpb-badges"><span class="gpb-badge">Compare current pricing</span><span class="gpb-badge">Multiple items</span><span class="gpb-badge">Custom sourcing</span></div>
+      </div>
+    </div>
 
-      <div class='gqb-body'>
-        {% form 'contact', id: 'GlobiSunQuoteBuilder', class: 'gqb-form' %}
-          {% if form.posted_successfully? %}<div class='gqb-success'>Thank you. Your bulk request was sent successfully.</div>{% endif %}
-          {% if form.errors %}<div class='gqb-error'>Please check the required fields and try again.</div>{% endif %}
+    {% form 'contact', id: 'GlobiSunProcurementBuilder', class: 'gpb-form' %}
+      {% if form.posted_successfully? %}<div class="gpb-status gpb-status--ok">Thank you. Your supply request has been received. We will review the products, pricing references, and sourcing options.</div>{% endif %}
+      {% if form.errors %}<div class="gpb-status gpb-status--error">Please check the required fields and submit again.</div>{% endif %}
+      <div class="gpb-status gpb-status--error gpb-hidden" data-gpb-client-error></div>
 
-          <div class='gqb-panel'>
-            <h3>1. Start with a popular request template</h3>
-            <p class='gqb-hint'>One click can pre-select common B2B combinations. Buyers can still edit everything below.</p>
-            <div class='gqb-options gqb-options--two' data-gqb-group='Templates' data-gqb-render='templates'></div>
+      <div class="gpb-grid">
+        <div>
+          <div class="gpb-panel">
+            <h2>1. Add what you buy or need</h2>
+            <p class="gpb-copy">Product names do not have to be exact. You can search GlobiSun, paste a competitor or supplier link, describe an unknown item, or paste an existing supply list.</p>
+            <div class="gpb-source-grid" data-gpb-source-grid>
+              <button class="gpb-source is-active" type="button" data-gpb-source="shop"><b>Add from GlobiSun</b><span>Search our current Shopify catalog.</span></button>
+              <button class="gpb-source" type="button" data-gpb-source="link"><b>Add by product link</b><span>Amazon, Blick, Jerry's, supplier pages, etc.</span></button>
+              <button class="gpb-source" type="button" data-gpb-source="custom"><b>I can't find the product</b><span>Describe it in plain language. A name is optional.</span></button>
+              <button class="gpb-source" type="button" data-gpb-source="list"><b>Paste a supply list</b><span>Fast path for longer purchasing lists.</span></button>
+            </div>
+
+            <div class="gpb-add-panel is-active" data-gpb-panel="shop">
+              <div class="gpb-field"><label for="gpb-shop-search">Search GlobiSun products</label><input id="gpb-shop-search" type="search" autocomplete="off" placeholder="Try: acrylic paint, canvas, brush set..." data-gpb-shop-search></div>
+              <div class="gpb-search-results" data-gpb-search-results><div class="gpb-empty">Start typing to find products. Selecting one adds it to your request — it does not add it to checkout.</div></div>
+            </div>
+
+            <div class="gpb-add-panel" data-gpb-panel="link">
+              <div class="gpb-fields">
+                <div class="gpb-field gpb-field--full"><label>Product or supplier URL *</label><input type="url" placeholder="https://..." data-gpb-link-url></div>
+                <div class="gpb-field"><label>Product name</label><input type="text" placeholder="Optional if the link is clear" data-gpb-link-title></div>
+                <div class="gpb-field"><label>Brand</label><input type="text" placeholder="Optional" data-gpb-link-brand></div>
+                <div class="gpb-field gpb-field--full"><label>Specification / size / packaging</label><input type="text" placeholder="Example: 64 oz, 11 × 14 in, 12-color set" data-gpb-link-spec></div>
+              </div>
+              <div class="gpb-inline-actions"><button class="gpb-add-button" type="button" data-gpb-add-link>Add product</button></div>
+            </div>
+
+            <div class="gpb-add-panel" data-gpb-panel="custom">
+              <div class="gpb-fields">
+                <div class="gpb-field"><label>Product name</label><input type="text" placeholder="Optional" data-gpb-custom-title></div>
+                <div class="gpb-field"><label>Brand</label><input type="text" placeholder="Optional / unknown is fine" data-gpb-custom-brand></div>
+                <div class="gpb-field gpb-field--full"><label>Describe what you need *</label><textarea placeholder="Example: large student-grade acrylic paint bottles, similar to the 64 oz bottles used in our classes." data-gpb-custom-description></textarea></div>
+                <div class="gpb-field"><label>Size / specification</label><input type="text" placeholder="Optional" data-gpb-custom-spec></div>
+                <div class="gpb-field"><label>Reference image / product link</label><input type="url" placeholder="Optional https://..." data-gpb-custom-url></div>
+              </div>
+              <div class="gpb-inline-actions"><button class="gpb-add-button" type="button" data-gpb-add-custom>Add custom item</button></div>
+            </div>
+
+            <div class="gpb-add-panel" data-gpb-panel="list">
+              <div class="gpb-fields">
+                <div class="gpb-field gpb-field--full"><label>Paste your current shopping / supply list</label><textarea placeholder="Example:\nBlick 11 × 14 canvas — 300 pcs\n64 oz acrylic paint — 20 bottles\n12 pc brush set — 100 sets" data-gpb-list-text></textarea></div>
+                <div class="gpb-field gpb-field--full"><label>Supply list / quote / invoice share link</label><input type="url" placeholder="Optional Google Drive, Dropbox, supplier quote, or document link" data-gpb-list-link></div>
+              </div>
+              <p class="gpb-help">For true file attachments, Shopify's native theme contact form needs a file-upload integration. A share link works immediately and keeps this V1 reliable.</p>
+            </div>
           </div>
 
-          <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>2. What is this order for?</h3>
-            <p class='gqb-hint'>Use case helps us recommend the right product mix even if the buyer is not sure what exact items to order.</p>
-            <div class='gqb-options' data-gqb-group='UseCase' data-gqb-render='usecase'></div>
+          <div class="gpb-panel">
+            <h2>2. Build the product request</h2>
+            <p class="gpb-copy">For each item, tell us as much or as little as you know. Current price is optional — sharing it lets us make a clean apples-to-apples comparison.</p>
+            <div class="gpb-items" data-gpb-items><div class="gpb-empty">No products added yet.</div></div>
           </div>
 
-          <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>3. Choose product categories</h3>
-            <p class='gqb-hint'>Select as many as needed. Optional note boxes appear after selection for colors, quantity, brand preference, or substitutes.</p>
-            <div class='gqb-options' data-gqb-group='Products' data-gqb-render='products'></div>
-          </div>
-
-          <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>4. Add custom services</h3>
-            <p class='gqb-hint'>Use these for logo printing, private label, kit assembly, packaging, freight, and recurring order needs.</p>
-            <div class='gqb-options' data-gqb-group='Services' data-gqb-render='services'></div>
-          </div>
-
-          <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>5. Quick order presets</h3>
-            <div class='gqb-options' data-gqb-group='BuyerType' data-gqb-render='buyer'></div>
-            <div class='gqb-options' data-gqb-group='Quantity' data-gqb-render='quantity' style='margin-top:12px;'></div>
-            <div class='gqb-options' data-gqb-group='BudgetPreference' data-gqb-render='budgetPreference' style='margin-top:12px;'></div>
-            <div class='gqb-options' data-gqb-group='DeliveryPriority' data-gqb-render='deliveryPriority' style='margin-top:12px;'></div>
-            <div class='gqb-options' data-gqb-group='Timeline' data-gqb-render='timeline' style='margin-top:12px;'></div>
-          </div>
-
-          <div class='gqb-panel' style='margin-top:18px;'>
-            <h3>6. Minimal details</h3>
-            <div class='gqb-form-grid'>
-              <div class='gqb-field'><label for='gqb-company'>Company / School / Studio</label><input id='gqb-company' name='contact[Organization]' type='text' placeholder='Optional'></div>
-              <div class='gqb-field'><label for='gqb-zip'>Delivery ZIP code</label><input id='gqb-zip' name='contact[Delivery ZIP]' type='text' placeholder='ZIP code helps review freight'></div>
-              <div class='gqb-field'><label for='gqb-budget'>Target budget</label><select id='gqb-budget' name='contact[Target budget]'><option>$500 - $1,000</option><option>$1,000 - $2,500</option><option>$2,500 - $5,000</option><option>$5,000+</option><option>Not sure yet</option></select></div>
-              <div class='gqb-field'><label for='gqb-email'>Email *</label><input id='gqb-email' name='contact[email]' type='email' placeholder='you@example.com' required></div>
-              <div class='gqb-field'><label for='gqb-name'>Name</label><input id='gqb-name' name='contact[name]' type='text' placeholder='Optional'></div>
-              <div class='gqb-field'><label for='gqb-phone'>Phone</label><input id='gqb-phone' name='contact[phone]' type='tel' placeholder='Optional'></div>
-              <div class='gqb-field gqb-full'><label for='gqb-notes'>Extra notes</label><textarea id='gqb-notes' name='contact[Extra notes]' placeholder='Optional: paste product links, logo printing notes, preferred colors, deadline, or anything important.'></textarea></div>
-              <input id='gqb-subject' name='contact[Subject]' type='hidden' value='GlobiSun bulk quote request'>
+          <div class="gpb-panel gpb-contact">
+            <h2>3. Where should we send the comparison?</h2>
+            <p class="gpb-copy">We use this information only to review the request, confirm delivery feasibility, and reply with pricing or sourcing questions.</p>
+            <div class="gpb-fields">
+              <div class="gpb-field"><label for="gpb-org">Company / organization</label><input id="gpb-org" name="contact[Organization]" type="text" autocomplete="organization" placeholder="Studio, school, program, retailer..."></div>
+              <div class="gpb-field"><label for="gpb-buyer">Buyer type</label><select id="gpb-buyer" name="contact[Buyer type]"><option value="">Select</option><option>Art Studio / Workshop</option><option>School / Education Program</option><option>Camp / Creative Program</option><option>Recreation Department</option><option>Retailer / Reseller</option><option>Other B2B Buyer</option></select></div>
+              <div class="gpb-field"><label for="gpb-name">Name</label><input id="gpb-name" name="contact[name]" type="text" autocomplete="name" placeholder="Your name"></div>
+              <div class="gpb-field"><label for="gpb-email">Email *</label><input id="gpb-email" name="contact[email]" type="email" autocomplete="email" required placeholder="you@company.com"></div>
+              <div class="gpb-field"><label for="gpb-phone">Phone</label><input id="gpb-phone" name="contact[phone]" type="tel" autocomplete="tel" placeholder="Optional"></div>
+              <div class="gpb-field"><label for="gpb-zip">Delivery ZIP code</label><input id="gpb-zip" name="contact[Delivery ZIP]" type="text" inputmode="numeric" placeholder="ZIP"></div>
+              <div class="gpb-field"><label for="gpb-timeline">When do you need it?</label><select id="gpb-timeline" name="contact[Timeline]"><option value="">Select</option><option>Under 2 weeks</option><option>2–4 weeks</option><option>1–2 months</option><option>2+ months / planning ahead</option><option>Flexible</option></select></div>
+              <div class="gpb-field"><label for="gpb-role">Your role</label><input id="gpb-role" name="contact[Role]" type="text" placeholder="Owner, instructor, purchasing, coordinator..."></div>
+              <div class="gpb-field gpb-field--full"><label for="gpb-notes">Anything else we should know?</label><textarea id="gpb-notes" name="contact[Additional notes]" placeholder="Delivery constraints, program date, packaging needs, preferred brands, tax/resale notes, etc."></textarea></div>
             </div>
           </div>
         </div>
 
-        <aside class='gqb-panel gqb-summary-box'>
-          <div class='gqb-summary-title'><h3>Your Request Cart</h3><span class='gqb-chip' data-gqb-count>0 selected</span></div>
-          <div class='gqb-live-pills' data-gqb-pills><span>Choose options on the left</span></div>
-          <div class='gqb-cart' data-gqb-cart><div class='gqb-cart-empty'>Selected templates, use cases, products, and services will appear here.</div></div>
-          <div class='gqb-field'>
-            <label for='gqb-summary'>Generated request sent to GlobiSun</label>
-            <textarea id='gqb-summary' name='contact[body]' readonly></textarea>
+        <aside class="gpb-summary">
+          <div class="gpb-summary-top"><h2>Your supply request</h2><span class="gpb-count" data-gpb-count>0 items</span></div>
+          <div class="gpb-metrics">
+            <div class="gpb-metric"><span>Current order estimate</span><strong data-gpb-order-total>—</strong></div>
+            <div class="gpb-metric"><span>Annual purchasing estimate</span><strong data-gpb-annual-total>—</strong></div>
           </div>
-          <div class='gqb-actions'>
-            <button type='submit' class='gqb-submit'>Send Bulk Request</button>
-            <button type='button' class='gqb-copy' data-gqb-copy>Copy Summary</button>
-          </div>
-          <p class='gqb-note'>This summary is the real message sent to GlobiSun. Buyers can click first and type only when they want to add details.</p>
+          <div class="gpb-review" data-gpb-review><div class="gpb-empty">Add a product or paste a supply list to begin.</div></div>
+          <textarea class="gpb-hidden" id="gpb-body" name="contact[body]"></textarea>
+          <input class="gpb-hidden" name="contact[Inquiry type]" value="Procurement Builder / price comparison">
+          <button class="gpb-submit" type="submit">Request My Comparison</button>
+          <p class="gpb-submit-note">No obligation to switch suppliers. If we cannot offer a meaningful advantage, we can say so plainly.</p>
         </aside>
-      {% endform %}
-    </div>
+      </div>
+    {% endform %}
   </div>
 
   <script>
-    function initGlobiSunQuoteBuilder(root){
-      (root || document).querySelectorAll('.globisun-quote-builder').forEach(function(section){
-        if(section.dataset.gqbReady === 'true') return;
-        section.dataset.gqbReady = 'true';
-        var templateItems = [
-          ['Classroom Starter Kit','Basic classroom art supply bundle for schools and education programs.','Classroom Starter Kit','Acrylic paints / bottled paints|Markers / drawing pens|Brushes / palettes / painting tools|Canvas / paper / boards / surfaces','Kit assembly / class pack planning|Color / variant planning'],
-          ['Summer Camp Art Kit','Fast program kit for kids camps, art workshops, and seasonal classes.','Summer Camp Art Kit','Markers / drawing pens|Glue / craft materials|Aprons / studio protection|Storage boxes / classroom organization|Seasonal art program supplies','Kit assembly / class pack planning|Supplier substitute options|Shipping carton / freight review'],
-          ['Painting Workshop Kit','Painting-focused bundle for studios, classes, and creative events.','Painting Workshop Kit','Acrylic paints / bottled paints|Brushes / palettes / painting tools|Canvas / paper / boards / surfaces|Aprons / studio protection','Color / variant planning|Sample order / approval review'],
-          ['Retail Resale Starter Pack','Product mix for small retailers, online sellers, and resale projects.','Retail Resale Starter Pack','Resale / retail-ready products|Acrylic paints / bottled paints|Markers / drawing pens|Storage boxes / classroom organization','Private label / packaging review|Product photo / listing support|Recurring reorder program'],
-          ['Custom Logo Supply Pack','Best for schools, studios, events, or brands that want printed logo options.','Custom Logo Art Supply Pack','School / studio kits|Display / banner / event materials|Custom / not listed products','Logo printing / custom branding|Private label / packaging review|Kit assembly / class pack planning'],
-          ['Custom Sourcing Request','For products not currently listed, substitute brands, or special B2B sourcing.','Custom Sourcing Request','Custom / not listed products|Resale / retail-ready products','Supplier substitute options|Shipping carton / freight review|Sample order / approval review']
-        ];
-        var useCaseItems = [
-          ['Classroom Art Class','Structured class use, student packs, recurring supply needs.','Classroom art class'],
-          ['Summer Camp','Seasonal camp, children program, multi-day art activities.','Summer camp'],
-          ['Private Studio Workshop','Studio class, instructor-led workshop, recurring sessions.','Private studio workshop'],
-          ['Retail Resale','Small retail, online store, product bundle or resale-ready request.','Retail resale'],
-          ['Event / Exhibition','Event setup, display, themed art activity, group project.','Event / exhibition'],
-          ['Custom Branded Program','Logo printing, custom packaging, private label, school identity.','Custom branded art supply program']
-        ];
-        var productItems = [
-          ['Acrylic Paints','Bottled paints, color sets, classroom paint supply.','Acrylic paints / bottled paints'],
-          ['Markers & Pens','Alcohol markers, acrylic markers, drawing pens.','Markers / drawing pens'],
-          ['Brushes & Tools','Brush sets, palettes, painting accessories.','Brushes / palettes / painting tools'],
-          ['Surfaces & Paper','Canvas, paper, panels, boards, practice surfaces.','Canvas / paper / boards / surfaces'],
-          ['Glue & Crafts','Glue sticks, classroom craft materials, project supplies.','Glue / craft materials'],
-          ['Aprons & Protection','Kids aprons, adult aprons, studio protection items.','Aprons / studio protection'],
-          ['Storage & Organization','Art supply boxes, classroom storage, kit organization.','Storage boxes / classroom organization'],
-          ['School & Studio Kits','Class packs, camp kits, workshop bundles.','School / studio kits'],
-          ['Display Materials','Banners, stands, event display and program support.','Display / banner / event materials'],
-          ['Seasonal Programs','Summer camp, holiday workshops, themed class packs.','Seasonal art program supplies'],
-          ['Resale Products','Products for small retailers, online sellers, and shops.','Resale / retail-ready products'],
-          ['Custom Sourcing','Products not listed yet, substitute brands, special requests.','Custom / not listed products']
-        ];
-        var serviceItems = [
-          ['Logo Printing','School logo, studio logo, event identity, branded item request.','Logo printing / custom branding'],
-          ['Private Label','Packaging, barcode, resale presentation, brand-ready review.','Private label / packaging review'],
-          ['Kit Assembly','Class sets, workshop kits, camp packs, program bundles.','Kit assembly / class pack planning'],
-          ['Color Planning','Color count, variant mix, classroom distribution, substitutes.','Color / variant planning'],
-          ['Substitute Options','Comparable products if exact item is unavailable or costly.','Supplier substitute options'],
-          ['Freight Review','Carton quantity, weight, lead time, overseas freight review.','Shipping carton / freight review'],
-          ['Sample Review','Pre-order sample discussion before larger bulk order.','Sample order / approval review'],
-          ['Reorder Program','Repeat class, studio, or retail replenishment planning.','Recurring reorder program'],
-          ['Product Photo Support','Basic product presentation support for resale or catalog use.','Product photo / listing support']
-        ];
-        var buyerItems = [['School','Classroom, district, program, camp, education buyer.','School / Education Program'],['Studio','Private studio, instructor, workshop, recurring class.','Art Studio / Workshop'],['Reseller','Small retailer, online seller, resale project.','Retailer / Reseller']];
-        var quantityItems = [['Starter Bulk','$500-$1,000 or small program order.','Starter bulk: $500-$1,000 / small program'],['Class Pack','30-100 students, class or workshop bundle.','Class / workshop pack: 30-100 students'],['Carton / Resale','100-500+ units or carton-based review.','Carton / resale order: 100-500+ units']];
-        var budgetPreferenceItems = [['Lowest Cost','Prioritize cost control and value options.','Lowest cost first'],['Balanced','Balance price, quality, and availability.','Balanced quality and price'],['Better Quality','Prefer stronger quality even if cost is higher.','Better quality preferred']];
-        var deliveryPriorityItems = [['Cheapest Shipping','Lowest practical freight and slower timeline is okay.','Cheapest shipping'],['Balanced Delivery','Balanced cost and speed.','Balanced cost and speed'],['Fastest Available','Speed matters more than cheapest option.','Fastest available']];
-        var timelineItems = [['Flexible','Planning stage, best value sourcing.','Flexible / planning stage'],['2-4 Weeks','Need sooner, review available options first.','Need within 2-4 weeks'],['Event Date','Camp, show, semester, workshop, or launch date.','Seasonal / fixed event date']];
-        function esc(s){return String(s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];});}
-        function render(container, items, group, type, variant){
-          if(!container || container.dataset.rendered === 'true') return;
-          container.dataset.rendered = 'true';
-          container.innerHTML = items.map(function(item, idx){
-            var checked = type === 'radio' && idx === 0 ? ' checked' : '';
-            var note = type === 'checkbox' ? '<input class="gqb-option-note" type="text" data-gqb-note placeholder="Optional note for this choice">' : '';
-            var data = '';
-            if(group === 'Templates'){ data = ' data-template-products="'+esc(item[3])+'" data-template-services="'+esc(item[4])+'"'; }
-            var badge = group === 'Templates' ? '<em>Apply template</em>' : '';
-            return '<label class="gqb-option '+(variant || '')+'"><input type="'+type+'" name="gqb_'+group+'" value="'+esc(item[2])+'" data-gqb-control data-gqb-group-name="'+group+'"'+checked+data+'><b>'+esc(item[0])+'</b><small>'+esc(item[1])+'</small>'+badge+note+'</label>';
-          }).join('');
+    (function(){
+      function init(section){
+        if(!section || section.dataset.gpbReady==='1') return;
+        section.dataset.gpbReady='1';
+        var state={items:[],listText:'',listLink:''};
+        var freq={monthly:12,bimonthly:6,quarterly:4,semester:2,annual:1,once:1};
+        var money=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
+        var itemsEl=section.querySelector('[data-gpb-items]'),reviewEl=section.querySelector('[data-gpb-review]'),countEl=section.querySelector('[data-gpb-count]'),orderEl=section.querySelector('[data-gpb-order-total]'),annualEl=section.querySelector('[data-gpb-annual-total]'),bodyEl=section.querySelector('#gpb-body'),errorEl=section.querySelector('[data-gpb-client-error]');
+        function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];});}
+        function uid(){return 'i'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+        function get(sel){var el=section.querySelector(sel);return el?el.value.trim():'';}
+        function showError(msg){if(!errorEl)return;errorEl.textContent=msg;errorEl.classList.remove('gpb-hidden');errorEl.scrollIntoView({behavior:'smooth',block:'center'});}
+        function clearError(){if(errorEl){errorEl.textContent='';errorEl.classList.add('gpb-hidden');}}
+        function save(){try{sessionStorage.setItem('globisunProcurementV1',JSON.stringify({items:state.items,listText:state.listText,listLink:state.listLink}));}catch(e){}}
+        function restore(){try{var raw=sessionStorage.getItem('globisunProcurementV1');if(raw){var data=JSON.parse(raw);if(Array.isArray(data.items))state.items=data.items;if(typeof data.listText==='string')state.listText=data.listText;if(typeof data.listLink==='string')state.listLink=data.listLink;}}catch(e){}}
+        function emptyItem(source){return {id:uid(),source:source,title:'',url:'',image:'',catalogPrice:'',brand:'',description:'',spec:'',quantity:'',unit:'pcs',currentPrice:'',currentSupplier:'',frequency:'',quoteLink:'',alternatives:'ask',priorities:[],notes:''};}
+        function addItem(item){state.items.push(Object.assign(emptyItem(item.source||'custom'),item,{id:uid()}));save();renderItems();updateSummary();clearError();}
+        function sourceLabel(s){return s==='globisun'?'GlobiSun catalog':s==='external'?'External product link':'Custom / unknown product';}
+        function itemHtml(item){
+          var image=item.image?'<img class="gpb-item-thumb" src="'+esc(item.image)+'" alt="">':'<div class="gpb-item-thumb">'+(item.source==='globisun'?'GS':'＋')+'</div>';
+          var link=item.url?'<a href="'+esc(item.url)+'" target="_blank" rel="noopener">Open reference ↗</a>':'<small>'+esc(sourceLabel(item.source))+'</small>';
+          var priorities=['Lower price','Same quality for less','Better quality','Faster availability','Custom packaging','Private label','Flexible quantity'];
+          return '<article class="gpb-item" data-item-id="'+esc(item.id)+'">'+
+            '<div class="gpb-item-head">'+image+'<div><h3>'+esc(item.title||item.description||'Custom item')+'</h3>'+link+'</div><div class="gpb-item-actions"><button class="gpb-icon-btn" type="button" data-duplicate-item>Duplicate</button><button class="gpb-icon-btn" type="button" data-remove-item>Remove</button></div></div>'+
+            '<div class="gpb-item-body"><div class="gpb-fields">'+
+            '<div class="gpb-field"><label>Product name</label><input data-item-field="title" value="'+esc(item.title)+'" placeholder="Optional if reference is clear"></div>'+
+            '<div class="gpb-field"><label>Brand</label><input data-item-field="brand" value="'+esc(item.brand)+'" placeholder="Optional"></div>'+
+            '<div class="gpb-field gpb-field--full"><label>Specification / size / packaging</label><input data-item-field="spec" value="'+esc(item.spec)+'" placeholder="Example: 64 oz, 11 × 14 in, 12-color set"></div>'+
+            '<div class="gpb-field"><label>Quantity</label><input data-item-field="quantity" inputmode="decimal" value="'+esc(item.quantity)+'" placeholder="300"></div>'+
+            '<div class="gpb-field"><label>Unit</label><select data-item-field="unit"><option '+(item.unit==='pcs'?'selected':'')+'>pcs</option><option '+(item.unit==='sets'?'selected':'')+'>sets</option><option '+(item.unit==='bottles'?'selected':'')+'>bottles</option><option '+(item.unit==='cases'?'selected':'')+'>cases</option><option '+(item.unit==='packs'?'selected':'')+'>packs</option><option '+(item.unit==='kits'?'selected':'')+'>kits</option></select></div>'+
+            '<div class="gpb-field"><label>Current unit price</label><input data-item-field="currentPrice" inputmode="decimal" value="'+esc(item.currentPrice)+'" placeholder="$ optional"></div>'+
+            '<div class="gpb-field"><label>Current supplier</label><input data-item-field="currentSupplier" value="'+esc(item.currentSupplier)+'" placeholder="Blick, Amazon, distributor..."></div>'+
+            '<div class="gpb-field"><label>How often do you buy it?</label><select data-item-field="frequency"><option value="" '+(!item.frequency?'selected':'')+'>Select / optional</option><option value="monthly" '+(item.frequency==='monthly'?'selected':'')+'>Monthly</option><option value="bimonthly" '+(item.frequency==='bimonthly'?'selected':'')+'>Every 2 months</option><option value="quarterly" '+(item.frequency==='quarterly'?'selected':'')+'>Quarterly</option><option value="semester" '+(item.frequency==='semester'?'selected':'')+'>Twice a year / semester</option><option value="annual" '+(item.frequency==='annual'?'selected':'')+'>Annually</option><option value="once" '+(item.frequency==='once'?'selected':'')+'>One-time</option></select></div>'+
+            '<div class="gpb-field"><label>Comparable alternatives?</label><select data-item-field="alternatives"><option value="yes" '+(item.alternatives==='yes'?'selected':'')+'>Yes</option><option value="no" '+(item.alternatives==='no'?'selected':'')+'>No — exact item/spec</option><option value="ask" '+(item.alternatives==='ask'?'selected':'')+'>Ask me first</option></select></div>'+
+            '<div class="gpb-field gpb-field--full"><label>Current quote / invoice / screenshot link</label><input data-item-field="quoteLink" type="url" value="'+esc(item.quoteLink)+'" placeholder="Optional share link"></div>'+
+            '<div class="gpb-field gpb-field--full"><label>Notes</label><textarea data-item-field="notes" placeholder="Colors, packaging, quality requirement, use case...">'+esc(item.notes||item.description)+'</textarea></div>'+
+            '<div class="gpb-field gpb-field--full"><label>What matters most?</label><div class="gpb-priorities">'+priorities.map(function(p){return '<label class="gpb-priority"><input type="checkbox" data-item-priority="'+esc(p)+'" '+(item.priorities.indexOf(p)>=0?'checked':'')+'><span>'+esc(p)+'</span></label>';}).join('')+'</div></div>'+
+            '</div><p class="gpb-help">Sharing current pricing is optional. It helps us compare the same or closest specification instead of guessing what “better pricing” means.</p></div></article>';
         }
-        render(section.querySelector('[data-gqb-render="templates"]'), templateItems, 'Templates', 'checkbox', 'gqb-template');
-        render(section.querySelector('[data-gqb-render="usecase"]'), useCaseItems, 'UseCase', 'radio', 'gqb-radio gqb-usecase');
-        render(section.querySelector('[data-gqb-render="products"]'), productItems, 'Products', 'checkbox', '');
-        render(section.querySelector('[data-gqb-render="services"]'), serviceItems, 'Services', 'checkbox', 'gqb-service');
-        render(section.querySelector('[data-gqb-render="buyer"]'), buyerItems, 'BuyerType', 'radio', 'gqb-radio');
-        render(section.querySelector('[data-gqb-render="quantity"]'), quantityItems, 'Quantity', 'radio', 'gqb-radio');
-        render(section.querySelector('[data-gqb-render="budgetPreference"]'), budgetPreferenceItems, 'BudgetPreference', 'radio', 'gqb-radio');
-        render(section.querySelector('[data-gqb-render="deliveryPriority"]'), deliveryPriorityItems, 'DeliveryPriority', 'radio', 'gqb-radio');
-        render(section.querySelector('[data-gqb-render="timeline"]'), timelineItems, 'Timeline', 'radio', 'gqb-radio');
-        section.querySelectorAll('.gqb-option-note').forEach(function(note){note.addEventListener('click',function(e){e.stopPropagation();});note.addEventListener('keydown',function(e){e.stopPropagation();});});
-        var summary = section.querySelector('#gqb-summary');
-        var copyBtn = section.querySelector('[data-gqb-copy]');
-        var linkBtn = section.querySelector('[data-gqb-copy-link]');
-        var shareInput = section.querySelector('#gqb-share-url');
-        var countEl = section.querySelector('[data-gqb-count]');
-        var pillsEl = section.querySelector('[data-gqb-pills]');
-        var cartEl = section.querySelector('[data-gqb-cart]');
-        function val(sel){ var el = section.querySelector(sel); return el && el.value ? el.value.trim() : ''; }
-        function controls(group){ return Array.from(section.querySelectorAll('[data-gqb-group-name="'+group+'"]')); }
-        function selected(group){ return controls(group).filter(function(input){return input.checked;}).map(function(input){var label=input.closest('.gqb-option');var note=label ? (label.querySelector('[data-gqb-note]')||{}).value || '' : '';return {value:input.value,note:note.trim()};}); }
-        function radioValue(group){ var el = section.querySelector('[data-gqb-group-name="'+group+'"]:checked'); return el ? el.value : 'Not selected'; }
-        function linesFor(arr){ return arr.length ? arr.map(function(x){return '- '+x.value+(x.note ? ' | Note: '+x.note : '');}).join('\n') : '- Not selected yet'; }
-        function setCheckedByValue(group, values){ controls(group).forEach(function(input){ if(values.indexOf(input.value) >= 0){ input.checked = true; } }); }
-        function applyTemplate(input){
-          if(!input.checked) return;
-          var products = (input.getAttribute('data-template-products') || '').split('|').filter(Boolean);
-          var services = (input.getAttribute('data-template-services') || '').split('|').filter(Boolean);
-          setCheckedByValue('Products', products);
-          setCheckedByValue('Services', services);
+        function renderItems(){itemsEl.innerHTML=state.items.length?state.items.map(itemHtml).join(''):'<div class="gpb-empty">No products added yet.</div>';}
+        function num(v){var n=parseFloat(String(v||'').replace(/[^0-9.]/g,''));return isFinite(n)?n:0;}
+        function frequencyText(v){return {monthly:'Monthly',bimonthly:'Every 2 months',quarterly:'Quarterly',semester:'Twice a year / semester',annual:'Annually',once:'One-time'}[v]||'Not provided';}
+        function totals(){var order=0,annual=0,hasOrder=false,hasAnnual=false;state.items.forEach(function(i){var q=num(i.quantity),p=num(i.currentPrice);if(q&&p){var line=q*p;order+=line;hasOrder=true;if(freq[i.frequency]){annual+=line*freq[i.frequency];hasAnnual=true;}}});return {order:hasOrder?order:null,annual:hasAnnual?annual:null};}
+        function updateSummary(){
+          state.listText=get('[data-gpb-list-text]')||state.listText;state.listLink=get('[data-gpb-list-link]')||state.listLink;
+          countEl.textContent=state.items.length+' item'+(state.items.length===1?'':'s');var t=totals();orderEl.textContent=t.order!=null?money.format(t.order):'—';annualEl.textContent=t.annual!=null?money.format(t.annual):'—';
+          var rows=state.items.map(function(i){var detail=[];if(i.quantity)detail.push(i.quantity+' '+i.unit);if(i.currentPrice)detail.push('$'+i.currentPrice+' current');if(i.frequency)detail.push(frequencyText(i.frequency));return '<div class="gpb-review-row"><b>'+esc(i.title||i.description||'Custom item')+'</b><span>'+esc(detail.join(' · ')||sourceLabel(i.source))+'</span></div>';});
+          if(state.listText||state.listLink)rows.push('<div class="gpb-review-row"><b>Existing supply list</b><span>'+(state.listText?'Pasted list included':'')+(state.listText&&state.listLink?' · ':'')+(state.listLink?'Document link included':'')+'</span></div>');
+          reviewEl.innerHTML=rows.length?rows.join(''):'<div class="gpb-empty">Add a product or paste a supply list to begin.</div>';
+          bodyEl.value=buildBody();save();
         }
-        function removeTemplate(input){
-          var products = (input.getAttribute('data-template-products') || '').split('|').filter(Boolean);
-          var services = (input.getAttribute('data-template-services') || '').split('|').filter(Boolean);
-          var keptProducts = [];
-          var keptServices = [];
-          controls('Templates').forEach(function(t){
-            if(t !== input && t.checked){
-              keptProducts = keptProducts.concat((t.getAttribute('data-template-products') || '').split('|').filter(Boolean));
-              keptServices = keptServices.concat((t.getAttribute('data-template-services') || '').split('|').filter(Boolean));
-            }
-          });
-          controls('Products').forEach(function(p){ if(products.indexOf(p.value) >= 0 && keptProducts.indexOf(p.value) < 0){ p.checked = false; } });
-          controls('Services').forEach(function(s){ if(services.indexOf(s.value) >= 0 && keptServices.indexOf(s.value) < 0){ s.checked = false; } });
+        function buildBody(){
+          var out=['GlobiSun Procurement Builder Request','================================',''];
+          state.items.forEach(function(i,idx){out.push('ITEM '+(idx+1));out.push('Source: '+sourceLabel(i.source));out.push('Product: '+(i.title||'Not provided'));if(i.url)out.push('Reference URL: '+i.url);if(i.brand)out.push('Brand: '+i.brand);if(i.spec)out.push('Specification: '+i.spec);if(i.description)out.push('Description: '+i.description);out.push('Quantity: '+(i.quantity?i.quantity+' '+i.unit:'Not provided'));out.push('Current unit price: '+(i.currentPrice?'$'+i.currentPrice:'Not provided'));out.push('Current supplier: '+(i.currentSupplier||'Not provided'));out.push('Purchase frequency: '+frequencyText(i.frequency));out.push('Comparable alternatives: '+(i.alternatives||'ask'));if(i.quoteLink)out.push('Current quote / invoice link: '+i.quoteLink);if(i.priorities.length)out.push('Priorities: '+i.priorities.join(', '));if(i.notes)out.push('Notes: '+i.notes);out.push('');});
+          if(state.listText||state.listLink){out.push('EXISTING SUPPLY LIST');out.push(state.listText||'No pasted text.');if(state.listLink)out.push('Supply list / quote link: '+state.listLink);out.push('');}
+          var t=totals();out.push('ESTIMATED CURRENT PURCHASING');out.push('Current order estimate from entered unit prices: '+(t.order!=null?money.format(t.order):'Not enough data'));out.push('Annual purchasing estimate from entered frequency: '+(t.annual!=null?money.format(t.annual):'Not enough data'));out.push('');out.push('BUYER');out.push('Organization: '+(get('#gpb-org')||'Not provided'));out.push('Buyer type: '+(get('#gpb-buyer')||'Not provided'));out.push('Name: '+(get('#gpb-name')||'Not provided'));out.push('Email: '+(get('#gpb-email')||'Not provided'));out.push('Phone: '+(get('#gpb-phone')||'Not provided'));out.push('Delivery ZIP: '+(get('#gpb-zip')||'Not provided'));out.push('Timeline: '+(get('#gpb-timeline')||'Not provided'));out.push('Role: '+(get('#gpb-role')||'Not provided'));out.push('Additional notes: '+(get('#gpb-notes')||'None'));out.push('');out.push('REQUESTED REVIEW');out.push('Compare specifications, pricing, sourcing feasibility, lead time, and practical alternatives.');return out.join('\n');
         }
-        function cartCard(title, arr){ return '<div class="gqb-cart-card"><strong>'+esc(title)+'</strong><p>'+(arr.length ? arr.map(function(x){return esc(x.value)+(x.note?' — '+esc(x.note):'');}).join('<br>') : 'Not selected yet')+'</p></div>'; }
-        function update(){
-          if(!summary) return;
-          section.querySelectorAll('.gqb-option').forEach(function(label){var input=label.querySelector('[data-gqb-control]');label.classList.toggle('is-selected',!!(input && input.checked));});
-          var templates = selected('Templates');
-          var useCase = selected('UseCase');
-          var products = selected('Products');
-          var services = selected('Services');
-          var buyerType = radioValue('BuyerType');
-          var quantity = radioValue('Quantity');
-          var budgetPreference = radioValue('BudgetPreference');
-          var deliveryPriority = radioValue('DeliveryPriority');
-          var timeline = radioValue('Timeline');
-          var selectedCount = templates.length + useCase.length + products.length + services.length;
-          if(countEl) countEl.textContent = selectedCount + ' selected';
-          if(pillsEl){ var pills = templates.concat(useCase, products, services).slice(0,7).map(function(x){return x.value;}); pillsEl.innerHTML = pills.length ? pills.map(function(p){return '<span>'+esc(p)+'</span>';}).join('') : '<span>Choose options on the left</span>'; }
-          if(cartEl){ cartEl.innerHTML = cartCard('Templates', templates)+cartCard('Use case', useCase)+cartCard('Products', products)+cartCard('Services', services)+cartCard('Order preferences', [{value:buyerType},{value:quantity},{value:budgetPreference},{value:deliveryPriority},{value:timeline}]); }
-          if(shareInput){ shareInput.value = window.location.origin + '/#bulk-inquiry'; }
-          summary.value = [
-            'GlobiSun Bulk Quote Request','----------------------------','SELECTED REQUEST TEMPLATES:',linesFor(templates),'','USE CASE:',linesFor(useCase),'','SELECTED PRODUCT CATEGORIES:',linesFor(products),'','SELECTED CUSTOM SERVICES:',linesFor(services),'','ORDER PREFERENCES:','Buyer type: '+buyerType,'Quantity range: '+quantity,'Budget preference: '+budgetPreference,'Delivery priority: '+deliveryPriority,'Timeline: '+timeline,'Target budget: '+(val('#gqb-budget') || 'Not provided'),'Delivery ZIP: '+(val('#gqb-zip') || 'Not provided'),'','CONTACT:','Name: '+(val('#gqb-name') || 'Not provided'),'Email: '+(val('#gqb-email') || 'Not provided'),'Phone: '+(val('#gqb-phone') || 'Not provided'),'Organization: '+(val('#gqb-company') || 'Not provided'),'','EXTRA NOTES:',val('#gqb-notes') || 'No extra notes yet.','','REQUESTED REVIEW:','Pricing, sourcing feasibility, case-pack/carton options, logo/customization feasibility, substitutes, lead time, and bulk fulfillment path.'
-          ].join('\n');
-          summary.scrollTop = 0;
-        }
-        document.addEventListener('click', function(e){
-          var card = e.target && e.target.closest ? e.target.closest('.gqb-template') : null;
-          if(!card || !section.contains(card)) return;
-          if(e.target.closest('[data-gqb-note]')) return;
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          var input = card.querySelector('[data-gqb-group-name="Templates"]');
-          if(!input) return;
-          if(input.checked){ input.checked = false; removeTemplate(input); }
-          else { input.checked = true; applyTemplate(input); }
-          update();
-        }, true);
-        section.addEventListener('change', function(e){ var input = e.target && e.target.matches('[data-gqb-group-name="Templates"]') ? e.target : null; if(input){ applyTemplate(input); } update(); });
-        section.addEventListener('input', update);
-        copyBtn && copyBtn.addEventListener('click', function(){update();try{navigator.clipboard.writeText(summary.value);copyBtn.textContent='Copied ✓';setTimeout(function(){copyBtn.textContent='Copy Summary';},1600);}catch(e){summary.focus();summary.select();document.execCommand('copy');}});
-        linkBtn && linkBtn.addEventListener('click', function(){if(shareInput){shareInput.value = window.location.origin + '/#bulk-inquiry';}try{navigator.clipboard.writeText(shareInput.value);linkBtn.textContent='Link copied ✓';setTimeout(function(){linkBtn.textContent='Copy customer link';},1600);}catch(e){shareInput.focus();shareInput.select();document.execCommand('copy');}});
-        update();
-      });
-    }
-    document.addEventListener('DOMContentLoaded', function(){ initGlobiSunQuoteBuilder(document); });
-    document.addEventListener('shopify:section:load', function(e){ initGlobiSunQuoteBuilder(e.target); });
-    initGlobiSunQuoteBuilder(document);
+        section.querySelectorAll('[data-gpb-source]').forEach(function(btn){btn.addEventListener('click',function(){var key=btn.dataset.gpbSource;section.querySelectorAll('[data-gpb-source]').forEach(function(b){b.classList.toggle('is-active',b===btn);});section.querySelectorAll('[data-gpb-panel]').forEach(function(p){p.classList.toggle('is-active',p.dataset.gpbPanel===key);});});});
+        section.addEventListener('input',function(e){
+          var card=e.target.closest&&e.target.closest('[data-item-id]');if(card&&e.target.dataset.itemField){var item=state.items.find(function(x){return x.id===card.dataset.itemId;});if(item){item[e.target.dataset.itemField]=e.target.value;save();updateSummary();return;}}
+          if(e.target.matches('[data-gpb-list-text],[data-gpb-list-link],#gpb-org,#gpb-buyer,#gpb-name,#gpb-email,#gpb-phone,#gpb-zip,#gpb-timeline,#gpb-role,#gpb-notes'))updateSummary();
+        });
+        section.addEventListener('change',function(e){
+          var card=e.target.closest&&e.target.closest('[data-item-id]');if(card&&e.target.dataset.itemField){var item=state.items.find(function(x){return x.id===card.dataset.itemId;});if(item){item[e.target.dataset.itemField]=e.target.value;save();updateSummary();}}
+          if(card&&e.target.dataset.itemPriority){var it=state.items.find(function(x){return x.id===card.dataset.itemId;});if(it){var p=e.target.dataset.itemPriority;if(e.target.checked&&it.priorities.indexOf(p)<0)it.priorities.push(p);if(!e.target.checked)it.priorities=it.priorities.filter(function(x){return x!==p;});save();updateSummary();}}
+        });
+        section.addEventListener('click',function(e){
+          var remove=e.target.closest&&e.target.closest('[data-remove-item]');if(remove){var c=remove.closest('[data-item-id]');state.items=state.items.filter(function(x){return x.id!==c.dataset.itemId;});save();renderItems();updateSummary();return;}
+          var dup=e.target.closest&&e.target.closest('[data-duplicate-item]');if(dup){var d=dup.closest('[data-item-id]'),item=state.items.find(function(x){return x.id===d.dataset.itemId;});if(item)addItem(Object.assign({},item,{id:undefined}));}
+        });
+        var linkBtn=section.querySelector('[data-gpb-add-link]');linkBtn.addEventListener('click',function(){var url=get('[data-gpb-link-url]');if(!url){showError('Please paste the product or supplier URL first.');return;}addItem({source:'external',url:url,title:get('[data-gpb-link-title]'),brand:get('[data-gpb-link-brand]'),spec:get('[data-gpb-link-spec]')});['[data-gpb-link-url]','[data-gpb-link-title]','[data-gpb-link-brand]','[data-gpb-link-spec]'].forEach(function(s){section.querySelector(s).value='';});});
+        var customBtn=section.querySelector('[data-gpb-add-custom]');customBtn.addEventListener('click',function(){var desc=get('[data-gpb-custom-description]');if(!desc){showError('Please describe the product you need. A formal product name is not required.');return;}addItem({source:'custom',title:get('[data-gpb-custom-title]'),brand:get('[data-gpb-custom-brand]'),description:desc,spec:get('[data-gpb-custom-spec]'),url:get('[data-gpb-custom-url]')});['[data-gpb-custom-title]','[data-gpb-custom-brand]','[data-gpb-custom-description]','[data-gpb-custom-spec]','[data-gpb-custom-url]'].forEach(function(s){section.querySelector(s).value='';});});
+        var searchInput=section.querySelector('[data-gpb-shop-search]'),searchResults=section.querySelector('[data-gpb-search-results]'),timer;
+        searchInput.addEventListener('input',function(){clearTimeout(timer);var q=searchInput.value.trim();if(q.length<2){searchResults.innerHTML='<div class="gpb-empty">Type at least 2 characters.</div>';return;}timer=setTimeout(function(){var root=(window.Shopify&&Shopify.routes&&Shopify.routes.root)||'/';var url=root+'search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6&resources[options][unavailable_products]=last';searchResults.innerHTML='<div class="gpb-empty">Searching…</div>';fetch(url).then(function(r){return r.json();}).then(function(data){var products=(((data||{}).resources||{}).results||{}).products||[];if(!products.length){searchResults.innerHTML='<div class="gpb-empty">No catalog match. Use “I can\'t find the product” or paste an external link instead.</div>';return;}searchResults.innerHTML='';products.forEach(function(p){var b=document.createElement('button');b.type='button';b.className='gpb-search-result';var img=(p.featured_image&&p.featured_image.url)||p.image||'';b.innerHTML=(img?'<img src="'+esc(img)+'" alt="">':'<div class="gpb-item-thumb">GS</div>')+'<span><b>'+esc(p.title)+'</b><small>'+esc(p.vendor||p.type||'GlobiSun product')+'</small></span><em>'+((p.price&&num(p.price))?money.format(num(p.price)):'Add')+'</em>';b.addEventListener('click',function(){addItem({source:'globisun',title:p.title,url:p.url,image:img,brand:p.vendor||'',catalogPrice:p.price||''});searchInput.value='';searchResults.innerHTML='<div class="gpb-empty">Added. Search again to add another product.</div>';});searchResults.appendChild(b);});}).catch(function(){searchResults.innerHTML='<div class="gpb-empty">Catalog search is temporarily unavailable. You can still add the item by link or description.</div>';});},260);});
+        var form=section.querySelector('form');form.addEventListener('submit',function(e){state.listText=get('[data-gpb-list-text]');state.listLink=get('[data-gpb-list-link]');updateSummary();if(!state.items.length&&!state.listText&&!state.listLink){e.preventDefault();showError('Please add at least one product or paste a supply list before submitting.');return;}if(!get('#gpb-email')){e.preventDefault();showError('Please enter an email so we can send the comparison back to you.');return;}clearError();bodyEl.value=buildBody();});
+        restore();var listTextEl=section.querySelector('[data-gpb-list-text]'),listLinkEl=section.querySelector('[data-gpb-list-link]');if(listTextEl)listTextEl.value=state.listText;if(listLinkEl)listLinkEl.value=state.listLink;renderItems();updateSummary();
+      }
+      document.querySelectorAll('.gpb').forEach(init);
+      document.addEventListener('shopify:section:load',function(e){var s=e.target.querySelector('.gpb');if(s)init(s);});
+    })();
   </script>
 </section>
 
 {% schema %}
 {
-  "name": "GlobiSun quote builder",
+  "name": "GlobiSun procurement builder",
   "tag": "section",
   "class": "section",
   "settings": [
+    {"type":"text","id":"heading","label":"Heading","default":"Build your supply request"},
+    {"type":"textarea","id":"intro","label":"Intro","default":"Add products you already purchase, products from our catalog, or anything you need us to source. Share current pricing if you want an apples-to-apples comparison."},
     {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"}
   ],
-  "presets": [{"name":"GlobiSun quote builder"}]
+  "presets": [{"name":"GlobiSun procurement builder"}]
 }
 {% endschema %}
